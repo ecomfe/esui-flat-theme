@@ -1,0 +1,71 @@
+@TextBox-BorderWidth: 1px;
+@TextBox-BorderColor: #a8adb6;
+@TextBox-BorderStyle: solid;
+@TextBox-InputHeight: 19px;
+@TextBox-TextAreaHeight: 200px;
+@TextBox-Width: 200px;
+@TextBox-LineHeight: 19px;
+
+@TextBox-PaddingVertical : 2px;
+@TextBox-PaddingHorizon: 4px;
+
+@TextBox-Color : #333;
+@TextBox-FontSize: 13px;
+
+@TextBox-Background: #fff;
+
+@TextBox-HoverBorder: 1px solid #6e8ab8;
+
+
+//Hint
+@TextBox-HintBackgroundColor: #f2f2f2;
+@TextBox-HintBorder: 1px solid #a8adb6;
+
+//禁用和只读状态
+@TextBox-DisabledAndReadOnlyBorder: 1px solid #7E9DB9;
+@TextBox-DisabledAndReadOnlyBackground: #f6f6f6;
+@TextBox-DisabledAndReadOnlyColor: #999;
+
+.ui-textbox {
+    input, textarea {
+        color: @TextBox-Color;
+        padding: @TextBox-PaddingVertical @TextBox-PaddingHorizon;
+        font-size: @TextBox-FontSize;
+        background: @TextBox-Background;
+        border: @TextBox-BorderWidth @TextBox-BorderColor @TextBox-BorderStyle;
+        height: @TextBox-InputHeight;
+        line-height: @TextBox-LineHeight;
+        width: @TextBox-Width;
+        &:hover {
+            border: @TextBox-HoverBorder;
+        }
+    }
+    textarea {
+        height: @TextBox-TextAreaHeight;
+    }
+}
+
+
+
+.ui-textbox-hint {
+    background-color: @TextBox-HintBackgroundColor;
+    padding: @TextBox-PaddingVertical 12px;
+    border: @TextBox-HintBorder;
+    height: @TextBox-InputHeight;
+    line-height: @TextBox-LineHeight;
+}
+
+.ui-textbox-placeholder {
+    height: @TextBox-InputHeight;
+    line-height:  @TextBox-LineHeight;
+    top: @TextBox-PaddingVertical + @TextBox-BorderWidth;
+}
+
+.ui-textbox-disabled,
+.ui-textbox-read-only {
+    input, textarea {
+        border: @TextBox-DisabledAndReadOnlyBorder;
+        background: @TextBox-DisabledAndReadOnlyBackground;
+        color: @TextBox-DisabledAndReadOnlyColor;
+    }
+}

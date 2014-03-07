@@ -1,0 +1,90 @@
+@import "variable.less";
+
+@SearchTextBox-Padding: 0 25px 0 0;
+@SearchTextBox-Border: 1px solid #d8d8d8;
+@SearchTextBox-HoverBorderColor: #d0d0d0;
+@SearchTextBox-FocusBorderColor: #bbb;
+
+@SearchTextBox-SearchIconWidth: 25px;
+@SearchTextBox-SearchIconHeight: 25px;
+
+@SearchTextBox-NormalSearchIconUrl: ~"@{ESUI-Flat-Theme-Path}/img/search.png";
+@SearchTextBox-NormalSearchIconUrl2x: ~"@{ESUI-Flat-Theme-Path}/img/search@2x.png";
+@SearchTextBox-NormalSearchIconBackground: Invalid;
+@SearchTextBox-ActiveSearchIconBackground: Invalid;
+
+@SearchTextBox-ActiveSearchIconUrl: ~"@{ESUI-Flat-Theme-Path}/img/search.png";
+@SearchTextBox-ActiveSearchIconUrl2x: ~"@{ESUI-Flat-Theme-Path}/img/search@2x.png";
+
+@SearchTextBox-SearchIcon2xBackgroundSize: 15px 50px;
+
+
+.skin-search-textbox {
+    input {
+        padding: @SearchTextBox-Padding;
+        border: @SearchTextBox-Border;
+
+        &:hover {
+            border-color: @SearchTextBox-HoverBorderColor;
+        }
+
+        &:focus {
+            border-color: @SearchTextBox-FocusBorderColor;
+        }
+    }
+}
+
+.normal-search-icon() {
+    background: @SearchTextBox-NormalSearchIconBackground;
+    background-image: url(@SearchTextBox-NormalSearchIconUrl);
+}
+
+.active-search-icon() {
+    background: @SearchTextBox-ActiveSearchIconBackground;
+    background-image: url(@SearchTextBox-ActiveSearchIconUrl);
+
+}
+
+.skin-search-button {
+    width: @SearchTextBox-SearchIconWidth;
+    height: @SearchTextBox-SearchIconHeight;
+    .normal-search-icon();
+
+    &:active {
+        .active-search-icon();
+    }
+}
+
+.skin-search-button-disabled {
+    &:active {
+        .active-search-icon();
+    }
+}
+
+
+.ui-searchbox-focus {
+    .skin-search-button {
+        .active-search-icon();
+    }
+}
+
+.searchbox-2x() {
+    background-image: url(@SearchTextBox-NormalSearchIconUrl2x);
+    background-size: @SearchTextBox-SearchIcon2xBackgroundSize;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .skin-search-button {
+        .searchbox-2x();
+
+        &:active {
+            .searchbox-2x();
+        }
+    }
+
+    .ui-searchbox-focus {
+        .skin-search-button {
+            .searchbox-2x();
+        }
+    }
+}
