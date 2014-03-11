@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>TextLine - ESUI Demo</title>
+    <link rel="stylesheet/less" href="main.less"/>
+    <link rel="stylesheet" href="demo.css"/>
+    <script src="loader/less-1.5.1.min.js"></script>
+    <script src="//cdn.staticfile.org/require.js/2.1.9/require.min.js"></script>
+    <script src="loader/config.js"></script>
+    <script src="jquery-1.9.1.min.js"></script>
+    <style>
+        label {
+            display: block;
+        }
+        .invalid {
+            color: #f00;
+        }
+    </style>
+    <script>
+        var ready = (function () {
+            var list = [];
+            return function (callback) {
+                if (callback) {
+                    list.push(callback);
+                }
+                else {
+                    for (var i = 0; i < list.length; i++) {
+                        list[i]();
+                    }
+                    ready = function (callback) {
+                        callback();
+                    };
+                }
+            }
+        }());
+    </script>
+</head>
+<body>
+    <h1>Region</h1>
+    <div id="page">
+        <div id="main">
+            <h2>展示</h2>
+            <section class="intro">
+                <p>描述</p>
+            </section>
+            <section class="view">
+                <ul class="viewer">
+                    <li class="view-markup">结构</li>
+                </ul>
+                <div>
+                    <div data-ui="type:TextLine;id:test;name:textLine;">
+                    </div>
+                </div>
+            </section>
+        </div>
+        <script>
+        require(
+            [
+                'esui',
+                'esui/TextLine'
+            ],
+            function (ui) {
+                var controls = ui.init();
+                var textLine = controls[0];
+
+                textLine.setProperties({
+                    value: 'value1\nvalue2\nsadf\nsadf\nsadf\nsadf\nsadf\nsadf\nsadf\nsadf\nsadf'
+                });
+            }
+        )
+        </script>
+    </div>
+</body>
+</html>

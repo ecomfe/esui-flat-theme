@@ -1,0 +1,29 @@
+@import "mixin.less";
+@import "variable.less";
+
+@TextLine-Border: 1px solid #ddd;
+@TextLine-HoverBorder: 1px solid #6e8ab8;
+
+@TextLine-NumLineWidth: 30px;
+@TextLine-NumLineBackground: #f8f9fb;
+@TextLine-NumLineColor: #000;
+
+.ui-textline {
+    border: @TextLine-Border;
+    &:hover {
+        border: @TextLine-HoverBorder;
+    }
+}
+
+.ui-textline-num-line {
+    background: @TextLine-NumLineBackground;
+    color: @TextLine-NumLineColor;
+    font-weight: bold;
+    line-height: 21px;
+    width: @TextLine-NumLineWidth;
+    font-size: 12px;
+}
+
+.ui-textline-text-container {
+    left: @TextLine-NumLineWidth;
+}

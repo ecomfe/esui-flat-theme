@@ -1,5 +1,3 @@
-@import "variable.less";
-
 @SearchTextBox-Padding: 0 25px 0 0;
 @SearchTextBox-Border: 1px solid #d8d8d8;
 @SearchTextBox-HoverBorderColor: #d0d0d0;
@@ -8,13 +6,13 @@
 @SearchTextBox-SearchIconWidth: 25px;
 @SearchTextBox-SearchIconHeight: 25px;
 
-@SearchTextBox-NormalSearchIconUrl: ~"@{ESUI-Flat-Theme-Path}/img/search.png";
-@SearchTextBox-NormalSearchIconUrl2x: ~"@{ESUI-Flat-Theme-Path}/img/search@2x.png";
+@SearchTextBox-NormalSearchIconUrl: ~"./img/search.png";
+@SearchTextBox-NormalSearchIconUrl2x: ~"./img/search@2x.png";
 @SearchTextBox-NormalSearchIconBackground: Invalid;
 @SearchTextBox-ActiveSearchIconBackground: Invalid;
 
-@SearchTextBox-ActiveSearchIconUrl: ~"@{ESUI-Flat-Theme-Path}/img/search.png";
-@SearchTextBox-ActiveSearchIconUrl2x: ~"@{ESUI-Flat-Theme-Path}/img/search@2x.png";
+@SearchTextBox-ActiveSearchIconUrl: ~"./img/search.png";
+@SearchTextBox-ActiveSearchIconUrl2x: ~"./img/search@2x.png";
 
 @SearchTextBox-SearchIcon2xBackgroundSize: 15px 50px;
 
@@ -48,6 +46,7 @@
 .skin-search-button {
     width: @SearchTextBox-SearchIconWidth;
     height: @SearchTextBox-SearchIconHeight;
+    border: 0;
     .normal-search-icon();
 
     &:active {
