@@ -1,0 +1,109 @@
+@import "mixin.less";
+
+@Select-Border: 1px solid #d8d8d8;
+@Select-BorderRadius: 3px;
+@Select-Height: 17px;
+@Select-Width: 50px;
+@Select-LineHeight: 17px;
+@Select-Padding: 3px 3px 3px 20px;
+
+@Select-Background: url("img/esui-combo-arrow.png") no-repeat right -6px;
+@Select-HoverBackground: url("img/esui-combo-arrow.png") no-repeat right -36px;
+@Select-BackgroundColor: transparent;
+@Select-HoverBackgroundColor: @Select-BackgroundColor;
+
+@Select-ActiveBackground: url("img/esui-combo-arrow.png") no-repeat right -67px;
+@Select-ActiveHoverBackground: @Select-ActiveBackground;
+@Select-ActiveBackgroundColor: transparent;
+@Select-ActiveHoverBackgroundColor: @Select-ActiveBackgroundColor;
+
+@Select-DisabledColor: #999;
+@Select-DisabledBorderColor: #D8D8D8;
+@Select-DisabledBackground: @Select-Background;
+@Select-DisabledBackgroundColor: transparent;
+
+@Select-LayerBorder: 1px solid #A8ADB6;
+@Select-LayerBackground: none repeat scroll 0 0 #fff;
+@Select-LayerMaxHeight: 152px;
+@Select-LayerPadding: 0 1px;
+
+@Select-ItemColor: #333;
+@Select-ItemLineHeight: 22px;
+@Select-ItemPadding: 0 4px;
+@Select-ItemMargin: 0 0 1px;
+@Select-ItemHoverBackgroundColor: #f1f1f1;
+@Select-ItemDisabledColor: #999;
+
+@Select-ItemSelectedBackgroundColor: #e0e0e0;
+@Select-ItemSelectedBorder: 1px solid #ddd;
+@Select-ItemSelectedPadding: 0 3px;
+
+.ui-select {
+    border: @Select-Border;
+    background: @Select-Background;
+    background-color: @Select-BackgroundColor;
+    border-radius: @Select-BorderRadius;
+    height: @Select-Height;
+    line-height: @Select-LineHeight;
+    padding: @Select-Padding;
+    width: @Select-Width;
+}
+
+.ui-select:focus,
+.ui-select:hover,
+.ui-select:active {
+    background: @Select-HoverBackground;
+    background-color: @Select-HoverBackgroundColor;
+}
+
+.ui-select-active {
+    background: @Select-ActiveBackground;
+}
+
+.ui-select-active:hover,
+.ui-select-active:focus {
+    background: @Select-ActiveHoverBackground;
+    background-color: @Select-ActiveHoverBackgroundColor;
+}
+
+.ui-select-layer {
+    background: @Select-LayerBackground;
+    border: @Select-LayerBorder;
+    *height: @Select-LayerMaxHeight;
+    max-height: @Select-LayerMaxHeight;
+    padding: @Select-LayerPadding;
+}
+
+.ui-select-item {
+    color: @Select-ItemColor;
+    line-height: @Select-ItemLineHeight;
+    margin: @Select-ItemMargin;
+    padding: @Select-ItemPadding;
+}
+
+.ui-select-item-disabled {
+    color: @Select-ItemDisabledColor;
+}
+
+.ui-select-item-selected {
+    background-color: @Select-ItemSelectedBackgroundColor;
+    border: @Select-ItemSelectedBorder;
+    padding: @Select-ItemSelectedPadding;
+}
+
+.ui-select-item:hover {
+    background-color: @Select-ItemHoverBackgroundColor;
+}
+
+.ui-select-disabled,
+.ui-select-read-only {
+    background: @Select-DisabledBackground;
+    background-color: @Select-DisabledBackgroundColor;
+    color: @Select-DisabledColor;
+    border-color: @Select-DisabledBorderColor;
+    &:hover,
+    &:focus {
+        background: @Select-DisabledBackground;
+        background-color: @Select-DisabledBackgroundColor;
+    }
+}
