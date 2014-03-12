@@ -1,0 +1,98 @@
+@Wizard-NodeFontSize: 14px;
+@Wizard-NodeFontWeight: bold;
+
+@Wizard-NodeColor: #999;
+@Wizard-NodeBackgroundColor: #e4e4e4;
+
+@Wizard-NodeDoneColor: #333;
+@Wizard-NodeDoneBackgroundColor: #ccf9b8;
+
+@Wizard-NodeActiveColor: #fff;
+@Wizard-NodeActiveBackgroundColor: #44ba0f;
+
+.ui-wizard {
+    @arrowHeight: 24px;
+    @arrowGap: 4px;
+
+    .ui-wizard-node {
+        color: @Wizard-NodeColor;
+        font-size: @Wizard-NodeFontSize;
+        font-weight: @Wizard-NodeFontWeight;
+        height: @arrowHeight;
+        line-height: @arrowHeight;
+        padding: 0 15px 0 0;
+        *padding: 0;
+        text-align: center;
+        position: relative;
+        background: #fff;
+
+        span {
+            margin-right: @arrowGap;
+            height: @arrowHeight;
+            float: left;
+            position: relative;
+            text-align: center;
+            width: auto;
+            padding: 0 10px;
+            background-color: @Wizard-NodeBackgroundColor;
+
+            &:after {
+                border-bottom: (@arrowHeight/2) solid transparent;
+                border-left: (@arrowHeight/2) solid @Wizard-NodeBackgroundColor;
+                border-top: (@arrowHeight/2) solid transparent;
+                content: " ";
+                height: 0;
+                position: absolute;
+                right: -(@arrowHeight/2);
+                top: 0;
+                width: 0;
+            }
+            &:before {
+                border-bottom: (@arrowHeight/2) solid @Wizard-NodeBackgroundColor;
+                border-left: (@arrowHeight/2) solid transparent;
+                border-top: (@arrowHeight/2) solid @Wizard-NodeBackgroundColor;
+                content: "";
+                height: 0;
+                left: -(@arrowHeight/2);
+                position: absolute;
+                top: 0;
+                width: 0;
+            }
+        }
+    }
+
+    .ui-wizard-node-last {
+        background: none;
+    }
+
+    .ui-wizard-node-done {
+        span {
+            background-color: @Wizard-NodeDoneBackgroundColor;
+            color: @Wizard-NodeDoneColor;
+
+            &:after {
+                border-left: (@arrowHeight/2) solid @Wizard-NodeDoneBackgroundColor;
+            }
+            &:before {
+                border-bottom: (@arrowHeight/2) solid @Wizard-NodeDoneBackgroundColor;
+                border-top: (@arrowHeight/2) solid @Wizard-NodeDoneBackgroundColor;
+            }
+        }
+    }
+
+    .ui-wizard-node-active {
+        span {
+            background-color: @Wizard-NodeActiveBackgroundColor;
+            color: @Wizard-NodeActiveColor;
+            &:after {
+                border-left: (@arrowHeight/2) solid @Wizard-NodeActiveBackgroundColor;
+            }
+            &:before {
+                border-bottom: (@arrowHeight/2) solid @Wizard-NodeActiveBackgroundColor;
+                border-top: (@arrowHeight/2) solid @Wizard-NodeActiveBackgroundColor;
+            }
+        }
+
+    }
+
+}
