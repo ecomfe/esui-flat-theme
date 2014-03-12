@@ -11,29 +11,23 @@
 @Button-FontSize: 12px;
 @Button-Color: #333;
 @Button-BorderRadius: 2px;
-@Button-LinearGradientBackgroundFromColor: #fff;
-@Button-LinearGradientBackgroundToColor: #fff;
-@Button-BackgroundColor: #f6f6f6;
-@Button-Background: Invaild;
+@Button-Background: transparent;
+@Button-BackgroundColor: @Button-Background;
 
-@Button-ActiveBorderWidth: 1px;
-@Button-ActiveBorderColor: #bebebe;
-@Button-Border: @Button-ActiveBorderWidth solid @Button-ActiveBorderColor;
-@Button-ActiveLinearGradientBackgroundFromColor: #f6f6f6;
-@Button-ActiveLinearGradientBackgroundToColor: #f6f6f6;
-@Button-ActiveBackgroundColor: #fff;
-@Button-ActiveBackground: Invaild;
+@Button-HoverBorderWidth: 1px;
+@Button-HoverBorderColor: #bebebe;
+@Button-Border: @Button-HoverBorderWidth solid @Button-HoverBorderColor;
+@Button-HoverBackground: transparent;
+@Button-HoverBackgroundColor: @Button-HoverBackground;
 
 .ui-button {
-    .linear-gradient-background (top,
-        @Button-LinearGradientBackgroundFromColor,
-        @Button-BackgroundColor, @Button-LinearGradientBackgroundToColor);
     background: @Button-Background;
+    background-color: @Button-BackgroundColor;
     border: @Button-Border;
     font-size: @Button-FontSize;
     color: @Button-Color;
     padding: @Button-Padding;
-    .border-radius(@Button-BorderRadius);
+    border-radius: @Button-BorderRadius;
     height: @Button-Height;
     line-height: @Button-Height;
 }
@@ -47,29 +41,31 @@ button.ui-button {
 /**
  * 基础按钮样式状态
  */
-.ui-button:active {
-    border: @Button-ActiveBorderWidth solid @Button-ActiveBorderColor;
-    .linear-gradient-background (top,
-        @Button-ActiveLinearGradientBackgroundFromColor,
-        @Button-ActiveBackgroundColor, @Button-ActiveLinearGradientBackgroundToColor);
-    background: @Button-ActiveBackground;
+.ui-button:active,
+.ui-button:hover {
+    border: @Button-HoverBorderWidth solid @Button-HoverBorderColor;
+    background: @Button-HoverBackground;
+    background-color: @Button-HoverBackgroundColor;
 }
-
 
 /** 春天系列 */
 .skin-spring-button,
-.skin-spring-add-button {
+.skin-spring-add-button,
+.skin-spring-button:hover,
+.skin-spring-add-button:hover {
     border: 1px solid #519D30;
     color: white;
     font-weight: bold;
 }
-.skin-spring-button {
+
+.skin-spring-button,
+.skin-spring-button:hover {
     .linear-gradient-background (top, #6cbb4c, #519c30, #65b445);
+    background-color: #65b445;
     padding: 0 10px;
     height: 30px;
     line-height: 30px;
 }
-
 
 button.skin-spring-button {
     // IE7下不支持设置box-sizing，且显示属性是按照border-box的
@@ -77,9 +73,12 @@ button.skin-spring-button {
     *height: 32px;
 }
 
-.skin-spring-add-button {
-    .linear-gradient-background-with-image (
-        top, #6cbb4c, #519c30, "img/esui-button-plus.gif", 9px, center, #65b445);
+.skin-spring-add-button,
+.skin-spring-add-button:hover {
+    .linear-gradient-background-with-image (top, #6cbb4c, #519c30,
+        "img/esui-button-plus.gif", 9px, center, #65b445);
+    background-color: #65b445;
+
     padding: 0 13px 0 27px;
 }
 
@@ -87,12 +86,17 @@ button.skin-spring-button {
 .skin-spring-add-button:active {
     border: 1px solid #509c2f;
 }
-.skin-spring-button:active {
+
+.skin-spring-button:active,
+{
     .linear-gradient-background (top, #519c30, #6cbb4c, #65b445);
+    background-color: #65b445;
 }
+
 .skin-spring-add-button:active {
-    .linear-gradient-background-with-image (
-        top, #519c30, #6cbb4c, "img/esui-button-plus.gif", 9px, center, #65b445);
+    .linear-gradient-background-with-image (top, #519c30, #6cbb4c,
+        "img/esui-button-plus.gif", 9px, center, #65b445);
+    background-color: #65b445;
 }
 
 .skin-spring-button:hover,
@@ -100,17 +104,22 @@ button.skin-spring-button {
     border: 1px solid #157106;
 }
 
-
 /** 下载系列 */
-.skin-download-button {
-    .linear-gradient-background-with-image (
-        top, #FFF, #f6f6f6, "img/esui-btn-download.png", 40px, center, #65b445);
+.skin-download-button,
+.skin-download-button:hover {
+    .linear-gradient-background-with-image (top, #FFF, #f6f6f6,
+        "img/esui-btn-download.png", 40px, center, #65b445);
+    border: 1px solid #ccc;
+    color: #333;
+    background-color: #65b445;
     padding-left: 12px;
     padding-right: 25px;
 }
+
 .skin-download-button:active {
-    .linear-gradient-background-with-image (
-        top, #f6f6f6, #FFF, "img/esui-btn-download.png", 40px, center, #65b445);
+    .linear-gradient-background-with-image (top, #f6f6f6, #FFF,
+        "img/esui-btn-download.png", 40px, center, #65b445);
+    background-color: #65b445;
 }
 
 /** 关闭layer按钮 */
@@ -125,6 +134,7 @@ button.skin-spring-button {
     width: 12px;
     padding: 0;
 }
+
 .skin-layerClose-button:active {
     .background("img/esui.png", repeat, -37px, -88px, transparent);
     border: 1px solid #f6f6f6;

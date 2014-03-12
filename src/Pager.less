@@ -1,0 +1,54 @@
+@Pager-Color: #333;
+@Pager-ItemBackground: transparent;
+@Pager-ItemBorderWidth: 1px;
+@Pager-ItemBorderColor: #ccc;
+@Pager-ItemBorder: @Pager-ItemBorderWidth solid @Pager-ItemBorderColor;
+@Pager-ItemBorderRadius: 2px;
+@Pager-ItemWidth: 23px;
+
+@Pager-ItemExtendWidth: 2*(@Pager-ItemWidth + @Pager-ItemBorderWidth *2);
+
+@Pager-ItemCurrentBackground: none;
+
+.ui-pager-label {
+    color: @Pager-Color;
+}
+
+/*
+ * 部分沿用button控件的样式
+ */
+.ui-pager-main li {
+    color: @Pager-Color;
+}
+
+.ui-pager-main a {
+    color: @Pager-Color;
+}
+
+/*
+ * 部分沿用button控件的样式
+ */
+.ui-pager-item, .ui-pager-item-extend {
+    width: @Pager-ItemWidth + @Pager-ItemBorderWidth *2;
+    height: @Pager-ItemWidth;
+    background: @Pager-ItemBackground;
+    border: @Pager-ItemBorder;
+    border-radius: @Pager-ItemBorderRadius;
+}
+
+.ui-pager-item a {
+    width: @Pager-ItemWidth;
+}
+
+.ui-pager-item-extend, .ui-pager-item-extend a {
+    width: @Pager-ItemExtendWidth;
+}
+
+.ui-pager-item-current, .ui-pager-item-omit {
+    width: @Pager-ItemWidth + @Pager-ItemBorderWidth *2;
+    height: @Pager-ItemWidth + @Pager-ItemBorderWidth *2;
+}
+
+.ui-pager-item-current {
+    background: @Pager-ItemCurrentBackground;
+}
