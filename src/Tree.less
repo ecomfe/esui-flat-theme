@@ -1,0 +1,47 @@
+@Tree-NodeLineHeight: 22px;
+@Tree-ContentBorder: 4px solid #fff;
+@Tree-ContentSelectedBorder: 4px solid #4765ca;
+@Tree-ContentSelectedBackground: #c9c9c9;
+
+@Tree-NodeIndicatorBackground: url(img/esui-open-icon.png) no-repeat 0 0 transparent;
+@Tree-NodeIndicatorExpandedBackground: url(img/esui-close-icon.png) no-repeat 0 0 transparent;
+@Tree-FolderTreeNodeIndicatorBackground: url(img/esui-folder.png) no-repeat 0 -6px transparent;
+@Tree-FolderTreeNodeIndicatorExpandedBackground: url(img/esui-folder.png) no-repeat 0 -30px transparent;
+
+.ui-tree-node {
+    line-height: @Tree-NodeLineHeight;
+}
+
+.ui-tree-content-wrapper {
+    border-left: @Tree-ContentBorder;
+}
+
+// 图标
+.ui-tree-node-indicator {
+    background: @Tree-NodeIndicatorBackground;
+}
+
+// 展开
+.ui-tree-node-indicator-expanded {
+    background: @Tree-NodeIndicatorExpandedBackground;
+}
+
+.ui-tree-content-wrapper-selected {
+    background: @Tree-ContentSelectedBackground;
+    border-left: @Tree-ContentSelectedBorder;
+}
+
+.skin-folder-tree-node-indicator {
+    background: @Tree-FolderTreeNodeIndicatorBackground;
+}
+.skin-folder-tree-node-indicator-expanded {
+    background: @Tree-FolderTreeNodeIndicatorExpandedBackground;
+}
+
+
+// 无子节点或占位
+.ui-tree-node-indicator-empty,
+.ui-tree-node-indicator-previous,
+.ui-tree-node-indicator-far-previous {
+    background-image: none;
+}
