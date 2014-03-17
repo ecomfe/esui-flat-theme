@@ -1,0 +1,27 @@
+@Calendar-Border: 1px solid #a9adb6;
+@Calendar-BorderRadius: 0;
+@Calendar-Background: none;
+@Calendar-BackgroundColor: #fff;
+@Calendar-TextColor: #000;
+@Calendar-HoverBorderColor: #a9adb6;
+@Calendar-ArrowBackgroundImage: url(img/esui-cal.png);
+
+.ui-calendar {
+    border: @Calendar-Border;
+    background: @Calendar-Background;
+    background-color: @Calendar-BackgroundColor;
+    border-radius: @Calendar-BorderRadius;
+}
+
+.ui-calendar-text {
+    color: @Calendar-TextColor;
+}
+
+.ui-calendar:hover,
+.ui-calendar:active {
+    border-color: @Calendar-HoverBorderColor;
+}
+
+.ui-calendar-arrow {
+    background: @Calendar-ArrowBackgroundImage no-repeat 0 0;
+}

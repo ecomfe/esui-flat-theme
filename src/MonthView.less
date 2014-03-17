@@ -1,0 +1,119 @@
+@import "mixin.less";
+@import "variable.less";
+
+@Monthview-Background: #fff;
+@Monthview-HeadBackground: #CCCED4;
+@Monthview-BackButtonBackground: url(img/esui.png) 0px, -200px;
+@Monthview-ForwardButtonBackground: url(img/esui.png) -20px, -200px;
+
+@Monthview-MonthBorder: 1px solid #ccced4;
+@Monthview-MonthTitleBackground: #f1f1f1;
+@Monthview-MonthTitleColor: #666;
+@Monthview-MonthTitleSelectedBackground: #CCCED4;
+
+@Monthview-MonthItemColor: #03c;
+@Monthview-MonthItemBorder: 1px solid #f1f1f1;
+@Monthview-MonthItemHoverBackground: #e4eaf9;
+@Monthview-MonthItemSelectedBackground: #fff6bd;
+@Monthview-MonthItemSelectedColor: #333;
+
+@Monthview-MonthItemVirtualColor: #888;
+@Monthview-MonthItemVirtualBackground: #fff;
+
+@Monthview-MonthItemDisabled: #ddd;
+@Monthview-MonthRowSelectBackground: #f1f1f1;
+@Monthview-MonthRowSelectSelectedBackground: #CCCED4;
+
+
+
+.ui-monthview {
+    background: @Monthview-Background;
+}
+
+.ui-monthview-head {
+    background: @Monthview-HeadBackground;
+}
+
+/** 先前向后按钮 */
+.ui-monthview-month-back {
+    padding: 0;
+    background: @Monthview-BackButtonBackground;
+    &:active,
+    &:hover {
+        background: @Monthview-BackButtonBackground;
+    }
+}
+
+.ui-monthview-month-forward {
+    padding: 0;
+    background: @Monthview-ForwardButtonBackground;
+    &:active,
+    &:hover {
+        background: @Monthview-ForwardButtonBackground;
+    }
+}
+
+.ui-monthview-month {
+    border: @Monthview-MonthBorder;
+}
+
+.ui-monthview-month-title {
+    background: @Monthview-MonthTitleBackground;
+    color: @Monthview-MonthTitleColor;
+}
+
+.ui-monthview-month-title-selected {
+    background: @Monthview-MonthTitleSelectedBackground;
+}
+
+.ui-monthview-month-item {
+    color: @Monthview-MonthItemColor;
+    border-bottom: @Monthview-MonthItemBorder;
+}
+
+.ui-monthview-month-item:hover {
+    background: @Monthview-MonthItemHoverBackground;
+}
+
+.ui-monthview-month-item-selected {
+    background: @Monthview-MonthItemSelectedBackground;
+    color: @Monthview-MonthItemSelectedColor;
+}
+
+.ui-monthview-month-item-virtual,
+.ui-monthview-month-item-out {
+    color: @Monthview-MonthItemVirtualColor;
+    background: @Monthview-MonthItemVirtualBackground;
+    &:hover {
+        background: @Monthview-MonthItemVirtualBackground;
+    }
+}
+
+.ui-monthview-month-item-disabled {
+    background: @Monthview-MonthItemDisabled;
+    &:hover {
+        background: @Monthview-MonthItemDisabled;
+    }
+}
+
+// 多选模式
+.ui-monthview-multi-select {
+    .ui-monthview-month-select-all {
+        background: @Monthview-MonthRowSelectBackground;
+        &:hover {
+            background: @Monthview-MonthRowSelectBackground;
+        }
+    }
+
+    .ui-monthview-month-select-all-selected {
+        background: @Monthview-MonthRowSelectSelectedBackground;
+    }
+
+    .ui-monthview-month-row-select {
+        background: @Monthview-MonthRowSelectBackground;
+        border-bottom: @Monthview-MonthItemBorder;
+    }
+    .ui-monthview-month-row-select-selected {
+        background: @Monthview-MonthRowSelectSelectedBackground;
+    }
+}
