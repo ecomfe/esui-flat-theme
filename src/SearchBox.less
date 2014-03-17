@@ -1,51 +1,36 @@
-@SearchTextBox-Padding: 0 25px 0 0;
-@SearchTextBox-Border: 1px solid #d8d8d8;
-@SearchTextBox-HoverBorderColor: #d0d0d0;
-@SearchTextBox-FocusBorderColor: #bbb;
+@SearchTextBox-Border: 1px solid #ddd;
 
-@SearchTextBox-SearchIconWidth: 25px;
-@SearchTextBox-SearchIconHeight: 25px;
-
-@SearchTextBox-NormalSearchIconUrl: ~"./img/search.png";
-@SearchTextBox-NormalSearchIconUrl2x: ~"./img/search@2x.png";
-@SearchTextBox-NormalSearchIconBackground: Invalid;
-@SearchTextBox-ActiveSearchIconBackground: Invalid;
-
-@SearchTextBox-ActiveSearchIconUrl: ~"./img/search.png";
-@SearchTextBox-ActiveSearchIconUrl2x: ~"./img/search@2x.png";
-
-@SearchTextBox-SearchIcon2xBackgroundSize: 15px 50px;
-
+@SearchTextBox-HoverBorder: @SearchTextBox-Border;
+@SearchTextBox-FocusBorder: @SearchTextBox-Border;
 
 .skin-search-textbox {
     input {
-        padding: @SearchTextBox-Padding;
         border: @SearchTextBox-Border;
 
         &:hover {
-            border-color: @SearchTextBox-HoverBorderColor;
+            border: @SearchTextBox-HoverBorder;
         }
 
         &:focus {
-            border-color: @SearchTextBox-FocusBorderColor;
+            border: @SearchTextBox-HoverBorder;
         }
     }
 }
 
 .normal-search-icon() {
-    background: @SearchTextBox-NormalSearchIconBackground;
-    background-image: url(@SearchTextBox-NormalSearchIconUrl);
+//    background: @SearchTextBox-NormalSearchIconBackground;
+    background-image: url(img/search.png);
 }
 
 .active-search-icon() {
-    background: @SearchTextBox-ActiveSearchIconBackground;
-    background-image: url(@SearchTextBox-ActiveSearchIconUrl);
+//    background: @SearchTextBox-ActiveSearchIconBackground;
+    background-image: url(img/search@2x.png);
 
 }
 
 .skin-search-button {
-    width: @SearchTextBox-SearchIconWidth;
-    height: @SearchTextBox-SearchIconHeight;
+    width: 25px;
+    height: 25px;
     border: 0;
     .normal-search-icon();
 
@@ -68,8 +53,8 @@
 }
 
 .searchbox-2x() {
-    background-image: url(@SearchTextBox-NormalSearchIconUrl2x);
-    background-size: @SearchTextBox-SearchIcon2xBackgroundSize;
+    background-image: url(img/search@2x.png);
+    background-size: 15px 50px;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
