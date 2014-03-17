@@ -1,53 +1,37 @@
-@Table-BorderColor: #e8e8e8;
-@Table-HeadBackgroundColor: #fbfbfb;
-@Table-BodyBackgroundColor: #fff;
-@Table-BodyBorderColor: #ddd;
-@Table-FootBackgroundColor: @Table-HeadBackgroundColor;
+@Table-BorderColor: #f0f0f0;
 
-@Table-HcellTextPadding: 0 8px;
-@Table-HcellColor: #777;
-@Table-HcellTextHeight: 36px;
+//head
+@Table-HeadBackground: #f7f7f7;
 
-@Table-FcellTextPadding: @Table-HcellTextPadding;
-@Table-FcellTextHeight: 32px;
-@Table-FcellColor: #000;
+//body
+@Table-BodyBackground: #fff;
+@Table-BodyBorderColor: @Table-BorderColor;
 
-@Table-CellTextHeight: 24px;
-@Table-CellTextPadding: 4px 8px;
+//foot
+@Table-FootBackground: #fff;
 
-@Table-CellSelHeight: @Table-CellTextHeight;
-@Table-CellSelPadding: 3px 8px 0;
+//row
+@Table-RowBackground: @Table-BodyBackground;
+@Table-RowHoverBackground: #fffaee;
+@Table-RowSelectedBackground: @Table-RowHoverBackground;
+@Table-RowUnfoldedBackground: @Table-RowHoverBackground;
 
+//cell
 @Table-HcellSortHoverBackground: #fede8c4;
-
-@Table-RowBackgroundColor: #fff;
-@Table-RowHoverBackgroundColor: #FFF9EE;
-@Table-RowBorder: 1px solid #ddd;
-
-@Table-RowSelectedBackgroundColor: #FFF4DD;
-
-@Table-RowUnfoldedBackgroundColor: #FDE8C4;
-
-@Table-CellEditableBorder: 1px solid #a8adb6;
-@Table-CellEditableBackgroundColor: #fcfcfc;
-
 @Table-CellEditEntryBackground: url(img/esui.png) -116px -90px;
 
-@Table-EditorBackgroundColor: #FFF6BD;
-@Table-EditorBorder: 1px solid #D5CA81;
 
 @Table-SubentryHoverBorderColor: #7a859a;
-
 @Table-SubrowBackgroundColor: #FFF9EE;
 @Table-SubrowBorderColor: #ddd;
 
 
 .ui-table-head {
-    background-color: @Table-HeadBackgroundColor;
+    background: @Table-HeadBackground;
 }
 
 .ui-table-foot {
-    background: @Table-FootBackgroundColor;
+    background: @Table-FootBackground;
 }
 
 .ui-table-head,
@@ -60,48 +44,17 @@
 
 /* 表头单元格 */
 .ui-table-hcell {
-    color: @Table-HcellColor;
     border-color: @Table-BorderColor;
-}
-
-/* 表头单元格DIV容器 */
-.ui-table-hcell-text {
-    height: @Table-HcellTextHeight;
-    line-height: @Table-HcellTextHeight;
-    padding: @Table-HcellTextPadding;
 }
 
 /* 表尾单元格 */
 .ui-table-fcell {
-    color: @Table-FcellColor;
     border-color: @Table-BorderColor;
-}
-
-/* 表尾单元格DIV容器 */
-.ui-table-fcell-text {
-    height: @Table-FcellTextHeight;
-    line-height: @Table-FcellTextHeight;
-    padding: @Table-FcellTextPadding;
 }
 
 /* 表格内容单元格 */
 .ui-table-cell {
     border-color: @Table-BorderColor;
-}
-
-/* 表格内容单元格容器 */
-.ui-table-cell-text,
-.ui-table-body-nodata {
-    line-height: @Table-CellTextHeight;
-    height: @Table-CellTextHeight;
-    padding: @Table-CellTextPadding;
-}
-
-.ui-table-cell-sel,
-.ui-table-hcell-sel {
-    padding: @Table-CellSelPadding;
-    height: @Table-CellSelHeight;
-    line-height: @Table-CellSelHeight;
 }
 
 /* 可排序列的表头样式Hover */
@@ -110,7 +63,7 @@
 }
 
 .ui-table-body {
-    background: @Table-BodyBackgroundColor;
+    background: @Table-BodyBackground;
     border-bottom: 1px solid @Table-BodyBorderColor;
 }
 
@@ -120,33 +73,23 @@
 }
 
 .ui-table-row {
-    background-color: @Table-RowBackgroundColor;
-    border-bottom: @Table-RowBorder;
+    background: @Table-RowBackground;
+    border-bottom: 1px solid @Table-BorderColor;
 }
 
 /* 行表格移上 */
 .ui-table-row-hover {
-    background: @Table-RowHoverBackgroundColor;
-}
-
-.ui-table-row-hover .ui-table-cell-editable {
-    border: @Table-CellEditableBorder;
-    background-color: @Table-CellEditableBackgroundColor;
-}
-
-.ui-table-editor {
-    background-color: @Table-EditorBackgroundColor;
-    border: @Table-EditorBorder;
+    background: @Table-RowHoverBackground;
 }
 
 /* 行表格选中 */
 .ui-table-row-selected table {
-    background-color: @Table-RowSelectedBackgroundColor;
+    background: @Table-RowSelectedBackground;
 }
 
 /* 行表格展开 */
 .ui-table-row-unfolded {
-    background-color: @Table-RowUnfoldedBackgroundColor;
+    background: @Table-RowUnfoldedBackground;
 }
 
 .ui-table-cell-editentry {
