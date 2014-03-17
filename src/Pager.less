@@ -1,54 +1,62 @@
-@Pager-Color: #333;
+@Pager-Height: 18px;
+@Pager-TextColor: #666;
+
 @Pager-ItemBackground: transparent;
-@Pager-ItemBorderWidth: 1px;
-@Pager-ItemBorderColor: #ccc;
-@Pager-ItemBorder: @Pager-ItemBorderWidth solid @Pager-ItemBorderColor;
-@Pager-ItemBorderRadius: 2px;
-@Pager-ItemWidth: 23px;
+@Pager-ItemBorder: 0;
+@Pager-ItemWidth: @Pager-Height;
+@Pager-ItemHeight: @Pager-ItemWidth;
 
-@Pager-ItemExtendWidth: 2*(@Pager-ItemWidth + @Pager-ItemBorderWidth *2);
+@Pager-ItemCurrentBackground: #cacaca;
+@Pager-ItemCurrentTextColor: #fff;
 
-@Pager-ItemCurrentBackground: none;
-
-.ui-pager-label {
-    color: @Pager-Color;
+.ui-pager .ui-select {
+    border: none;
+    width: 70px;
+    height: @Pager-Height;
+    line-height: @Pager-Height;
+    padding-top: 0;
+    padding-bottom: 0;
+    background-color: transparent;
 }
 
-/*
- * 部分沿用button控件的样式
- */
+.ui-pager-label {
+    color: @Pager-TextColor;
+    vertical-align: top;
+    line-height: @Pager-Height;
+}
+
 .ui-pager-main li {
-    color: @Pager-Color;
+    color: @Pager-TextColor;
+    font-weight: bold;
 }
 
 .ui-pager-main a {
-    color: @Pager-Color;
+    color: @Pager-TextColor;
 }
 
-/*
- * 部分沿用button控件的样式
- */
+.ui-pager-main .ui-pager-item-current {
+    background: @Pager-ItemCurrentBackground;
+    color: @Pager-ItemCurrentTextColor;
+}
+
 .ui-pager-item, .ui-pager-item-extend {
-    width: @Pager-ItemWidth + @Pager-ItemBorderWidth *2;
-    height: @Pager-ItemWidth;
+    height: @Pager-ItemHeight;
+    line-height: @Pager-ItemHeight;
     background: @Pager-ItemBackground;
     border: @Pager-ItemBorder;
-    border-radius: @Pager-ItemBorderRadius;
+}
+
+.ui-pager-item {
+    width: @Pager-ItemWidth;
+    color: @Pager-TextColor;
 }
 
 .ui-pager-item a {
     width: @Pager-ItemWidth;
 }
 
-.ui-pager-item-extend, .ui-pager-item-extend a {
-    width: @Pager-ItemExtendWidth;
-}
-
 .ui-pager-item-current, .ui-pager-item-omit {
-    width: @Pager-ItemWidth + @Pager-ItemBorderWidth *2;
-    height: @Pager-ItemWidth + @Pager-ItemBorderWidth *2;
-}
-
-.ui-pager-item-current {
-    background: @Pager-ItemCurrentBackground;
+    width: @Pager-ItemWidth;
+    height: @Pager-ItemHeight;
+    line-height: @Pager-ItemHeight;
 }
