@@ -1,9 +1,27 @@
+@Crumb-NodeTextColor: #67c1a5;
+@Crumb-FirstNodeTextColor: @Crumb-NodeTextColor;
+@Crumb-LastNodeTextColor: @Crumb-NodeTextColor;
+@Crumb-SeparatorColor: @Crumb-NodeTextColor;
+
 @Crumb-Padding: 0;
 @Crumb-SeparatorMargin: 0 5px;
 
 .ui-crumb-node,
 .ui-crumb-separator {
     padding: @Crumb-Padding;
+    color: @Crumb-SeparatorColor;
+}
+
+.ui-crumb-node {
+    color: @Crumb-NodeTextColor;
+}
+
+.ui-crumb-node-first {
+    color: @Crumb-FirstNodeTextColor;
+}
+
+.ui-crumb-node-last {
+    color: @Crumb-LastNodeTextColor;
 }
 
 .ui-crumb-separator {

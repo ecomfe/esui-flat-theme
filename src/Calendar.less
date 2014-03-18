@@ -1,15 +1,15 @@
 @Calendar-Border: 1px solid #a9adb6;
 @Calendar-BorderRadius: 0;
-@Calendar-Background: none;
-@Calendar-BackgroundColor: #fff;
-@Calendar-TextColor: #000;
+@Calendar-Background: #fff;
+@Calendar-TextColor: #333;
+
 @Calendar-HoverBorderColor: #a9adb6;
-@Calendar-ArrowBackgroundImage: url(img/esui-cal.png);
+
+@Calendar-ArrowBackground: url(img/esui-cal.png) no-repeat 0 0;
 
 .ui-calendar {
     border: @Calendar-Border;
     background: @Calendar-Background;
-    background-color: @Calendar-BackgroundColor;
     border-radius: @Calendar-BorderRadius;
 }
 
@@ -23,5 +23,5 @@
 }
 
 .ui-calendar-arrow {
-    background: @Calendar-ArrowBackgroundImage no-repeat 0 0;
+    background: @Calendar-ArrowBackground;
 }
