@@ -1,29 +1,17 @@
-@import "mixin.less";
+@import "variable.less";
 
-@RangeCalendar-Background: #fff;
-@RangeCalendar-Border: 1px solid #a9adb6;
-@RangeCalendar-BorderRadius: 0;
-
-@RangeCalendar-HoverBorder: @RangeCalendar-Border;
-@RangeCalendar-ActiveBorder: @RangeCalendar-Border;
-
-@RangeCalendar-LayerBackground: #fff;
-
-@RangeCalendar-ShortCutItemTextColor: #3377AA;
-@RangeCalendar-ShortCutItemBorder: 1px solid @RangeCalendar-ShortCutItemTextColor;
-@RangeCalendar-ShortCutItemSelectedTextColor: #666;
 .ui-rangecalendar {
-    border: @RangeCalendar-Border;
-    background: @RangeCalendar-Background;
-    border-radius: @RangeCalendar-BorderRadius;
+    border: @RangeCalendar-border;
+    background: @RangeCalendar-background;
+    border-radius: @RangeCalendar-border-radius;
 }
 
 .ui-rangecalendar:hover {
-    border: @RangeCalendar-HoverBorder;
+    border: @RangeCalendar-hover-border;
 }
 
 .ui-rangecalendar:active {
-    border: @RangeCalendar-ActiveBorder;
+    border: @RangeCalendar-active-border;
 }
 
 .ui-rangecalendar-arrow {
@@ -31,14 +19,14 @@
 }
 
 .ui-rangecalendar-layer {
-    background: @RangeCalendar-LayerBackground;
+    background: @RangeCalendar-layer-background;
 
     .ui-rangecalendar-shortcut-item {
-        color: @RangeCalendar-ShortCutItemTextColor;
-        border-left: @RangeCalendar-ShortCutItemBorder;
+        color: @RangeCalendar-shortcut-item-color;
+        border-left: @RangeCalendar-shortcut-item-border;
     }
 
     .ui-rangecalendar-shortcut-item-selected {
-        color: @RangeCalendar-ShortCutItemSelectedTextColor;
+        color: @RangeCalendar-shortcut-item-selected-color;
     }
 }

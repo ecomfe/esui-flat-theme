@@ -1,62 +1,52 @@
-@Pager-Height: 18px;
-@Pager-TextColor: #666;
-
-@Pager-ItemBackground: transparent;
-@Pager-ItemBorder: 0;
-@Pager-ItemWidth: @Pager-Height;
-@Pager-ItemHeight: @Pager-ItemWidth;
-
-@Pager-ItemCurrentBackground: #cacaca;
-@Pager-ItemCurrentTextColor: #fff;
-
+@import "variable.less";
 .ui-pager .ui-select {
     border: none;
     width: 70px;
-    height: @Pager-Height;
-    line-height: @Pager-Height;
+    height: @Pager-height;
+    line-height: @Pager-height;
     padding-top: 0;
     padding-bottom: 0;
     background-color: transparent;
 }
 
 .ui-pager-label {
-    color: @Pager-TextColor;
+    color: @Pager-color;
     vertical-align: top;
-    line-height: @Pager-Height;
+    line-height: @Pager-height;
 }
 
 .ui-pager-main li {
-    color: @Pager-TextColor;
+    color: @Pager-color;
     font-weight: bold;
 }
 
 .ui-pager-main a {
-    color: @Pager-TextColor;
+    color: @Pager-color;
 }
 
 .ui-pager-main .ui-pager-item-current {
-    background: @Pager-ItemCurrentBackground;
-    color: @Pager-ItemCurrentTextColor;
+    background: @Pager-item-current-background;
+    color: @Pager-item-current-color;
 }
 
 .ui-pager-item, .ui-pager-item-extend {
-    height: @Pager-ItemHeight;
-    line-height: @Pager-ItemHeight;
-    background: @Pager-ItemBackground;
-    border: @Pager-ItemBorder;
+    height: @Pager-item-height;
+    line-height: @Pager-item-height;
+    background: @Pager-item-background;
+    border: @Pager-item-border;
 }
 
 .ui-pager-item {
-    width: @Pager-ItemWidth;
-    color: @Pager-TextColor;
+    width: @Pager-item-width;
+    color: @Pager-color;
 }
 
 .ui-pager-item a {
-    width: @Pager-ItemWidth;
+    width: @Pager-item-width;
 }
 
 .ui-pager-item-current, .ui-pager-item-omit {
-    width: @Pager-ItemWidth;
-    height: @Pager-ItemHeight;
-    line-height: @Pager-ItemHeight;
+    width: @Pager-item-width;
+    height: @Pager-item-height;
+    line-height: @Pager-item-height;
 }

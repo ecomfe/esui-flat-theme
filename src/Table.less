@@ -1,108 +1,82 @@
-@Table-BorderColor: #f0f0f0;
-
-//head
-@Table-HeadBackground: #f7f7f7;
-
-//body
-@Table-BodyBackground: #fff;
-@Table-BodyBorderColor: @Table-BorderColor;
-
-//foot
-@Table-FootBackground: #fff;
-
-//row
-@Table-RowBackground: @Table-BodyBackground;
-@Table-RowHoverBackground: #fffaee;
-@Table-RowSelectedBackground: @Table-RowHoverBackground;
-@Table-RowUnfoldedBackground: @Table-RowHoverBackground;
-
-//cell
-@Table-HcellSortHoverBackground: #fede8c4;
-@Table-CellEditEntryBackground: url(img/esui.png) -116px -90px;
-
-
-@Table-SubentryHoverBorderColor: #7a859a;
-@Table-SubrowBackgroundColor: #FFF9EE;
-@Table-SubrowBorderColor: #ddd;
-
+@import "variable.less";
 
 .ui-table-head {
-    background: @Table-HeadBackground;
+    background: @Table-head-background;
 }
 
 .ui-table-foot {
-    background: @Table-FootBackground;
+    background: @Table-foot-background;
 }
 
 .ui-table-head,
 .ui-table-body,
 .ui-table-foot {
     table {
-        border-color: @Table-BorderColor;
+        border-color: @Table-border-color;
     }
 }
 
 /* 表头单元格 */
 .ui-table-hcell {
-    border-color: @Table-BorderColor;
+    border-color: @Table-border-color;
 }
 
 /* 表尾单元格 */
 .ui-table-fcell {
-    border-color: @Table-BorderColor;
+    border-color: @Table-border-color;
 }
 
 /* 表格内容单元格 */
 .ui-table-cell {
-    border-color: @Table-BorderColor;
+    border-color: @Table-border-color;
 }
 
 /* 可排序列的表头样式Hover */
 .ui-table-hcell-sort-hover {
-    background: @Table-HcellSortHoverBackground;
+    background: @Table-hcell-sort-hover-background;
 }
 
 .ui-table-body {
-    background: @Table-BodyBackground;
-    border-bottom: 1px solid @Table-BodyBorderColor;
+    background: @Table-body-background;
+    border-bottom: 1px solid @Table-body-border-color;
 }
 
 .ui-table-body-nodata {
-    border: 1px solid @Table-BodyBorderColor;
+    border: 1px solid @Table-body-border-color;
     border-width: 0 1px;
 }
 
 .ui-table-row {
-    background: @Table-RowBackground;
-    border-bottom: 1px solid @Table-BorderColor;
+    background: @Table-row-background;
+    border-bottom: 1px solid @Table-border-color;
 }
 
 /* 行表格移上 */
 .ui-table-row-hover {
-    background: @Table-RowHoverBackground;
+    background: @Table-row-hover-background;
 }
 
 /* 行表格选中 */
 .ui-table-row-selected table {
-    background: @Table-RowSelectedBackground;
+    background: @Table-row-selected-background;
 }
 
 /* 行表格展开 */
 .ui-table-row-unfolded {
-    background: @Table-RowUnfoldedBackground;
+    background: @Table-row-unfolded-background;
 }
 
 .ui-table-cell-editentry {
-    background: @Table-CellEditEntryBackground;
+    background: @Table-cell-edit-entry-background;
 }
 
 .ui-table-subentry-hover,
 .ui-table-subentry-opened-hover {
-    border-color: @Table-SubentryHoverBorderColor;
+    border-color: @Table-subentry-hover-border-color;
 }
 
 .ui-table-subrow {
-    background: @Table-SubrowBackgroundColor;
-    border-color: @Table-SubrowBorderColor;
+    background: @Table-subrow-background;
+    border-color: @Table-subrow-border-color;
 }
 

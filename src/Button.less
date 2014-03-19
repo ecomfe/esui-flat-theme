@@ -1,46 +1,31 @@
 @import "mixin";
-
-//default
-@Button-Height: 31px;
-@Button-Padding: 0 10px;
-@Button-Background: #eaeaea;
-@Button-Border: 1px solid @Button-Background;
-@Button-TextColor: #666;
-
-//hover
-@Button-HoverBackground: #6ccdc0;
-@Button-HoverBorder: 1px solid @Button-HoverBackground;
-@Button-HoverTextColor: #fff;
-
-//active
-@Button-ActiveBackground: #65cabd;
-@Button-ActiveBorder: 1px solid #54beb0;
-@Button-ActiveTextColor: @Button-HoverTextColor;
+@import "variable";
 
 .ui-button {
-    background: @Button-Background;
-    border: @Button-Border;
-    color: @Button-TextColor;
-    padding: @Button-Padding;
+    background: @Button-background;
+    border: @Button-border;
+    color: @Button-color;
+    font-size: @Button-font-size;
+    padding: @Button-padding;
     border-radius: 0;
-    height: @Button-Height;
-    line-height: @Button-Height;
+    height: @Button-height;
+    line-height: @Button-height;
 }
 
 button.ui-button {
-    *height: @Button-Height + 2px;
+    *height: @Button-height + 2px;
 }
 
 .ui-button:hover {
-    border: @Button-HoverBorder;
-    background: @Button-HoverBackground;
-    color: @Button-HoverTextColor;
+    border: @Button-hover-border;
+    background: @Button-hover-background;
+    color: @Button-hover-color;
 }
 
 .ui-button:active {
-    border: @Button-ActiveBorder;
-    background: @Button-ActiveBackground;
-    color: @Button-ActiveTextColor;
+    border: @Button-active-border;
+    background: @Button-active-background;
+    color: @Button-active-color;
 }
 
 /** 关闭layer按钮 */

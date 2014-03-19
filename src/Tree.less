@@ -1,41 +1,33 @@
-@Tree-NodeLineHeight: 22px;
-@Tree-ContentBorder: 4px solid #fff;
-@Tree-ContentSelectedBorder: 4px solid #4765ca;
-@Tree-ContentSelectedBackground: #c9c9c9;
-
-@Tree-NodeIndicatorBackground: url(img/esui-open-icon.png) no-repeat 0 0 transparent;
-@Tree-NodeIndicatorExpandedBackground: url(img/esui-close-icon.png) no-repeat 0 0 transparent;
-@Tree-FolderTreeNodeIndicatorBackground: url(img/esui-folder.png) no-repeat 0 -6px transparent;
-@Tree-FolderTreeNodeIndicatorExpandedBackground: url(img/esui-folder.png) no-repeat 0 -30px transparent;
+@import "variable.less";
 
 .ui-tree-node {
-    line-height: @Tree-NodeLineHeight;
+    line-height: @Tree-node-line-height;
 }
 
 .ui-tree-content-wrapper {
-    border-left: @Tree-ContentBorder;
+    border-left: @Tree-content-border;
 }
 
 // 图标
 .ui-tree-node-indicator {
-    background: @Tree-NodeIndicatorBackground;
+    background: @Tree-node-indicator-background;
 }
 
 // 展开
 .ui-tree-node-indicator-expanded {
-    background: @Tree-NodeIndicatorExpandedBackground;
+    background: @Tree-node-indicator-expanded-background;
 }
 
 .ui-tree-content-wrapper-selected {
-    background: @Tree-ContentSelectedBackground;
-    border-left: @Tree-ContentSelectedBorder;
+    background: @Tree-content-selected-background;
+    border-left: @Tree-content-selected-border;
 }
 
 .skin-folder-tree-node-indicator {
-    background: @Tree-FolderTreeNodeIndicatorBackground;
+    background: @Tree-folder-tree-node-indicator-background;
 }
 .skin-folder-tree-node-indicator-expanded {
-    background: @Tree-FolderTreeNodeIndicatorExpandedBackground;
+    background: @Tree-folder-tree-node-indicator-expanded-background;
 }
 
 

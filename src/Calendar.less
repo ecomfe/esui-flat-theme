@@ -1,27 +1,20 @@
-@Calendar-Border: 1px solid #a9adb6;
-@Calendar-BorderRadius: 0;
-@Calendar-Background: #fff;
-@Calendar-TextColor: #333;
-
-@Calendar-HoverBorderColor: #a9adb6;
-
-@Calendar-ArrowBackground: url(img/esui-cal.png) no-repeat 0 0;
+@import "variable.less";
 
 .ui-calendar {
-    border: @Calendar-Border;
-    background: @Calendar-Background;
-    border-radius: @Calendar-BorderRadius;
+    border: @Calendar-border;
+    background: @Calendar-background;
+    border-radius: @Calendar-border-radius;
 }
 
 .ui-calendar-text {
-    color: @Calendar-TextColor;
+    color: @Calendar-color;
 }
 
 .ui-calendar:hover,
 .ui-calendar:active {
-    border-color: @Calendar-HoverBorderColor;
+    border-color: @Calendar-hover-border-color;
 }
 
 .ui-calendar-arrow {
-    background: @Calendar-ArrowBackground;
+    background: @Calendar-arrow-background;
 }

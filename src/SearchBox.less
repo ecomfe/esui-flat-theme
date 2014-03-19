@@ -1,36 +1,29 @@
-@SearchTextBox-Border: 1px solid #ddd;
+@import "variable.less";
 
-@SearchTextBox-HoverBorder: @SearchTextBox-Border;
-@SearchTextBox-FocusBorder: @SearchTextBox-Border;
+.skin-search-textbox input {
+    border: @SearchBox-border;
 
-.skin-search-textbox {
-    input {
-        border: @SearchTextBox-Border;
+    &:hover {
+        border: @SearchBox-hover-border;
+    }
 
-        &:hover {
-            border: @SearchTextBox-HoverBorder;
-        }
-
-        &:focus {
-            border: @SearchTextBox-HoverBorder;
-        }
+    &:focus {
+        border: @SearchBox-hover-border;
     }
 }
 
 .normal-search-icon() {
-//    background: @SearchTextBox-NormalSearchIconBackground;
-    background-image: url(img/search.png);
+    background: url(img/search.png) no-repeat;
 }
 
 .active-search-icon() {
-//    background: @SearchTextBox-ActiveSearchIconBackground;
-    background-image: url(img/search@2x.png);
-
+    background: url(img/search@2x.png) no-repeat;
 }
 
 .skin-search-button {
     width: 25px;
     height: 25px;
+    padding: 0;
     border: 0;
     .normal-search-icon();
 
@@ -39,17 +32,12 @@
     }
 }
 
-.skin-search-button-disabled {
-    &:active {
-        .active-search-icon();
-    }
+.skin-search-button-disabled:active {
+    .active-search-icon();
 }
 
-
-.ui-searchbox-focus {
-    .skin-search-button {
-        .active-search-icon();
-    }
+.ui-searchbox-focus .skin-search-button {
+    .active-search-icon();
 }
 
 .searchbox-2x() {

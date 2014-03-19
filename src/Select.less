@@ -1,37 +1,13 @@
-//default
-@Select-Height: 34px;
-@Select-Width: 90px;
-@Select-Padding: 3px 3px 3px 5px;
-@Select-Border: 1px solid #f7f7f7;
-@Select-Background: url("img/esui-down-arrow.png") #f7f7f7 no-repeat 100% 50%;
-@Select-TextColor: #666;
-
-//hover
-@Select-HoverBackground: @Select-Background;
-@Select-HoverBorder: @Select-Border;
-
-//active
-@Select-ActiveBackground: url("img/esui-up-arrow.png") #f7f7f7 no-repeat 100% 50%;
-
-//layer
-@Select-LayerSplitBorder: 3px solid #dfdfdf;
-@Select-LayerBackground: #f7f7f7;
-
-@Select-ItemColor: #666;
-@Select-ItemHeight: 35px;
-@Select-ItemHoverBackgroundColor: #f1f1f1;
-@Select-ItemSelectedBackground: #fffaee;
-
 .ui-select {
-    border: @Select-Border;
-    background: @Select-Background;
+    border: @Select-border;
+    background: @Select-background;
     border-radius: 0;
-    height: @Select-Height;
-    line-height: @Select-Height;
-    padding: @Select-Padding;
+    height: @Select-height;
+    line-height: @Select-height;
+    padding: @Select-padding;
     padding-right: 20px;
-    width: @Select-Width;
-    color: @Select-TextColor;
+    width: @Select-width;
+    color: @Select-color;
     font-weight: bold;
     text-align: center;
 }
@@ -39,43 +15,45 @@
 .ui-select:focus,
 .ui-select:hover,
 .ui-select:active {
-    background: @Select-HoverBackground;
+    background: @Select-hover-background;
 }
 
 .ui-select-active,
 .ui-select-active:hover,
 .ui-select-active:focus {
-    background: @Select-ActiveBackground;
+    background: @Select-active-background;
 }
 
 .ui-select-layer {
-    width: @Select-Width;
-    border: @Select-Border;
-    border-top: @Select-LayerSplitBorder;
-    background: @Select-LayerBackground;
+    width: @Select-width;
+    border: @Select-border;
+    border-top: @Select-layer-split-border;
+    background: @Select-layer-background;
 }
 
 .ui-select-item {
-    color: @Select-ItemColor;
-    line-height: @Select-ItemHeight;
+    color: @Select-item-color;
+    line-height: @Select-item-height;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
 .ui-select-item-selected {
-    background: @Select-ItemSelectedBackground;
+    background: @Select-item-selected-background;
     border: none;
     padding: 0 3px;
 }
 
 .ui-select-item:hover {
-    background-color: @Select-ItemHoverBackgroundColor;
+    background: @Select-item-hover-background;
 }
 
-.ui-select-item-disabled {
+.ui-select-disabled,
+.ui-select-read-only {
+    background: @Select-disabled-background;
     color: #eee;
     &:hover {
-        background: none;
+        background: @Select-disabled-background;
     }
 }

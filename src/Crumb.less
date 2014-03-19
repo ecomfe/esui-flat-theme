@@ -1,30 +1,24 @@
-@Crumb-NodeTextColor: #67c1a5;
-@Crumb-FirstNodeTextColor: @Crumb-NodeTextColor;
-@Crumb-LastNodeTextColor: @Crumb-NodeTextColor;
-@Crumb-SeparatorColor: @Crumb-NodeTextColor;
-
-@Crumb-Padding: 0;
-@Crumb-SeparatorMargin: 0 5px;
+@import "variable.less";
 
 .ui-crumb-node,
 .ui-crumb-separator {
-    padding: @Crumb-Padding;
-    color: @Crumb-SeparatorColor;
+    padding: @Crumb-padding;
+    color: @Crumb-separator-color;
 }
 
 .ui-crumb-node {
-    color: @Crumb-NodeTextColor;
+    color: @Crumb-node-color;
 }
 
 .ui-crumb-node-first {
-    color: @Crumb-FirstNodeTextColor;
+    color: @Crumb-first-node-color;
 }
 
 .ui-crumb-node-last {
-    color: @Crumb-LastNodeTextColor;
+    color: @Crumb-last-node-color;
 }
 
 .ui-crumb-separator {
-    margin: @Crumb-SeparatorMargin;
+    margin: @Crumb-separator-margin;
 }
 

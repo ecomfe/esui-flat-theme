@@ -1,45 +1,34 @@
-@TextBox-Border: 1px solid #ddd;
-@TextBox-InputHeight: 19px;
-@TextBox-TextColor : #333;
-@TextBox-Background: #fff;
-
-//hover
-@TextBox-HoverBorder: @TextBox-Border;
-
-
-//Hint
-@TextBox-HintBackground: #f7f7f7;
-@TextBox-HintBorder: @TextBox-Border;
-
+@import "variable.less";
 .ui-textbox {
     input, textarea {
-        color: @TextBox-TextColor;
-        background: @TextBox-Background;
-        border: @TextBox-Border;
-        height: @TextBox-InputHeight;
-        line-height: @TextBox-InputHeight;
+        color: @TextBox-color;
+        background: @TextBox-background;
+        border: @TextBox-border;
+        width: @TextBox-width;
+        height: @TextBox-input-height;
+        line-height: @TextBox-input-height;
         &:hover {
-            border: @TextBox-HoverBorder;
+            border: @TextBox-hover-border;
         }
     }
 }
 
 .ui-textbox-hint {
-    background: @TextBox-HintBackground;
-    border: @TextBox-HintBorder;
-    height: @TextBox-InputHeight;
-    line-height: @TextBox-InputHeight;
+    background: @TextBox-hint-background;
+    border: @TextBox-hint-border;
+    height: @TextBox-input-height;
+    line-height: @TextBox-input-height;
 }
 
 .ui-textbox-placeholder {
-    height: @TextBox-InputHeight;
-    line-height:  @TextBox-InputHeight;
+    height: @TextBox-input-height;
+    line-height: @TextBox-input-height;
 }
 
 .ui-textbox-disabled,
 .ui-textbox-read-only {
     input, textarea {
-        border: @TextBox-Border;
+        border: @TextBox-border;
         background: #f6f6f6;
         color: #999;
     }

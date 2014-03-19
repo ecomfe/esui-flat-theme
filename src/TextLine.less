@@ -1,23 +1,18 @@
-@TextLine-Border: 1px solid #ebebeb;
-@TextLine-HoverBorder: 1px solid #ebebeb;
-
-@TextLine-NumLineWidth: 31px;
-@TextLine-NumLineBackground: #f7f7f7;
-@TextLine-NumLineTextColor: #333;
+@import "variable.less";
 
 .ui-textline {
-    border: @TextLine-Border;
+    border: @TextLine-border;
     &:hover {
-        border: @TextLine-HoverBorder;
+        border: @TextLine-hover-border;
     }
 }
 
 .ui-textline-num-line {
-    background: @TextLine-NumLineBackground;
-    color: @TextLine-NumLineTextColor;
-    width: @TextLine-NumLineWidth;
+    background: @TextLine-num-line-background;
+    color: @TextLine-num-line-color;
+    width: @TextLine-num-line-width;
 }
 
 .ui-textline-text-container {
-    left: @TextLine-NumLineWidth;
+    left: @TextLine-num-line-width;
 }
