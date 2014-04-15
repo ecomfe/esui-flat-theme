@@ -1,7 +1,20 @@
-@import "variable.less";
+@TextBox-border: 1px solid #ddd;
+@TextBox-width: 240px;
+@TextBox-input-height: 28px;
+@TextBox-font-color: #666;
+@TextBox-placeholder-font-color: #999;
+@TextBox-background: #fff;
+
+//hover
+@TextBox-hover-border: 1px solid #65cabd;
+
+//Hint
+@TextBox-hint-background: #f7f7f7;
+@TextBox-hint-border: @TextBox-border;
+
 .ui-textbox {
     input, textarea {
-        color: @TextBox-color;
+        color: @TextBox-font-color;
         background: @TextBox-background;
         border: @TextBox-border;
         width: @TextBox-width;
@@ -23,6 +36,7 @@
 .ui-textbox-placeholder {
     height: @TextBox-input-height;
     line-height: @TextBox-input-height;
+    color: @TextBox-placeholder-font-color;
 }
 
 .ui-textbox-disabled,

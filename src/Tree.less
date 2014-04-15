@@ -1,16 +1,46 @@
-@import "variable.less";
+@Tree-node-line-height: 35px;
+@Tree-node-indicator-collapsed-background: url('../img/esui-open-icon.png') no-repeat scroll 0 0 transparent;
+@Tree-node-indicator-expanded-background: url('../img/esui-close-icon.png') no-repeat scroll 0 0 transparent;
 
-.ui-tree-node {
-    line-height: @Tree-node-line-height;
-}
+@Tree-node-indicator-height: 7px;
+@Tree-node-indicator-width: 7px;
+@Tree-node-indicator-margin: 14px 9px 14px 4px;
 
-.ui-tree-content-wrapper {
-    border-left: @Tree-content-border;
-}
+@Tree-node-indicator-empty-background: none;
+@Tree-node-indicator-previous-background: none;
+@Tree-node-indicator-far-previous-background: none;
+
+@Tree-node-item-font-color: #666;
+@Tree-node-level-2-item-font-color: #9a9a9a;
+
+
+// 选中的节点
+@Tree-node-wrapper-selected-background: #fffaee;
+@Tree-node-item-selected-font-color: #333;
+@Tree-node-item-selected-icon: none;
+@Tree-node-level-2-wrapper-selected-background: #fffaee;
+@Tree-node-level-2-item-selected-font-color: #333;
+@Tree-node-level-2-item-selected-icon: @Tree-node-item-selected-icon;
+
+// 悬浮的节点
+@Tree-node-wrapper-hover-background: #fffaee;
+@Tree-node-item-hover-font-color: #333;
+@Tree-node-item-hover-icon: none;
+@Tree-node-level-2-wrapper-hover-background: #fffaee;
+@Tree-node-level-2-item-hover-font-color: #333;
+@Tree-node-level-2-item-hover-icon: @Tree-node-item-hover-icon;
+
+
+// tree-node = tree-content-wrapper + tree-sub-root
+// tree-content-wrapper = tree-indicator + tree-item-content
+// tree-sub-root = tree-node * n
 
 // 图标
 .ui-tree-node-indicator {
-    background: @Tree-node-indicator-background;
+    background: @Tree-node-indicator-collapsed-background;
+    margin: @Tree-node-indicator-margin;
+    height: @Tree-node-indicator-height;
+    width: @Tree-node-indicator-width;
 }
 
 // 展开
@@ -18,22 +48,44 @@
     background: @Tree-node-indicator-expanded-background;
 }
 
-.ui-tree-content-wrapper-selected {
-    background: @Tree-content-selected-background;
-    border-left: @Tree-content-selected-border;
-}
-
-.skin-folder-tree-node-indicator {
-    background: @Tree-folder-tree-node-indicator-background;
-}
-.skin-folder-tree-node-indicator-expanded {
-    background: @Tree-folder-tree-node-indicator-expanded-background;
-}
-
-
 // 无子节点或占位
-.ui-tree-node-indicator-empty,
-.ui-tree-node-indicator-previous,
+.ui-tree-node-indicator-empty {
+    background: @Tree-node-indicator-empty-background;
+}
+.ui-tree-node-indicator-previous {
+    background: @Tree-node-indicator-previous-background;
+}
 .ui-tree-node-indicator-far-previous {
-    background-image: none;
+    background: @Tree-node-indicator-far-previous-background;
+}
+
+.ui-tree-node {
+    line-height: @Tree-node-line-height;
+}
+
+.ui-tree-content-wrapper {
+    border-left: none;
+    padding: 0 10px;
+    &:hover {
+        background: @Tree-node-wrapper-hover-background;
+
+        .ui-tree-item-content {
+            color: @Tree-node-item-hover-font-color;
+            background: @Tree-node-item-hover-icon;
+        }
+    }
+}
+                                                                                                                                                                                                                                            
+.ui-tree-content-wrapper-selected,
+.ui-tree-content-wrapper-selected:hover {
+    background: @Tree-node-wrapper-selected-background;
+    border-left: none;
+    .ui-tree-item-content {
+        color: @Tree-node-item-selected-font-color;
+        background: @Tree-node-item-selected-icon;
+    }
+}
+
+.ui-tree-item-content {
+    color: @Tree-node-item-font-color;
 }

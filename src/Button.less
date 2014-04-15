@@ -1,80 +1,68 @@
 @import "mixin";
-@import "variable";
+@Button-background: #6dcec0;
+@Button-border-style: solid;
+@Button-border-width: 1px;
+@Button-border-color: @Button-background;
+@Button-color: #fff;
+@Button-radius: 0;
+@Button-font-size: 13px;
+@Button-padding: 0 15px;
+@Button-height: 35px - 2 * @Button-border-width;
 
-.ui-button {
-    background: @Button-background;
-    border: @Button-border;
-    color: @Button-color;
-    font-size: @Button-font-size;
-    padding: @Button-padding;
-    border-radius: 0;
-    height: @Button-height;
-    line-height: @Button-height;
-}
+@Button-hover-background: #72dccd;
+@Button-hover-color: @Button-color;
+@Button-hover-border-color: @Button-hover-background;
+
+@Button-active-background: #65cabd;
+@Button-active-color: @Button-color;
+@Button-active-border-color: #46B3A5 #59C0B2 #66C9BB;
+
+@Button-disabled-background: #eaeaea;
+@Button-disabled-color: #656565;
+@Button-disabled-border-color: @Button-disabled-background;
 
 button.ui-button {
     *height: @Button-height + 2px;
 }
+.ui-button {
+    background: @Button-background;
+    border-style: @Button-border-style;
+    border-color: @Button-border-color;
+    border-width: @Button-border-width;
+    color: @Button-color;
+    font-size: @Button-font-size;
+    padding: @Button-padding;
+    border-radius: @Button-radius;
+    height: @Button-height;
+    line-height: @Button-height;
 
-.ui-button:hover {
-    border: @Button-hover-border;
-    background: @Button-hover-background;
-    color: @Button-hover-color;
+    &:hover {
+        border-color: @Button-hover-border-color;
+        background: @Button-hover-background;
+        color: @Button-hover-color;
+        border-width: @Button-border-width;
+    }
+
+    &:active {
+        border-color: @Button-active-border-color;
+        background: @Button-active-background;
+        color: @Button-active-color;
+    }
+
 }
 
-.ui-button:active {
-    border: @Button-active-border;
-    background: @Button-active-background;
-    color: @Button-active-color;
-}
-
-/** 关闭layer按钮 */
-.skin-layerClose-button {
-    .background("img/esui.png", repeat, -37px, -88px, transparent);
-    border: 0 none;
-    height: 12px;
-    overflow: hidden;
-    position: absolute;
-    right: 5px;
-    top: 5px;
-    width: 12px;
-    padding: 0;
-}
-
-.skin-layerClose-button:active,
-.skin-layerClose-button:hover {
-    .background("img/esui.png", repeat, -37px, -88px, transparent);
-    border: 1px solid #f6f6f6;
-    height: 12px;
-    width: 12px;
-    right: 4px;
-    top: 4px;
-}
-
-/** 文字按钮 */
-.skin-link-button {
-    background: none;
-    border: 0 none;
-    height: 26px;
-    line-height: 26px;
-    overflow: hidden;
-}
-
-button.skin-link-button {
-    *height: 28px;
-}
-
-.skin-link-button:active,
-.skin-link-button:hover {
-    background: none;
-    border: 0 none;
-    height: 26px;
-    line-height: 26px;
-    overflow: hidden;
-    color: blue;
-}
-
-button.skin-link-button:active,
-button.skin-link-button:hover {
-    height: 28px;
+.ui-button-disabled {
+    border-color: @Button-disabled-border-color;
+    background: @Button-disabled-background;
+    color: @Button-disabled-color;
+    &:hover {
+        border-color: @Button-disabled-border-color;
+        background: @Button-disabled-background;
+        color: @Button-disabled-color;
+    }
+    &:active {
+        border-color: @Button-disabled-border-color;
+        background: @Button-disabled-background;
+        color: @Button-disabled-color;
+    }
 }
