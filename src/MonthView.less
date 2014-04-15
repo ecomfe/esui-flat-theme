@@ -1,38 +1,119 @@
-@import "variable.less";
+@MonthView-select-layer-background:#EFEFEF
+@Montview-month-item-width: 30px;
+@Montview-month-item-height: 30px;
 
-.ui-monthview {
-    background: @Monthview-background;
+@Monthview-background: #fff;
+@Monthview-border: 1px solid #e1e1e1;
 
-    .ui-select {
-        height: 17px;
-        line-height: 17px;
-    }
-}
+@Monthview-head-background: #e1f5f1;
+@Monthview-head-button-width: 21px;
+@Monthview-head-button-height: 21px;
+
+@Monthview-month-border: none;
+@Monthview-month-title-background: #f6f6f6;
+@Monthview-month-title-color: #666;
+
+@Monthview-month-title-selected-background: #CCCED4;
+@Monthview-month-item-color: #333;
+@Monthview-month-item-border: 1px solid #fff;
+
+@Monthview-month-item-hover-background: #e2f4ef;
+
+@Monthview-month-item-selected-background: none; 
+@Monthview-month-item-selected-color: #68c1a4;
+@Monthview-month-item-virtual-color: #999;
+@Monthview-month-item-virtual-background: none;
+@Monthview-month-item-virtual-background: none;
+@Monthview-month-item-disabled-background: none;
+@Monthview-month-item-disabled-color: #999;
+
+@Monthview-month-row-select-background: #fffbed;
+@Monthview-month-row-select-selected-background: #fffbed;
+
+@Monthview-back-button-background: url(../img/esui-monthview-prev-icon.png) no-repeat;
+@Monthview-back-button-hover-background: @Monthview-back-button-background;
+@Monthview-back-button-disabled-background: url(../img/esui-monthview-next-icon.png) no-repeat;
+
+@Monthview-forward-button-background: url(../img/esui-monthview-next-icon.png) no-repeat;
+@Monthview-forward-button-hover-background: @Monthview-forward-button-background;
+@Monthview-forward-button-disabled-background: url(../img/esui-monthview-prev-icon.png) no-repeat;
+
+@Monthview-select-icon: url("../img/esui-monthview-select-icon.png") no-repeat scroll center right #fff;
+@Monthview-select-active-icon: url("../img/esui-monthview-select-active-icon.png") no-repeat scroll center right #fff;
+@Monthview-select-height: 21px;
+@Monthview-year-select-width: 56px;
+@Monthview-year-select-margin: 3px 6px 0;
+@Monthview-month-select-width: 40px;
+@Monthview-month-select-margin: 3px 6px 0;
+@MonthView-select-layer-background: #efefef;
+
 
 .ui-monthview-head {
+    height: 28px;
+    table { width: auto; }
     background: @Monthview-head-background;
 }
 
-/** 先前向后按钮 */
-.ui-monthview-month-back {
-    padding: 0;
-    border: 0;
-    background: @Monthview-back-button-background;
-    &:active,
-    &:hover {
-        border: 0;
-        background: @Monthview-back-button-background;
-    }
-}
+.ui-monthview {
+    background: @Monthview-background;
+    border: @Monthview-border;
+    width: 7 * @Montview-month-item-width;
 
-.ui-monthview-month-forward {
-    padding: 0;
-    border: 0;
-    background: @Monthview-forward-button-background;
-    &:active,
-    &:hover {
+    /** 先前向后按钮 */
+    .ui-monthview-month-back,
+    .ui-monthview-month-forward {
+        padding: 0;
         border: 0;
+        margin-top: 0px;
+        height: @Monthview-head-button-width;
+        width: @Monthview-head-button-height;
+    }
+
+    .ui-monthview-month-back {
+        background: @Monthview-back-button-background;
+        &:active,
+        &:hover {
+            border: 0;
+            background: @Monthview-back-button-hover-background;
+        }
+    }
+
+    .ui-monthview-month-forward {
+        margin-right: 5px;
         background: @Monthview-forward-button-background;
+        &:active,
+        &:hover {
+            border: 0;
+            background: @Monthview-forward-button-hover-background;
+        }
+    }
+
+    /** 年月下拉选框 */
+    .ui-select {
+        background: @Monthview-select-icon;
+        height: @Monthview-select-height;
+        line-height: @Monthview-select-height;
+        padding: 0 0 0 5px;
+        text-align: left;
+        font-weight: normal;
+    }
+
+    .ui-select-active {
+        background: @Monthview-select-active-icon;
+    }
+
+    .ui-select-layer {
+        background: @MonthView-select-layer-background;
+    }
+
+    .ui-monthview-month-select {
+        width: @Monthview-month-select-width;
+        margin: @Monthview-month-select-margin;
+    }
+
+    .ui-monthview-year-select {
+        width: @Monthview-year-select-width;
+        margin: @Monthview-year-select-margin;
     }
 }
 
@@ -43,6 +124,9 @@
 .ui-monthview-month-title {
     background: @Monthview-month-title-background;
     color: @Monthview-month-title-color;
+    width: @Montview-month-item-width;
+    height: @Montview-month-item-height;
+    line-height: @Montview-month-item-height;
 }
 
 .ui-monthview-month-title-selected {
@@ -50,12 +134,19 @@
 }
 
 .ui-monthview-month-item {
+    width: @Montview-month-item-width;
+    height: @Montview-month-item-height;
+    line-height: @Montview-month-item-height;
     color: @Monthview-month-item-color;
     border-bottom: @Monthview-month-item-border;
 }
 
 .ui-monthview-month-item:hover {
     background: @Monthview-month-item-hover-background;
+}
+
+.ui-monthview-month-item-today {
+    font-weight: bold;
 }
 
 .ui-monthview-month-item-selected {
@@ -74,6 +165,7 @@
 
 .ui-monthview-month-item-disabled {
     background: @Monthview-month-item-disabled-background;
+    color: @Monthview-month-item-disabled-color;
     &:hover {
         background: @Monthview-month-item-disabled-background;
     }
