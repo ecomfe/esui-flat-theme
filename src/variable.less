@@ -1,0 +1,210 @@
+/*Button*/
+//default
+@Button-height: 31px;
+@Button-padding: 0 10px;
+@Button-font-size: 14px;
+@Button-background: #eaeaea;
+@Button-border: 1px solid @Button-background;
+@Button-color: #666;
+
+//hover
+@Button-hover-background: #6ccdc0;
+@Button-hover-border: 1px solid @Button-hover-background;
+@Button-hover-color: #fff;
+
+//active
+@Button-active-background: #65cabd;
+@Button-active-border: 1px solid #54beb0;
+@Button-active-color: @Button-hover-color;
+
+/*Select*/
+//default
+@Select-height: 34px;
+@Select-width: 90px;
+@Select-padding: 3px 3px 3px 5px;
+@Select-border: 1px solid #f7f7f7;
+@Select-background: url("img/esui-down-arrow.png") #f7f7f7 no-repeat 100% 50%;
+@Select-color: #666;
+
+//hover
+@Select-hover-background: @Select-background;
+@Select-hover-border: @Select-border;
+
+//active
+@Select-active-background: url("img/esui-up-arrow.png") #f7f7f7 no-repeat 100% 50%;
+
+//disabled
+@Select-disabled-background: @Select-background;
+
+//layer
+@Select-layer-split-border: 3px solid #dfdfdf;
+@Select-layer-background: #f7f7f7;
+@Select-item-color: #666;
+@Select-item-height: 35px;
+@Select-item-hover-background: #f1f1f1;
+@Select-item-selected-background: #fffaee;
+
+/*SearchBox*/
+@SearchBox-border: 1px solid #ddd;
+@SearchBox-hover-border: @SearchBox-border;
+@SearchBox-focus-border: @SearchBox-border;
+
+/*TextBox*/
+@TextBox-border: 1px solid #ddd;
+@TextBox-width: 240px;
+@TextBox-input-height: 19px;
+@TextBox-color : #333;
+@TextBox-background: #fff;
+
+//hover
+@TextBox-hover-border: @TextBox-border;
+
+//Hint
+@TextBox-hint-background: #f7f7f7;
+@TextBox-hint-border: @TextBox-border;
+
+/*Crumb*/
+@Crumb-node-color: #67c1a5;
+@Crumb-first-node-color: @Crumb-node-color;
+@Crumb-last-node-color: @Crumb-node-color;
+@Crumb-separator-color: @Crumb-node-color;
+@Crumb-padding: 0;
+@Crumb-separator-margin: 0 5px;
+
+/*Pager*/
+@Pager-height: 18px;
+@Pager-color: #666;
+
+@Pager-item-background: transparent;
+@Pager-item-border: 0;
+@Pager-item-width: @Pager-height;
+@Pager-item-height: @Pager-item-width;
+@Pager-item-current-background: #cacaca;
+@Pager-item-current-color: #fff;
+
+@Table-border-color: #f0f0f0;
+
+//head
+@Table-head-background: #f7f7f7;
+
+//body
+@Table-body-background: #fff;
+@Table-body-border-color: @Table-border-color;
+
+//foot
+@Table-foot-background: #fff;
+
+//row
+@Table-row-background: @Table-body-background;
+@Table-row-hover-background: #fffaee;
+@Table-row-selected-background: @Table-row-hover-background;
+@Table-row-unfolded-background: @Table-row-hover-background;
+
+//cell
+@Table-hcell-sort-hover-background: #fede8c4;
+@Table-cell-edit-entry-background: url(img/esui.png) -116px -90px;
+
+@Table-subentry-hover-border-color: #7a859a;
+@Table-subrow-background: #FFF9EE;
+@Table-subrow-border-color: #ddd;
+
+
+@Wizard-node-color: #999;
+@Wizard-node-background: #e4e4e4;
+
+@Wizard-node-done-color: #333;
+@Wizard-node-done-background: #ccf9b8;
+
+@Wizard-node-active-color: #fff;
+@Wizard-node-active-background: #44ba0f;
+
+
+@Tree-node-line-height: 22px;
+@Tree-content-border: 4px solid #fff;
+@Tree-content-selected-border: 4px solid #4765ca;
+@Tree-content-selected-background: #c9c9c9;
+
+@Tree-node-indicator-background: url(img/esui-open-icon.png) no-repeat 0 0 transparent;
+@Tree-node-indicator-expanded-background: url(img/esui-close-icon.png) no-repeat 0 0 transparent;
+@Tree-folder-tree-node-indicator-background: url(img/esui-folder.png) no-repeat 0 -6px transparent;
+@Tree-folder-tree-node-indicator-expanded-background: url(img/esui-folder.png) no-repeat 0 -30px transparent;
+
+
+@TextLine-border: 1px solid #ebebeb;
+@TextLine-hover-border: 1px solid #ebebeb;
+
+@TextLine-num-line-width: 31px;
+@TextLine-num-line-background: #f7f7f7;
+@TextLine-num-line-color: #333;
+
+
+@Schedule-border: 1px solid #cdcdcd;
+@Schedule-background: #f7f7f7;
+
+@Schedule-item-border: 1px solid #dcdcdc;
+
+@Schedule-shortcut-item-color: #333;
+@Schedule-shortcut-item-border: 1px solid #a8adb6;
+@Schedule-shortcut-item-border-radius: 2px;
+
+@Schedule-shortcut-item-hover-border: 1px solid #888f9b;
+
+@Schedule-help-unselected-background: #fff;
+@Schedule-help-selected-background: #dcfacf;
+
+@Schedule-time-hover-border: 1px solid #f7de41;
+@Schedule-time-hover-background: #fff6bd;
+
+@Schedule-follow-item-border: 1px dotted #cc0000;
+@Schedule-follow-item-background: #dcfacf;
+
+
+@RangeCalendar-background: #fff;
+@RangeCalendar-border: 1px solid #a9adb6;
+@RangeCalendar-border-radius: 0;
+
+@RangeCalendar-hover-border: @RangeCalendar-border;
+@RangeCalendar-active-border: @RangeCalendar-border;
+
+@RangeCalendar-layer-background: #fff;
+
+@RangeCalendar-shortcut-item-color: #3377AA;
+@RangeCalendar-shortcut-item-border: 1px solid @RangeCalendar-shortcut-item-color;
+@RangeCalendar-shortcut-item-selected-color: #666;
+
+
+@Calendar-border: 1px solid #a9adb6;
+@Calendar-border-radius: 0;
+@Calendar-background: #fff;
+@Calendar-color: #333;
+
+@Calendar-hover-border-color: #a9adb6;
+
+@Calendar-arrow-background: url(img/esui-cal.png) no-repeat 0 0;
+
+
+@Monthview-background: #fff;
+@Monthview-head-background: #CCCED4;
+@Monthview-back-button-background: url(img/esui.png) 0px -200px;
+@Monthview-back-button-disabled-background: url(img/esui.png) 0px -240px;
+
+@Monthview-forward-button-background: url(img/esui.png) -20px -200px;
+@Monthview-forward-button-disabled-background: url(img/esui.png) -20px -240px;
+
+@Monthview-month-border: 1px solid #ccced4;
+@Monthview-month-title-background: #f1f1f1;
+@Monthview-month-title-color: #666;
+@Monthview-month-title-selected-background: #CCCED4;
+
+@Monthview-month-item-color: #03c;
+@Monthview-month-item-border: 1px solid #f1f1f1;
+@Monthview-month-item-hover-background: #e4eaf9;
+@Monthview-month-item-selected-background: #fff6bd;
+@Monthview-month-item-selected-color: #333;
+
+@Monthview-month-item-virtual-color: #888;
+@Monthview-month-item-virtual-background: #fff;
+
+@Monthview-month-item-disabled-background: #ddd;
+@Monthview-month-row-select-background: #f1f1f1;
+@Monthview-month-row-select-selected-background: #CCCED4;

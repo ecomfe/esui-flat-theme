@@ -1,0 +1,58 @@
+.ui-select {
+    border: @Select-border;
+    background: @Select-background;
+    border-radius: 0;
+    height: @Select-height;
+    line-height: @Select-height;
+    padding: @Select-padding;
+    width: @Select-width;
+    color: @Select-font-color;
+    font-weight: bold;
+    text-align: center;
+}
+
+.ui-select:focus,
+.ui-select:hover,
+.ui-select:active {
+    background: @Select-hover-background;
+}
+
+.ui-select-active,
+.ui-select-active:hover,
+.ui-select-active:focus {
+    background: @Select-active-background;
+}
+
+.ui-select-layer {
+    width: @Select-width;
+    border: @Select-border;
+    border-top: @Select-layer-split-border;
+    background: @Select-layer-background;
+}
+
+.ui-select-item {
+    color: @Select-item-color;
+    line-height: @Select-item-height;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.ui-select-item-selected {
+    background: @Select-item-selected-background;
+    border: none;
+    padding: 0 3px;
+}
+
+.ui-select-item:hover {
+    background: @Select-item-hover-background;
+}
+
+.ui-select-disabled,
+.ui-select-read-only {
+    background: @Select-disabled-background;
+    color: #999;
+    &:hover {
+        background: @Select-disabled-background;
+    }
+}

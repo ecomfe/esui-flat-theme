@@ -1,0 +1,37 @@
+@TextLine-border: 1px solid #ebebeb;
+@TextLine-hover-border: @TextLine-border;
+@TextLine-num-line-background: #f7f7f7;
+@TextLine-num-line-color: #333;
+@TextLine-num-line-width: 30px;
+@TextLine-num-line-line-height: 25px;
+@TextLine-num-line-font-size: 12px;
+
+@TextLine-textarea-background: #fff;
+
+
+.ui-textline {
+    background: @TextLine-num-line-background;
+    border: @TextLine-border;
+    &:hover {
+        border: @TextLine-hover-border;
+    }
+}
+
+.ui-textline-num-line {
+    background: @TextLine-num-line-background;
+    color: @TextLine-num-line-color;
+    width: @TextLine-num-line-width;
+    line-height: @TextLine-num-line-line-height;
+    font-size: @TextLine-num-line-font-size;
+}
+
+.ui-textline-text-container {
+    left: @TextLine-num-line-width;
+    textarea {
+        position: absolute;
+        background: @TextLine-textarea-background;
+        line-height: @TextLine-num-line-line-height;
+        font-size: @TextLine-num-line-font-size;
+        resize: none;
+    }
+}

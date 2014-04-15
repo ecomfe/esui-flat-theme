@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Crumb</title>
+    <link rel="stylesheet" href="main.css"/>
+    <link rel="stylesheet" href="demo.css"/>
+    <script src="//cdn.staticfile.org/require.js/2.1.9/require.min.js"></script>
+    <script src="loader/config.js"></script>
+    <script src="jquery-1.9.1.min.js"></script>
+</head>
+<body>
+    <div id="container">
+        <div data-ui-type="Crumb">
+            <a href="#1">Node1</a>
+            <a href="#2">Node2</a>
+            <a href="#3">Node3</a>
+            <a href="#4">Node4</a>
+            <span>Node5</span>
+        </div>
+    </div>
+    <script>
+        require(
+            [
+                'esui',
+                'esui/Crumb'
+            ],
+            function (ui, Crumb) {
+                ui.init(document.getElementById('container'));
+                var path = [
+                    { text: 'test', href: 'http://test.com' },
+                    { text: 'test2', href: 'http://test2.com' },
+                    { text: 'test3'}
+                ];
+
+                var crumb = new Crumb({ path: path });
+                crumb.appendTo(document.getElementById('container'));
+                var crumb2 = new Crumb({ path: path, separator: '|' });
+                crumb2.appendTo(document.getElementById('container'));
+            }
+        );
+    </script>
+</body>
+</html>
