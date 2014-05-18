@@ -1,12 +1,10 @@
 // TODO: 改了变量名，这里之后要做下向前兼容处理
-@Searchbox-search-icon-normal-img: url(./img/esui-search-normal.png);
-@Searchbox-search-icon-active-img: url(./img/esui-search-active.png);
+@Searchbox-search-icon-img: url(./img/esui-search-normal.png);
+@Searchbox-search-icon-img-active: url(./img/esui-search-active.png);
 @Searchbox-search-icon-img-width: 15px;
 @Searchbox-search-icon-img-height: 15px;
 @Searchbox-search-icon-width: 25px;
 @Searchbox-search-icon-height: 25px;
-@Searchbox-search-icon-folder: '';
-
 
 @Searchbox-2x-search-icon-background-image: url(./img/search@2x.png);
 @Searchbox-2x-search-icon-background-size: 15px 50px;
@@ -19,13 +17,13 @@
 
 .normal-search-icon() {
     .pseudo-icon(
-        @Searchbox-search-icon-normal-img,
+        @Searchbox-search-icon-img,
         @Searchbox-search-icon-img-width, @Searchbox-search-icon-img-height,
         center, 0, center, 0, absolute);
 }
 .active-search-icon() {
     .pseudo-icon(
-        @Searchbox-search-icon-active-img,
+        @Searchbox-search-icon-img-active,
         @Searchbox-search-icon-img-width, @Searchbox-search-icon-img-height,
         center, 0, center, 0, absolute);
 }

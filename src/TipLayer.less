@@ -1,4 +1,5 @@
 @TipLayer-background: #fff6bd;
+@TipLayer-font-color: #555;
 
 @TipLayer-border-color: #d5ca81;
 @TipLayer-border-width: 1px;
@@ -27,18 +28,22 @@
 @TipLayer-arrow-icon-rt: url(./img/esui-tip-arrow-rt.png);
 @TipLayer-arrow-icon-rb: url(./img/esui-tip-arrow-rb.png);
 
+
 @TipLayer-title-padding: 0px;
 @TipLayer-title-margin: .5em 0;
 @TipLayer-title-font-size: 12px;
+@TipLayer-title-line-height: 18px;
 
 @TipLayer-body-padding: 0px;
 @TipLayer-body-margin: 0 0 5px;
 @TipLayer-body-font-size: 12px;
+@TipLayer-body-line-height: 18px;
 
 .ui-tiplayer {
     background: @TipLayer-background;
     border: @TipLayer-border;
     padding: @TipLayer-padding;
+    color: @TipLayer-font-color;
 }
 
 .ui-tiplayer-rt,
@@ -55,12 +60,14 @@
     padding: @TipLayer-title-padding;
     margin: @TipLayer-title-margin;
     font-size: @TipLayer-title-font-size;
+    line-height: @TipLayer-title-line-height;
 }
 .ui-tiplayer-body {
     padding: @TipLayer-body-padding;
     margin: @TipLayer-body-margin;
     @TipLayer-body-font-size: 12px;
     word-wrap: break-word;
+    line-height: @TipLayer-body-line-height;
 }
 
 .ui-tiplayer-arrow {

@@ -6,10 +6,10 @@
 @RangeCalendar-main-font-size: 12px;
 @RangeCalendar-main-font-color: #666;
 @RangeCalendar-main-hover-border-color: none;
-@RangeCalendar-month-item-highlight-color: #fffbed;
+@RangeCalendar-month-item-color-highlight: #fffbed;
 
 @RangeCalendar-arrow-icon: url(./img/esui-monthview-select-icon.png);
-@RangeCalendar-active-arrow-icon: url(./img/esui-monthview-select-icon-active.png);
+@RangeCalendar-arrow-icon-active: url(./img/esui-monthview-select-icon-active.png);
 @RangeCalendar-arrow-icon-width: 9px;
 @RangeCalendar-arrow-icon-height: 5px;
 
@@ -27,7 +27,7 @@
 
 @RangeCalendar-shortcut-item-color: #68c1a6;
 @RangeCalendar-link-text-color: #66c4a5;
-@RangeCalendar-hover-link-text-color: #74dcce;
+@RangeCalendar-link-text-color-hover: #74dcce;
 
 .ui-rangecalendar {
     background: @RangeCalendar-main-background;
@@ -59,7 +59,7 @@
 .ui-rangecalendar-active {
     .ui-rangecalendar-arrow {
         background: none;
-        .pseudo-icon(@RangeCalendar-active-arrow-icon, @RangeCalendar-arrow-icon-width, @RangeCalendar-arrow-icon-height, center);
+        .pseudo-icon(@RangeCalendar-arrow-icon-active, @RangeCalendar-arrow-icon-width, @RangeCalendar-arrow-icon-height, center);
     }
 }
 
@@ -89,7 +89,7 @@
         margin-left: 8px;
         padding-left: 8px;
         &:hover {
-            color: @RangeCalendar-hover-link-text-color;
+            color: @RangeCalendar-link-text-color-hover;
         }
     }
 
@@ -111,7 +111,7 @@
         .ui-rangecalendar-begin, .ui-rangecalendar-end {
             width: auto;
             .ui-monthview-month-item-highlight {
-                background: @RangeCalendar-month-item-highlight-color;
+                background: @RangeCalendar-month-item-color-highlight;
             }
             .ui-monthview-month-item:hover {
                 background: @Monthview-month-item-hover-background;
@@ -153,7 +153,7 @@
             color: @RangeCalendar-link-text-color;
             border: none;
             &:hover {
-                color: @RangeCalendar-hover-link-text-color;
+                color: @RangeCalendar-link-text-color-hover;
             }
         }
     }

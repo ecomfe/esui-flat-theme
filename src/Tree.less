@@ -1,12 +1,12 @@
 @Tree-node-line-height: 35px;
 
-@Tree-node-indicator-icon-collapsed-height: 7px;
-@Tree-node-indicator-icon-collapsed-width: 5px;
-@Tree-node-indicator-collapsed-icon: url(./img/esui-open-icon.png);
+@Tree-node-indicator-icon-height-collapsed: 7px;
+@Tree-node-indicator-icon-width-collapsed: 5px;
+@Tree-node-indicator-icon-collapsed: url(./img/esui-open-icon.png);
 
-@Tree-node-indicator-icon-expanded-height: 5px;
-@Tree-node-indicator-icon-expanded-width: 7px;
-@Tree-node-indicator-expanded-icon: url(./img/esui-close-icon.png);
+@Tree-node-indicator-icon-height-expanded: 5px;
+@Tree-node-indicator-icon-width-expanded: 7px;
+@Tree-node-indicator-icon-expanded: url(./img/esui-close-icon.png);
 
 @Tree-node-indicator-height: 7px;
 @Tree-node-indicator-width: 7px;
@@ -18,29 +18,16 @@
 @Tree-node-indicator-far-previous-background: none;
 
 @Tree-node-item-font-color: #666;
-@Tree-node-level-2-item-font-color: #9a9a9a;
 
 
 // 选中的节点
-@Tree-node-wrapper-selected-background: #fffaee;
-@Tree-node-item-selected-font-color: #333;
-@Tree-node-item-selected-icon: none;
-@Tree-node-level-2-wrapper-selected-background: #fffaee;
-@Tree-node-level-2-item-selected-font-color: #333;
-@Tree-node-level-2-item-selected-icon: @Tree-node-item-selected-icon;
-
+@Tree-node-wrapper-background-selected: #fffaee;
+@Tree-node-item-font-color-selected: #333;
+@Tree-node-item-icon-selected: none;
 // 悬浮的节点
-@Tree-node-wrapper-hover-background: #fffaee;
-@Tree-node-item-hover-font-color: #333;
-@Tree-node-item-hover-icon: none;
-@Tree-node-level-2-wrapper-hover-background: #fffaee;
-@Tree-node-level-2-item-hover-font-color: #333;
-@Tree-node-level-2-item-hover-icon: @Tree-node-item-hover-icon;
-
-
-// tree-node = tree-content-wrapper + tree-sub-root
-// tree-content-wrapper = tree-indicator + tree-item-content
-// tree-sub-root = tree-node * n
+@Tree-node-wrapper-background-hover: #fffaee;
+@Tree-node-item-font-color-hover: #333;
+@Tree-node-item-icon-hover: none;
 
 // 图标
 .ui-tree-node-indicator {
@@ -49,14 +36,14 @@
     width: @Tree-node-indicator-width;
     background: none;
     .pseudo-icon(
-        @Tree-node-indicator-collapsed-icon, @Tree-node-indicator-icon-collapsed-width, @Tree-node-indicator-icon-collapsed-height, center
+        @Tree-node-indicator-icon-collapsed, @Tree-node-indicator-icon-width-collapsed, @Tree-node-indicator-icon-height-collapsed, center
     );
 }
 
 // 展开
 .ui-tree-node-indicator-expanded {
     .pseudo-icon(
-        @Tree-node-indicator-expanded-icon, @Tree-node-indicator-icon-expanded-width, @Tree-node-indicator-icon-expanded-height, center
+        @Tree-node-indicator-icon-expanded, @Tree-node-indicator-icon-width-expanded, @Tree-node-indicator-icon-height-expanded, center
     );
 }
 
@@ -79,22 +66,22 @@
     border-left: none;
     padding: 0 10px;
     &:hover {
-        background: @Tree-node-wrapper-hover-background;
+        background: @Tree-node-wrapper-background-hover;
 
         .ui-tree-item-content {
-            color: @Tree-node-item-hover-font-color;
-            background: @Tree-node-item-hover-icon;
+            color: @Tree-node-item-font-color-hover;
+            background: @Tree-node-item-icon-hover;
         }
     }
 }
                                                                                                                                                                                                                                             
 .ui-tree-content-wrapper-selected,
 .ui-tree-content-wrapper-selected:hover {
-    background: @Tree-node-wrapper-selected-background;
+    background: @Tree-node-wrapper-background-selected;
     border-left: none;
     .ui-tree-item-content {
-        color: @Tree-node-item-selected-font-color;
-        background: @Tree-node-item-selected-icon;
+        color: @Tree-node-item-font-color-selected;
+        background: @Tree-node-item-icon-selected;
     }
 }
 

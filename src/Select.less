@@ -1,7 +1,7 @@
 @Select-background-color: transparent;
-@Select-hover-background-color: transparent;
-@Select-active-background-color: transparent;
-@Select-disabled-background-color: transparent;
+@Select-background-color-hover: transparent;
+@Select-background-color-active: transparent;
+@Select-background-color-disabled: transparent;
 @Select-font-color: #666;
 @Select-border: none;
 @Select-height: 12px;
@@ -11,18 +11,18 @@
 
 @Select-arrow-icon-width: 9px;
 @Select-arrow-icon-height: 5px;
-@Select-normal-arrow-icon: url(./img/esui-combo-arrow-normal.png);
-@Select-hover-arrow-icon: url(./img/esui-combo-arrow-hover.png);
-@Select-active-arrow-icon: url(./img/esui-combo-arrow-active.png);
-@Select-disabled-arrow-icon: url(./img/esui-combo-arrow-normal.png);
+@Select-arrow-icon: url(./img/esui-combo-arrow-normal.png);
+@Select-arrow-icon-hover: url(./img/esui-combo-arrow-hover.png);
+@Select-arrow-icon-active: url(./img/esui-combo-arrow-active.png);
+@Select-arrow-icon-disabled: url(./img/esui-combo-arrow-normal.png);
 
 //layer
 @Select-layer-split-border: 0;
 @Select-layer-background: #f7f7f7;
 @Select-item-color: #666;
 @Select-item-height: 30px;
-@Select-item-hover-background: #f1f1f1;
-@Select-item-selected-background: #fffaee;
+@Select-item-background-hover: #f1f1f1;
+@Select-item-background-selected: #fffaee;
 
 .ui-select {
     background: @Select-background-color;
@@ -36,20 +36,20 @@
     font-weight: bold;
     text-align: center;
     // TODO: 这里的left和10px是否需要开放配置？
-    .pseudo-icon(@Select-normal-arrow-icon, @Select-arrow-icon-width, @Select-arrow-icon-height, right, 5px);
+    .pseudo-icon(@Select-arrow-icon, @Select-arrow-icon-width, @Select-arrow-icon-height, right, 5px);
 }
 
 .ui-select:focus,
 .ui-select:hover {
-    background: @Select-hover-background-color;
-    .pseudo-icon(@Select-hover-arrow-icon, @Select-arrow-icon-width, @Select-arrow-icon-height, right, 5px);
+    background: @Select-background-color-hover;
+    .pseudo-icon(@Select-arrow-icon-hover, @Select-arrow-icon-width, @Select-arrow-icon-height, right, 5px);
 }
 
 .ui-select-active,
 .ui-select-active:hover,
 .ui-select-active:focus {
-    background: @Select-active-background-color;
-    .pseudo-icon(@Select-active-arrow-icon, @Select-arrow-icon-width, @Select-arrow-icon-height, right, 5px);
+    background: @Select-background-color-active;
+    .pseudo-icon(@Select-arrow-icon-active, @Select-arrow-icon-width, @Select-arrow-icon-height, right, 5px);
 }
 
 .ui-select-layer {
@@ -68,13 +68,13 @@
 }
 
 .ui-select-item-selected {
-    background: @Select-item-selected-background;
+    background: @Select-item-background-selected;
     border: none;
     padding: 0 3px;
 }
 
 .ui-select-item:hover {
-    background: @Select-item-hover-background;
+    background: @Select-item-background-hover;
 }
 
 .ui-select-disabled,
@@ -82,6 +82,6 @@
 .ui-select-disabled:hover,
 .ui-select-read-only:hover {
     color: #999;
-    background: @Select-disabled-background-color;
-    .pseudo-icon(@Select-disabled-arrow-icon, @Select-arrow-icon-width, @Select-arrow-icon-height, right, 5px);
+    background: @Select-background-color-disabled;
+    .pseudo-icon(@Select-arrow-icon-disabled, @Select-arrow-icon-width, @Select-arrow-icon-height, right, 5px);
 }
