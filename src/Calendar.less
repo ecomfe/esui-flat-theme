@@ -1,0 +1,32 @@
+@Calendar-border: none;
+@Calendar-border-radius: 0;
+@Calendar-background: #fff;
+@Calendar-color: #333;
+
+@Calendar-hover-border-color: #a9adb6;
+
+@Calendar-arrow-icon-background: url(./img/esui-cal.png);
+@Calendar-arrow-icon-height: 16px;
+@Calendar-arrow-icon-width: 16px;
+
+.ui-calendar {
+    border: @Calendar-border;
+    background: @Calendar-background;
+    border-radius: @Calendar-border-radius;
+}
+
+.ui-calendar-text {
+    color: @Calendar-color;
+}
+
+.ui-calendar:hover,
+.ui-calendar:active {
+    border-color: @Calendar-hover-border-color;
+}
+
+.ui-calendar-arrow {
+    .normal-icon(
+        @Calendar-arrow-icon-background,
+        @Calendar-arrow-icon-width, @Calendar-arrow-icon-height
+    );
+}

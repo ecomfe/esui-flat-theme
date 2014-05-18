@@ -1,0 +1,108 @@
+@Dialog-background: #fff;
+@Dialog-border: 1px solid #ddd;
+@Dialog-width: 470px;
+
+@Dialog-head-background: @Dialog-background;
+@Dialog-color: #333;
+@Dialog-head-height: 43px;
+
+@Dialog-title-padding: 0 0 0 15px;
+@Dialog-title-font-size: 14px;
+@Dialog-title-height: @Dialog-head-height;
+
+@Dialog-close-icon-image: url(./img/esui-dialog-head-close.png);
+@Dialog-close-icon-height: 13px;
+@Dialog-close-icon-width: 13px;
+@Dialog-close-icon-right: 15px;
+@Dialog-close-icon-top: 15px;
+
+@Dialog-body-padding: 5px 25px;
+
+@Dialog-foot-panel-padding: 25px 30px;
+
+@Dialog-foot-button-align: left;
+
+.ui-dialog {
+    background: @Dialog-background;
+    border: @Dialog-border;
+    width: @Dialog-width;
+    .border-radius(0);
+}
+
+.ui-dialog-head {
+    background: @Dialog-head-background;
+    color: @Dialog-color;
+    height: @Dialog-head-height;
+}
+
+.ui-dialog-title {
+    padding: @Dialog-title-padding;
+    font-size: @Dialog-title-font-size;
+    line-height: @Dialog-title-height;
+}
+
+.ui-dialog-close-icon {
+    .normal-icon(@Dialog-close-icon-image, @Dialog-close-icon-width, @Dialog-close-icon-height);
+    right: @Dialog-close-icon-right;
+    top: @Dialog-close-icon-top;
+}
+
+.ui-dialog-body {
+    padding: @Dialog-body-padding;
+}
+
+
+.ui-dialog-foot-panel {
+    padding: @Dialog-foot-panel-padding;
+    border: none;
+    margin: 0;
+}
+
+.ui-dialog-foot {
+    float: @Dialog-foot-button-align;
+    .ui-button {
+        margin-right: 6px;
+        height: @Button-height;
+        line-height: @Button-height;
+        width: 90px;
+    }
+}
+
+.ui-dialog-mask-mixin {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    // 兼容IE6
+    _position: absolute;
+    _width: 100%;
+    _height: 100%;
+    background: #333;
+    opacity: .2;
+    filter: alpha(opacity=20);
+}
+
+/** 警告框，确认框 */
+.skin-alert-dialog,
+.skin-confirm-dialog {
+    .ui-dialog-body {
+        padding: 5px 40px;
+    }
+
+    // TODO: 无图标的提示框设计是besc中的，这里迁移到esui-flat-theme不知是否合适。
+    .ui-dialog-icon-warning, .ui-dialog-icon-confirm {
+        display: none;
+    }
+
+    .ui-dialog-cancel-btn {
+        width: 30px;
+        .skin-link-button();
+    }
+
+    .ui-dialog-text {
+        margin-top: 0;
+        line-height: 18px;
+        margin-right: 0;
+    }
+}

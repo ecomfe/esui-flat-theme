@@ -1,0 +1,136 @@
+@Sidebar-width: 202px;
+@Sidebar-background: #FFF;
+
+@Sidebar-border-radius: 5px;
+@Sidebar-border-color: #ccc;
+@Sidebar-border: 1px solid @Sidebar-border-color;
+
+@Sidebar-neighbor-margin-left: 220px;
+@Sidebar-neighbor-margin-left-hide: 30px;
+
+@Sidebar-mat-width: 218px;
+@Sidebar-mat-background: #FFF;
+@Sidebar-mat-border-color: 1px solid #ddd;
+
+@Sidebar-minibar-background: #eaeaea;
+@Sidebar-minibar-width: 19px;
+@Sidebar-minibar-border-width: 1px;
+@Sidebar-minibar-border-style: solid;
+@Sidebar-minibar-border-color: #d1d1d1;
+@Sidebar-minibar-border: @Sidebar-minibar-border-width @Sidebar-minibar-border-style @Sidebar-minibar-border-color;
+
+@Sidebar-minibar-border-radius-left-top: 0;
+@Sidebar-minibar-border-radius-top-right: 5px;
+@Sidebar-minibar-border-radius-right-bottom: 5px;
+@Sidebar-minibar-border-radius-bottom-left:0;
+
+@Sidebar-minibar-text-padding: 8px 0;
+@Sidebar-minibar-text-width: 12px;
+@Sidebar-minibar-text-color-hover: #03c;
+
+
+@Sidebar-minibar-arrow-width: 5px;
+@Sidebar-minibar-arrow-height: 9px;
+@Sidebar-minibar-arrow: url(./img/esui-sidebar-minibar-arrow.png);
+@Sidebar-minibar-arrow-hover: url(./img/esui-sidebar-minibar-arrow-hover.png);
+
+@Sidebar-head-background: #e6e6e6;
+@Sidebar-head-border-bottom: 1px solid #ccc;
+@Sidebar-head-height: 34px;
+@Sidebar-head-padding: 8px 0 0 0;
+@Sidebar-head-border-radius-left-top: 5px;
+@Sidebar-head-border-radius-top-right: 5px;
+@Sidebar-head-border-radius-right-bottom: 0;
+@Sidebar-head-border-radius-bottom-left:0;
+
+.ui-sidebar {
+    position: fixed;
+    _position: absolute;
+    z-index: 100;
+    overflow: hidden;
+    width: @Sidebar-width;
+    background: @Sidebar-background;
+    .border-radius(@Sidebar-border-radius);
+    border: @Sidebar-border;
+}
+
+.ui-sidebar-neighbor {  
+    margin-left: @Sidebar-neighbor-margin-left;
+}
+
+.ui-sidebar-neighbor-hide {
+    margin-left: @Sidebar-neighbor-margin-left-hide;
+}
+
+.ui-sidebar-mat {
+    position: fixed;
+    _display: none;
+    z-index: 50;
+    bottom: 0;
+    width: @Sidebar-mat-width;
+    background: @Sidebar-mat-background;
+    border-right: @Sidebar-mat-border;
+}
+
+.ui-sidebar-minibar {
+    position: fixed;
+    _position: absolute;
+    _padding-bottom: 10px;
+    padding-left: 6px;
+    border-left: 0;
+    cursor: pointer;
+    .border-radius(
+        @Sidebar-minibar-border-radius-left-top,
+        @Sidebar-minibar-border-radius-top-right,
+        @Sidebar-minibar-border-radius-right-bottom,
+        @Sidebar-minibar-border-radius-bottom-left
+    );
+    background: @Sidebar-minibar-background;
+    border: @Sidebar-minibar-border;
+    width: @Sidebar-minibar-width;
+}
+
+.ui-sidebar-minibar-text {
+    padding: @Sidebar-minibar-padding;
+    width: @Sidebar-minibar-text-width;
+} 
+
+.ui-sidebar-minibar-arrow {
+    font-size: 0;
+    position: absolute;
+    bottom: 50%;
+    _bottom: 5px;
+    left: 50%;
+    .normal-icon(@Sidebar-minibar-arrow, @Sidebar-minibar-arrow-width, @Sidebar-minibar-arrow-height);
+}
+
+.ui-sidebar-minibar-hover .ui-sidebar-minibar-arrow {
+    .normal-icon(@Sidebar-minibar-arrow-hover, @Sidebar-minibar-arrow-width, @Sidebar-minibar-arrow-height);
+}
+
+.ui-sidebar-minibar-hover .ui-sidebar-minibar-text {
+    color: @Sidebar-minibar-text-color-hover;
+}
+
+.ui-sidebar-head {
+    border-bottom: @Sidebar-head-border-bottom;
+    background: @Sidebar-head-background;
+    line-height: @Sidebar-head-height;
+    height: @Sidebar-head-height;
+    padding: @Sidebar-head-padding;
+    .border-radius(
+        @Sidebar-head-border-radius-left-top,
+        @Sidebar-head-border-radius-top-right,
+        @Sidebar-head-border-radius-right-bottom,
+        @Sidebar-head-border-radius-bottom-left
+    );
+}
+
+.ui-sidebar-body {
+    position: absolute;
+    _position: static;
+    overflow-x: hidden;
+    overflow-y: auto;
+    bottom: 0;
+    width: 100%;
+}
