@@ -1,4 +1,3 @@
-
 @Button-background: #6dcec0;
 @Button-border-style: solid;
 @Button-border-width: 1px;
@@ -9,17 +8,17 @@
 @Button-padding: 0 15px;
 @Button-height: 35px - 2 * @Button-border-width;
 
-@Button-hover-background: #72dccd;
-@Button-hover-color: @Button-color;
-@Button-hover-border-color: @Button-hover-background;
+@Button-background-hover: #72dccd;
+@Button-color-hover: @Button-color;
+@Button-border-color-hover: @Button-background-hover;
 
-@Button-active-background: #65cabd;
-@Button-active-color: @Button-color;
-@Button-active-border-color: #46B3A5 #59C0B2 #66C9BB;
+@Button-background-active: #65cabd;
+@Button-color-active: @Button-color;
+@Button-border-color-active: #46B3A5 #59C0B2 #66C9BB;
 
-@Button-disabled-background: #eaeaea;
-@Button-disabled-color: #656565;
-@Button-disabled-border-color: @Button-disabled-background;
+@Button-background-disabled: #eaeaea;
+@Button-color-disabled: #656565;
+@Button-border-color-disabled: @Button-background-disabled;
 
 .ui-button {
     background: @Button-background;
@@ -39,30 +38,30 @@ button.ui-button {
 }
 
 .ui-button:hover {
-    border-color: @Button-hover-border-color;
-    background: @Button-hover-background;
-    color: @Button-hover-color;
+    border-color: @Button-border-color-hover;
+    background: @Button-background-hover;
+    color: @Button-color-hover;
     border-width: @Button-border-width;
 }
 
 .ui-button:active {
-    border-color: @Button-active-border-color;
-    background: @Button-active-background;
-    color: @Button-active-color;
+    border-color: @Button-border-color-active;
+    background: @Button-background-active;
+    color: @Button-color-active;
 }
 
 .ui-button-disabled {
-    border-color: @Button-disabled-border-color;
-    background: @Button-disabled-background;
-    color: @Button-disabled-color;
+    border-color: @Button-border-color-disabled;
+    background: @Button-background-disabled;
+    color: @Button-color-disabled;
     &:hover {
-        border-color: @Button-disabled-border-color;
-        background: @Button-disabled-background;
-        color: @Button-disabled-color;
+        border-color: @Button-border-color-disabled;
+        background: @Button-background-disabled;
+        color: @Button-color-disabled;
     }
     &:active {
-        border-color: @Button-disabled-border-color;
-        background: @Button-disabled-background;
-        color: @Button-disabled-color;
+        border-color: @Button-border-color-disabled;
+        background: @Button-background-disabled;
+        color: @Button-color-disabled;
     }
 }

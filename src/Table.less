@@ -25,17 +25,17 @@
 @Table-body-background: #fff;
 @Table-body-border-color: @Table-body-background;
 @Table-row-background: @Table-body-background;
-@Table-row-hover-background: #fffbed;
+@Table-row-background-hover: #fffbed;
 @Table-row-border-color: #f0f0f0;
 
-@Table-row-selected-background: #f0f0f0;
-@Table-row-unfolded-background: #f0f0f0;
+@Table-row-background-selected: #f0f0f0;
+@Table-row-background-unfolded: #f0f0f0;
 @Table-subrow-background: #FFF9EE;
 @Table-subrow-border-color: #ddd;
 @Table-subrow-padding: 1px 0 0 36px;
 
 @Table-cell-border-color: @Table-row-background;
-@Table-cell-border-hover-color: @Table-row-hover-background;
+@Table-cell-border-color-hover: @Table-row-background-hover;
 
 @Table-cell-height: 28px;
 @Table-cell-padding: 4px 8px;
@@ -62,16 +62,16 @@
 @Table-subentry-icon-img-height: 7px;
 @Table-subentry-icon: url(./img/esui-open-icon.png);
 
-@Table-subentry-icon-open-img-width: 7px;
-@Table-subentry-icon-open-img-height: 5px;
+@Table-subentry-icon-img-width-open: 7px;
+@Table-subentry-icon-img-height-open: 5px;
 @Table-subentry-icon-open: url(./img/esui-close-icon.png);
 
-@Table-subentry-icon-hover-img-width: 5px;
-@Table-subentry-icon-hover-img-height: 7px;
+@Table-subentry-icon-img-width-hover: 5px;
+@Table-subentry-icon-img-height-hover: 7px;
 @Table-subentry-icon-hover: url(./img/esui-open-icon.png);
 
-@Table-subentry-icon-opened-hover-img-width: 7px;
-@Table-subentry-icon-opened-hover-img-height: 5px;
+@Table-subentry-icon-img-width-opened-hover: 7px;
+@Table-subentry-icon-img-height-opened-hover: 5px;
 @Table-subentry-icon-opened-hover: url(./img/esui-close-icon.png);
 
 .ui-table-head {
@@ -149,7 +149,7 @@
 
 /* 行表格移上 */
 .ui-table-row-hover {
-    background: @Table-row-hover-background;
+    background: @Table-row-background-hover;
 }
 
 /* 扩展-可编辑单元
@@ -179,12 +179,12 @@
 
 /* 行表格选中 */
 .ui-table-row-selected table {
-    background: @Table-row-selected-background;
+    background: @Table-row-background-selected;
 }
 
 /* 行表格展开 */
 .ui-table-row-unfolded {
-    background: @Table-row-unfolded-background;
+    background: @Table-row-background-unfolded;
 }
 
 /* 拖拽显示的竖线 */
@@ -203,7 +203,7 @@
 }
 
 .ui-table-row-hover .ui-table-cell {
-    border-color: @Table-cell-border-hover-color;
+    border-color: @Table-cell-border-color-hover;
 }
 
 /* 表格内容单元格容器 */
@@ -262,15 +262,15 @@
 }
 
 .ui-table-subentry-opened {
-    .pseudo-icon(@Table-subentry-icon-open, @Table-subentry-icon-open-img-width, @Table-subentry-icon-open-img-height, center);
+    .pseudo-icon(@Table-subentry-icon-open, @Table-subentry-icon-img-width-open, @Table-subentry-icon-img-height-open, center);
 }
 
 
 .ui-table-subentry-hover {
-    .pseudo-icon(@Table-subentry-icon-hover, @Table-subentry-icon-hover-img-width, @Table-subentry-icon-hover-img-height, center);
+    .pseudo-icon(@Table-subentry-icon-hover, @Table-subentry-icon-img-width-hover, @Table-subentry-icon-img-height-hover, center);
 }
 .ui-table-subentry-opened-hover {
-    .pseudo-icon(@Table-subentry-icon-opened-hover, @Table-subentry-icon-opened-hover-img-width, @Table-subentry-icon-opened-hover-img-height, center);
+    .pseudo-icon(@Table-subentry-icon-opened-hover, @Table-subentry-icon-img-width-opened-hover, @Table-subentry-icon-img-height-opened-hover, center);
 }
 
 .ui-table-subrow {
