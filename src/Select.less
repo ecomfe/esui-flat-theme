@@ -1,0 +1,87 @@
+@Select-background-color: transparent;
+@Select-hover-background-color: transparent;
+@Select-active-background-color: transparent;
+@Select-disabled-background-color: transparent;
+@Select-font-color: #666;
+@Select-border: none;
+@Select-height: 12px;
+@Select-width: auto;
+@Select-height: 12px;
+@Select-padding: 0 18px 0 20px;
+
+@Select-arrow-icon-width: 9px;
+@Select-arrow-icon-height: 5px;
+@Select-normal-arrow-icon: url(./img/esui-combo-arrow-normal.png);
+@Select-hover-arrow-icon: url(./img/esui-combo-arrow-hover.png);
+@Select-active-arrow-icon: url(./img/esui-combo-arrow-active.png);
+@Select-disabled-arrow-icon: url(./img/esui-combo-arrow-normal.png);
+
+//layer
+@Select-layer-split-border: 0;
+@Select-layer-background: #f7f7f7;
+@Select-item-color: #666;
+@Select-item-height: 30px;
+@Select-item-hover-background: #f1f1f1;
+@Select-item-selected-background: #fffaee;
+
+.ui-select {
+    background: @Select-background-color;
+    border: @Select-border;
+    border-radius: 0;
+    height: @Select-height;
+    line-height: @Select-height;
+    padding: @Select-padding;
+    width: @Select-width;
+    color: @Select-font-color;
+    font-weight: bold;
+    text-align: center;
+    // TODO: 这里的left和10px是否需要开放配置？
+    .pseudo-icon(@Select-normal-arrow-icon, @Select-arrow-icon-width, @Select-arrow-icon-height, right, 5px);
+}
+
+.ui-select:focus,
+.ui-select:hover {
+    background: @Select-hover-background-color;
+    .pseudo-icon(@Select-hover-arrow-icon, @Select-arrow-icon-width, @Select-arrow-icon-height, right, 5px);
+}
+
+.ui-select-active,
+.ui-select-active:hover,
+.ui-select-active:focus {
+    background: @Select-active-background-color;
+    .pseudo-icon(@Select-active-arrow-icon, @Select-arrow-icon-width, @Select-arrow-icon-height, right, 5px);
+}
+
+.ui-select-layer {
+    width: @Select-width;
+    border: @Select-border;
+    border-top: @Select-layer-split-border;
+    background: @Select-layer-background;
+}
+
+.ui-select-item {
+    color: @Select-item-color;
+    line-height: @Select-item-height;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.ui-select-item-selected {
+    background: @Select-item-selected-background;
+    border: none;
+    padding: 0 3px;
+}
+
+.ui-select-item:hover {
+    background: @Select-item-hover-background;
+}
+
+.ui-select-disabled,
+.ui-select-read-only,
+.ui-select-disabled:hover,
+.ui-select-read-only:hover {
+    color: #999;
+    background: @Select-disabled-background-color;
+    .pseudo-icon(@Select-disabled-arrow-icon, @Select-arrow-icon-width, @Select-arrow-icon-height, right, 5px);
+}

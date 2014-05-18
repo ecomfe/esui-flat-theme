@@ -1,0 +1,297 @@
+@Table-font-color: #555;
+
+@Table-head-background-color: #f7f7f7;
+@Table-head-border-lr-color: @Table-head-background-color;
+@Table-head-border-top-color: @Table-head-background-color;
+@Table-head-border-bottom-color: @Table-head-background-color;
+@Table-head-font-weight: normal;
+@Table-head-font-color: @Table-font-color;
+@Table-hcell-border-color: @Table-head-background-color;
+
+@Table-hcell-text-height: 35px;
+@Table-hcell-text-padding: 0 8px;
+ 
+
+/* 表头单元格提示 */
+@Table-hcell-tip-margin: 0 4px 0 0;
+
+/* 表头单元格排序标识 */
+@Table-sort-icon-margin: 2px 0 0 2px;
+@Table-sort-icon-height: 10px;
+@Table-sort-icon-width: 7px;
+@Table-hcell-sort-hover-background: #FDE8C4;
+
+
+@Table-body-background: #fff;
+@Table-body-border-color: @Table-body-background;
+@Table-row-background: @Table-body-background;
+@Table-row-hover-background: #fffbed;
+@Table-row-border-color: #f0f0f0;
+
+@Table-row-selected-background: #f0f0f0;
+@Table-row-unfolded-background: #f0f0f0;
+@Table-subrow-background: #FFF9EE;
+@Table-subrow-border-color: #ddd;
+@Table-subrow-padding: 1px 0 0 36px;
+
+@Table-cell-border-color: @Table-row-background;
+@Table-cell-border-hover-color: @Table-row-hover-background;
+
+@Table-cell-height: 28px;
+@Table-cell-padding: 4px 8px;
+@Table-cell-head-padding: 12px;
+@Table-cell-tail-padding: 12px;
+
+@Table-cell-sel-padding: 3px 8px 0;
+@Table-cell-sel-padding-IE: 0 4px;
+
+@Table-foot-background: @Table-head-background-color;
+@Table-foot-border-color: @Table-body-border-color;
+@Table-footcell-border-color: @Table-cell-border-color;
+
+
+/* 拖拽显示的竖线 */
+@Table-mark-height: 400px;
+@Table-mark-background: #000;
+
+@Table-scrollX-height: 20px;
+
+@Table-subentry-icon-width: 7px;
+@Table-subentry-icon-height: 7px;
+@Table-subentry-icon-img-width: 5px;
+@Table-subentry-icon-img-height: 7px;
+@Table-subentry-icon: url(./img/esui-open-icon.png);
+
+@Table-subentry-icon-open-img-width: 7px;
+@Table-subentry-icon-open-img-height: 5px;
+@Table-subentry-icon-open: url(./img/esui-close-icon.png);
+
+@Table-subentry-icon-hover-img-width: 5px;
+@Table-subentry-icon-hover-img-height: 7px;
+@Table-subentry-icon-hover: url(./img/esui-open-icon.png);
+
+@Table-subentry-icon-opened-hover-img-width: 7px;
+@Table-subentry-icon-opened-hover-img-height: 5px;
+@Table-subentry-icon-opened-hover: url(./img/esui-close-icon.png);
+
+.ui-table-head {
+    background: @Table-head-background-color;
+
+    table {
+        border-left-color: @Table-head-border-lr-color;
+        border-right-color: @Table-head-border-lr-color;
+        border-top-color: @Table-head-border-top-color;
+        border-bottom-color: @Table-head-border-bottom-color;
+    }
+}
+
+/* 表头单元格 */
+.ui-table-hcell {
+    font-weight: @Table-head-font-weight;
+    color: @Table-head-font-color;
+    border-left-color: @Table-hcell-border-color;
+    &:first-child {
+        border-left-color: @Table-head-border-lr-color;
+    }
+}
+
+/* 表头单元格DIV容器 */
+.ui-table-hcell-text {
+    height: Table-hcell-text-height;
+    line-height: Table-hcell-text-height;
+    padding: Table-hcell-text-padding;
+}
+
+/* 表头单元格提示 */
+.ui-table-htip{
+    margin: @Table-hcell-tip-margin;
+}
+
+/* 表头单元格排序标识 */
+.ui-table-hsort {
+    // background: @Table-sort-icon-background;
+    margin: @Table-sort-icon-margin;
+    height: @Table-sort-icon-height;
+    width: @Table-sort-icon-width;
+}
+
+.ui-table-hcell-asc .ui-table-hsort {
+    // background: @Table-sort-icon-asc-background;
+}
+
+.ui-table-hcell-desc .ui-table-hsort {
+    //background: @Table-sort-icon-desc-background;
+}
+
+
+/* 可排序列的表头样式Hover */
+.ui-table-hcell-sort-hover {
+    background: @Table-hcell-sort-hover-background;
+}
+
+.ui-table-body {
+    background: @Table-body-background;
+    border-bottom: 1px solid @Table-body-border-color;
+    table {
+        border-color: @Table-body-border-color;
+    }
+}
+
+.ui-table-body-nodata {
+    border: 1px solid @Table-body-border-color;
+    border-width: 0 1px;
+}
+
+.ui-table-row {
+    background: @Table-row-background;
+    border-bottom: 1px solid @Table-row-border-color;
+}
+
+/* 行表格移上 */
+.ui-table-row-hover {
+    background: @Table-row-hover-background;
+}
+
+/* 扩展-可编辑单元
+.ui-table-row-hover .ui-table-cell-editable {
+    border: @Table-row-hover-editable-cell-border;
+    margin: @Table-row-hover-editable-cell-margin;
+    padding: @Table-row-hover-editable-cell-padding;
+    background: @Table-row-hover-editable-cell-background;
+}
+.ui-table-editor {
+    background: @Table-editor-background;
+    border-color: @Table-editor-border-color;
+    padding: @Table-editor-padding;
+    width: @Table-editor-width;
+}
+.ui-table-editor-opt {
+    margin-bottom: @Table-editor-opt-margin-bottom;
+}
+.ui-table-editor-error {
+    margin-bottom: @Table-editor-error-margin-bottom;
+}
+.ui-table-editor .ui-button{
+    margin-left: @Table-editor-button-margin-left;
+}
+
+*/
+
+/* 行表格选中 */
+.ui-table-row-selected table {
+    background: @Table-row-selected-background;
+}
+
+/* 行表格展开 */
+.ui-table-row-unfolded {
+    background: @Table-row-unfolded-background;
+}
+
+/* 拖拽显示的竖线 */
+.ui-table-mark {
+    height: @Table-mark-height;
+    background: @Table-mark-background;
+}
+
+
+/* 表格内容单元格 */
+.ui-table-cell {
+    border-color: @Table-cell-border-color;
+    &:first-child {
+        border-color: @Table-body-border-color;
+    }
+}
+
+.ui-table-row-hover .ui-table-cell {
+    border-color: @Table-cell-border-hover-color;
+}
+
+/* 表格内容单元格容器 */
+.ui-table-cell-text,
+.ui-table-body-nodata {
+  line-height: @Table-cell-height;
+  height: @Table-cell-height;
+  padding: @Table-cell-padding;
+}
+
+.ui-table-cell-text-first,.ui-table-hcell-text-first {
+    padding-left: @Table-cell-head-padding;
+}
+.ui-table-cell-text-last,.ui-table-hcell-text-last {
+    padding-right: @Table-cell-tail-padding;
+}
+
+.ui-table-cell-sel,
+.ui-table-hcell-sel {
+  padding: @Table-cell-sel-padding;
+  *padding: @Table-cell-sel-padding-IE;
+  height: @Table-cell-height;
+  line-height: @Table-cell-height;
+}
+
+.ui-table-scroll-x {
+    height: @Table-scrollX-height;
+}
+
+//.ui-table-cell-editentry {
+//    width: @Table-cell-edit-entry-width;
+//    height: @Table-cell-edit-entry-height;
+//    top: @Table-cell-edit-entry-top;
+//    right: @Table-cell-edit-entry-right;
+//    background: @Table-cell-edit-entry-background;
+//}
+
+
+//.ui-table-cell-align-right .ui-table-cell-editentry {
+//    left: @Table-cell-align-right-edit-entry-left;
+//}
+
+/* 子表格收起展开按钮 */
+.ui-table-subentry,
+.ui-table-subentry-opened,
+.ui-table-subentry-opened-hover {
+    width: @Table-subentry-icon-width;
+    height: @Table-subentry-icon-height;
+    border: none;
+    .border-radius(0px);
+    background: none;
+}
+
+.ui-table-subentry {
+    .pseudo-icon(@Table-subentry-icon, @Table-subentry-icon-img-width, @Table-subentry-icon-img-height, center);
+}
+
+.ui-table-subentry-opened {
+    .pseudo-icon(@Table-subentry-icon-open, @Table-subentry-icon-open-img-width, @Table-subentry-icon-open-img-height, center);
+}
+
+
+.ui-table-subentry-hover {
+    .pseudo-icon(@Table-subentry-icon-hover, @Table-subentry-icon-hover-img-width, @Table-subentry-icon-hover-img-height, center);
+}
+.ui-table-subentry-opened-hover {
+    .pseudo-icon(@Table-subentry-icon-opened-hover, @Table-subentry-icon-opened-hover-img-width, @Table-subentry-icon-opened-hover-img-height, center);
+}
+
+.ui-table-subrow {
+    background: @Table-subrow-background;
+    border-color: @Table-subrow-border-color;
+    padding: @Table-subrow-padding;
+}
+
+
+.ui-table-foot {
+    background: @Table-foot-background;
+    table {
+        border-color: @Table-foot-border-color;
+    }
+}
+
+
+/* 表尾单元格 */
+.ui-table-fcell {
+    border-color: @Table-footcell-border-color;
+    &:first-child {
+        border-color: @Table-foot-border-color;
+    }
+}
