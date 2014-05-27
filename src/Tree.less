@@ -49,13 +49,22 @@
 
 // 无子节点或占位
 .ui-tree-node-indicator-empty {
-    background: @Tree-node-indicator-empty-background;
+    background: none;
+    .pseudo-icon(
+        @Tree-node-indicator-empty-background, 0, 0
+    );
 }
 .ui-tree-node-indicator-previous {
-    background: @Tree-node-indicator-previous-background;
+    background: none;
+    .pseudo-icon(
+        @Tree-node-indicator-previous-background, 0, 0
+    );
 }
 .ui-tree-node-indicator-far-previous {
-    background: @Tree-node-indicator-far-previous-background;
+    background: none;
+    .pseudo-icon(
+        @Tree-node-indicator-far-previous-background, 0, 0
+    );
 }
 
 .ui-tree-node {
