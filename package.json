@@ -1,0 +1,26 @@
+{
+    "name": "esui-flat-theme",
+    "version": "1.0.0-alpha.1",
+    "maintainers": [
+        {
+            "name": "otakustay",
+            "email": "otakustay@gmail.com"
+        }
+    ],
+    "contributors": [
+        {
+            "name": "DDDBear"
+        },
+        {
+            "name": "Exodia"
+        }
+    ],
+    "dependencies": {
+        "esui": ">=3.1.x"
+    },
+    "devDependencies": {
+        "less": "~1.6.3"
+    },
+    "description": "专门为ESUI打造的一套扁平化皮肤主题",
+    "homepage": "https://github.com/ecomfe/esui-flat-theme"
+}
