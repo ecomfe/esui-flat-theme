@@ -1,67 +1,67 @@
-@Button-background: #6dcec0;
-@Button-border-style: solid;
-@Button-border-width: 1px;
-@Button-border-color: @Button-background;
-@Button-color: #fff;
-@Button-radius: 0;
-@Button-font-size: 13px;
-@Button-padding: 0 15px;
-@Button-height: 35px - 2 * @Button-border-width;
+@button-background: #6dcec0;
+@button-border-style: solid;
+@button-border-width: 1px;
+@button-border-color: @button-background;
+@button-color: #fff;
+@button-radius: 0;
+@button-font-size: 13px;
+@button-padding: 0 15px;
+@button-height: 35px - 2 * @button-border-width;
 
-@Button-background-hover: #72dccd;
-@Button-color-hover: @Button-color;
-@Button-border-color-hover: @Button-background-hover;
+@button-background-hover: #72dccd;
+@button-color-hover: @button-color;
+@button-border-color-hover: @button-background-hover;
 
-@Button-background-active: #65cabd;
-@Button-color-active: @Button-color;
-@Button-border-color-active: #46B3A5 #59C0B2 #66C9BB;
+@button-background-active: #65cabd;
+@button-color-active: @button-color;
+@button-border-color-active: #46B3A5 #59C0B2 #66C9BB;
 
-@Button-background-disabled: #eaeaea;
-@Button-color-disabled: #656565;
-@Button-border-color-disabled: @Button-background-disabled;
+@button-background-disabled: #eaeaea;
+@button-color-disabled: #656565;
+@button-border-color-disabled: @button-background-disabled;
 
 .ui-button {
-    background: @Button-background;
-    border-style: @Button-border-style;
-    border-color: @Button-border-color;
-    border-width: @Button-border-width;
-    color: @Button-color;
-    font-size: @Button-font-size;
-    padding: @Button-padding;
-    border-radius: @Button-radius;
-    height: @Button-height;
-    line-height: @Button-height;
+    background: @button-background;
+    border-style: @button-border-style;
+    border-color: @button-border-color;
+    border-width: @button-border-width;
+    color: @button-color;
+    font-size: @button-font-size;
+    padding: @button-padding;
+    border-radius: @button-radius;
+    height: @button-height;
+    line-height: @button-height;
 }
 
 button.ui-button {
-    *height: @Button-height + 2px;
+    *height: @button-height + 2px;
 }
 
 .ui-button:hover {
-    border-color: @Button-border-color-hover;
-    background: @Button-background-hover;
-    color: @Button-color-hover;
-    border-width: @Button-border-width;
+    border-color: @button-border-color-hover;
+    background: @button-background-hover;
+    color: @button-color-hover;
+    border-width: @button-border-width;
 }
 
 .ui-button:active {
-    border-color: @Button-border-color-active;
-    background: @Button-background-active;
-    color: @Button-color-active;
+    border-color: @button-border-color-active;
+    background: @button-background-active;
+    color: @button-color-active;
 }
 
 .ui-button-disabled {
-    border-color: @Button-border-color-disabled;
-    background: @Button-background-disabled;
-    color: @Button-color-disabled;
+    border-color: @button-border-color-disabled;
+    background: @button-background-disabled;
+    color: @button-color-disabled;
     &:hover {
-        border-color: @Button-border-color-disabled;
-        background: @Button-background-disabled;
-        color: @Button-color-disabled;
+        border-color: @button-border-color-disabled;
+        background: @button-background-disabled;
+        color: @button-color-disabled;
     }
     &:active {
-        border-color: @Button-border-color-disabled;
-        background: @Button-background-disabled;
-        color: @Button-color-disabled;
+        border-color: @button-border-color-disabled;
+        background: @button-background-disabled;
+        color: @button-color-disabled;
     }
 }

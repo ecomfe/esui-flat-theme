@@ -1,82 +1,82 @@
-@Select-arrow-icon-width: 9px;
-@Select-arrow-icon-height: 5px;
-@Select-arrow-icon: url(./img/esui-combo-arrow-normal.png);
-@Select-arrow-icon-hover: url(./img/esui-combo-arrow-hover.png);
-@Select-arrow-icon-active: url(./img/esui-combo-arrow-active.png);
-@Select-arrow-icon-disabled: url(./img/esui-combo-arrow-normal.png);
+@select-arrow-icon-width: 9px;
+@select-arrow-icon-height: 5px;
+@select-arrow-icon: url(./img/esui-combo-arrow-normal.png);
+@select-arrow-icon-hover: url(./img/esui-combo-arrow-hover.png);
+@select-arrow-icon-active: url(./img/esui-combo-arrow-active.png);
+@select-arrow-icon-disabled: url(./img/esui-combo-arrow-normal.png);
 
-@Select-background-color: transparent;
-@Select-background-color-hover: transparent;
-@Select-background-color-active: transparent;
-@Select-background-color-disabled: transparent;
-@Select-font-color: #666;
-@Select-border: none;
-@Select-height: 12px;
-@Select-width: auto;
-@Select-height: 12px;
-@Select-padding-left: 18px;
-@Select-padding-right: @Select-padding-left + @Select-arrow-icon-width;
-@Select-padding: 0 @Select-padding-right 0 @Select-padding-left;
+@select-background-color: transparent;
+@select-background-color-hover: transparent;
+@select-background-color-active: transparent;
+@select-background-color-disabled: transparent;
+@select-font-color: #666;
+@select-border: none;
+@select-height: 12px;
+@select-width: auto;
+@select-height: 12px;
+@select-padding-left: 18px;
+@select-padding-right: @select-padding-left + @select-arrow-icon-width;
+@select-padding: 0 @select-padding-right 0 @select-padding-left;
 
 //layer
-@Select-layer-split-border: 0;
-@Select-layer-background: #f7f7f7;
-@Select-item-color: #666;
-@Select-item-height: 30px;
-@Select-item-background-hover: #f1f1f1;
-@Select-item-background-selected: #fffaee;
+@select-layer-split-border: 0;
+@select-layer-background: #f7f7f7;
+@select-item-color: #666;
+@select-item-height: 30px;
+@select-item-background-hover: #f1f1f1;
+@select-item-background-selected: #fffaee;
 
 .ui-select {
-    background: @Select-background-color;
-    border: @Select-border;
+    background: @select-background-color;
+    border: @select-border;
     border-radius: 0;
-    height: @Select-height;
-    line-height: @Select-height;
-    padding: @Select-padding;
-    width: @Select-width;
-    color: @Select-font-color;
+    height: @select-height;
+    line-height: @select-height;
+    padding: @select-padding;
+    width: @select-width;
+    color: @select-font-color;
     font-weight: bold;
     text-align: center;
     // TODO: 这里的left和10px是否需要开放配置？
-    .pseudo-icon(@Select-arrow-icon, @Select-arrow-icon-width, @Select-arrow-icon-height, right, @Select-padding-left);
+    .pseudo-icon(@select-arrow-icon, @select-arrow-icon-width, @select-arrow-icon-height, right, @select-padding-left);
 }
 
 .ui-select:focus,
 .ui-select:hover {
-    background: @Select-background-color-hover;
-    .pseudo-icon(@Select-arrow-icon-hover, @Select-arrow-icon-width, @Select-arrow-icon-height, right, @Select-padding-left);
+    background: @select-background-color-hover;
+    .pseudo-icon(@select-arrow-icon-hover, @select-arrow-icon-width, @select-arrow-icon-height, right, @select-padding-left);
 }
 
 .ui-select-active,
 .ui-select-active:hover,
 .ui-select-active:focus {
-    background: @Select-background-color-active;
-    .pseudo-icon(@Select-arrow-icon-active, @Select-arrow-icon-width, @Select-arrow-icon-height, right, @Select-padding-left);
+    background: @select-background-color-active;
+    .pseudo-icon(@select-arrow-icon-active, @select-arrow-icon-width, @select-arrow-icon-height, right, @select-padding-left);
 }
 
 .ui-select-layer {
-    width: @Select-width;
-    border: @Select-border;
-    border-top: @Select-layer-split-border;
-    background: @Select-layer-background;
+    width: @select-width;
+    border: @select-border;
+    border-top: @select-layer-split-border;
+    background: @select-layer-background;
 }
 
 .ui-select-item {
-    color: @Select-item-color;
-    line-height: @Select-item-height;
+    color: @select-item-color;
+    line-height: @select-item-height;
     margin: 0;
     padding: 0;
     text-align: center;
 }
 
 .ui-select-item-selected {
-    background: @Select-item-background-selected;
+    background: @select-item-background-selected;
     border: none;
     padding: 0 3px;
 }
 
 .ui-select-item:hover {
-    background: @Select-item-background-hover;
+    background: @select-item-background-hover;
 }
 
 .ui-select-disabled,
@@ -84,6 +84,6 @@
 .ui-select-disabled:hover,
 .ui-select-read-only:hover {
     color: #999;
-    background: @Select-background-color-disabled;
-    .pseudo-icon(@Select-arrow-icon-disabled, @Select-arrow-icon-width, @Select-arrow-icon-height, right, @Select-padding-left);
+    background: @select-background-color-disabled;
+    .pseudo-icon(@select-arrow-icon-disabled, @select-arrow-icon-width, @select-arrow-icon-height, right, @select-padding-left);
 }

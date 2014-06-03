@@ -1,69 +1,69 @@
-@Dialog-background: #fff;
-@Dialog-border: 1px solid #ddd;
-@Dialog-width: 470px;
+@dialog-background: #fff;
+@dialog-border: 1px solid #ddd;
+@dialog-width: 470px;
 
-@Dialog-head-background: @Dialog-background;
-@Dialog-color: #333;
-@Dialog-head-height: 43px;
+@dialog-head-background: @dialog-background;
+@dialog-color: #333;
+@dialog-head-height: 43px;
 
-@Dialog-title-padding: 0 0 0 15px;
-@Dialog-title-font-size: 14px;
-@Dialog-title-height: @Dialog-head-height;
+@dialog-title-padding: 0 0 0 15px;
+@dialog-title-font-size: 14px;
+@dialog-title-height: @dialog-head-height;
 
-@Dialog-close-icon-image: url(./img/esui-dialog-head-close.png);
-@Dialog-close-icon-height: 13px;
-@Dialog-close-icon-width: 13px;
-@Dialog-close-icon-right: 15px;
-@Dialog-close-icon-top: 15px;
+@dialog-close-icon-image: url(./img/esui-dialog-head-close.png);
+@dialog-close-icon-height: 13px;
+@dialog-close-icon-width: 13px;
+@dialog-close-icon-right: 15px;
+@dialog-close-icon-top: 15px;
 
-@Dialog-body-padding: 5px 25px;
+@dialog-body-padding: 5px 25px;
 
-@Dialog-foot-panel-padding: 25px 30px;
+@dialog-foot-panel-padding: 25px 30px;
 
-@Dialog-foot-button-align: left;
+@dialog-foot-button-align: left;
 
 .ui-dialog {
-    background: @Dialog-background;
-    border: @Dialog-border;
-    width: @Dialog-width;
+    background: @dialog-background;
+    border: @dialog-border;
+    width: @dialog-width;
     .border-radius(0);
 }
 
 .ui-dialog-head {
-    background: @Dialog-head-background;
-    color: @Dialog-color;
-    height: @Dialog-head-height;
+    background: @dialog-head-background;
+    color: @dialog-color;
+    height: @dialog-head-height;
 }
 
 .ui-dialog-title {
-    padding: @Dialog-title-padding;
-    font-size: @Dialog-title-font-size;
-    line-height: @Dialog-title-height;
+    padding: @dialog-title-padding;
+    font-size: @dialog-title-font-size;
+    line-height: @dialog-title-height;
 }
 
 .ui-dialog-close-icon {
-    .normal-icon(@Dialog-close-icon-image, @Dialog-close-icon-width, @Dialog-close-icon-height);
-    right: @Dialog-close-icon-right;
-    top: @Dialog-close-icon-top;
+    .normal-icon(@dialog-close-icon-image, @dialog-close-icon-width, @dialog-close-icon-height);
+    right: @dialog-close-icon-right;
+    top: @dialog-close-icon-top;
 }
 
 .ui-dialog-body {
-    padding: @Dialog-body-padding;
+    padding: @dialog-body-padding;
 }
 
 
 .ui-dialog-foot-panel {
-    padding: @Dialog-foot-panel-padding;
+    padding: @dialog-foot-panel-padding;
     border: none;
     margin: 0;
 }
 
 .ui-dialog-foot {
-    float: @Dialog-foot-button-align;
+    float: @dialog-foot-button-align;
     .ui-button {
         margin-right: 6px;
-        height: @Button-height;
-        line-height: @Button-height;
+        height: @dialog-foot-button-height;
+        line-height: @dialog-foot-button-height;
         width: 90px;
     }
 }

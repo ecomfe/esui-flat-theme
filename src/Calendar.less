@@ -1,32 +1,32 @@
-@Calendar-border: none;
-@Calendar-border-radius: 0;
-@Calendar-background: #fff;
-@Calendar-color: #333;
+@calendar-border: none;
+@calendar-border-radius: 0;
+@calendar-background: #fff;
+@calendar-color: #333;
 
-@Calendar-border-color-hover: #a9adb6;
+@calendar-border-color-hover: #a9adb6;
 
-@Calendar-arrow-icon-background: url(./img/esui-cal.png);
-@Calendar-arrow-icon-height: 16px;
-@Calendar-arrow-icon-width: 16px;
+@calendar-arrow-icon-background: url(./img/esui-cal.png);
+@calendar-arrow-icon-height: 16px;
+@calendar-arrow-icon-width: 16px;
 
 .ui-calendar {
-    border: @Calendar-border;
-    background: @Calendar-background;
-    border-radius: @Calendar-border-radius;
+    border: @calendar-border;
+    background: @calendar-background;
+    border-radius: @calendar-border-radius;
 }
 
 .ui-calendar-text {
-    color: @Calendar-color;
+    color: @calendar-color;
 }
 
 .ui-calendar:hover,
 .ui-calendar:active {
-    border-color: @Calendar-border-color-hover;
+    border-color: @calendar-border-color-hover;
 }
 
 .ui-calendar-arrow {
     .normal-icon(
-        @Calendar-arrow-icon-background,
-        @Calendar-arrow-icon-width, @Calendar-arrow-icon-height
+        @calendar-arrow-icon-background,
+        @calendar-arrow-icon-width, @calendar-arrow-icon-height
     );
 }

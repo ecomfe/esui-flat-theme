@@ -1,95 +1,95 @@
-@RangeCalendar-main-background: none repeat scroll 0 0 transparent;
-@RangeCalendar-main-border: none;
-@RangeCalendar-main-border-radius: 0;
-@RangeCalendar-main-width: 220px;
-@RangeCalendar-main-height: 55px;
-@RangeCalendar-main-font-size: 12px;
-@RangeCalendar-main-font-color: #666;
-@RangeCalendar-main-hover-border-color: none;
-@RangeCalendar-month-item-color-highlight: #fffbed;
+@range-calendar-main-background: none repeat scroll 0 0 transparent;
+@range-calendar-main-border: none;
+@range-calendar-main-border-radius: 0;
+@range-calendar-main-width: 220px;
+@range-calendar-main-height: 55px;
+@range-calendar-main-font-size: 12px;
+@range-calendar-main-font-color: #666;
+@range-calendar-main-hover-border-color: none;
+@range-calendar-month-item-color-highlight: #fffbed;
 
-@RangeCalendar-arrow-icon: url(./img/esui-monthview-select-icon.png);
-@RangeCalendar-arrow-icon-active: url(./img/esui-monthview-select-icon-active.png);
-@RangeCalendar-arrow-icon-width: 9px;
-@RangeCalendar-arrow-icon-height: 5px;
+@range-calendar-arrow-icon: url(./img/esui-monthview-select-icon.png);
+@range-calendar-arrow-icon-active: url(./img/esui-monthview-select-icon-active.png);
+@range-calendar-arrow-icon-width: 9px;
+@range-calendar-arrow-icon-height: 5px;
 
-@RangeCalendar-layer-background: #f6f6f6;
-@RangeCalendar-layer-border-top-color: #dfdfdf;
-@RangeCalendar-layer-border-top: 3px solid @RangeCalendar-layer-border-top-color;
-@RangeCalendar-layer-border-bottom: none;
-@RangeCalendar-layer-border-left: none;
-@RangeCalendar-layer-border-right: none;
-@RangeCalendar-layer-padding: 11px;
+@range-calendar-layer-background: #f6f6f6;
+@range-calendar-layer-border-top-color: #dfdfdf;
+@range-calendar-layer-border-top: 3px solid @range-calendar-layer-border-top-color;
+@range-calendar-layer-border-bottom: none;
+@range-calendar-layer-border-left: none;
+@range-calendar-layer-border-right: none;
+@range-calendar-layer-padding: 11px;
 
-@RangeCalendar-layer-close-icon: url(./img/esui-rangecalendar-layer-close-icon.png);
-@RangeCalendar-layer-close-icon-width: 10px;
-@RangeCalendar-layer-close-icon-height: 10px;
+@range-calendar-layer-close-icon: url(./img/esui-rangecalendar-layer-close-icon.png);
+@range-calendar-layer-close-icon-width: 10px;
+@range-calendar-layer-close-icon-height: 10px;
 
-@RangeCalendar-shortcut-item-color: #68c1a6;
-@RangeCalendar-link-text-color: #66c4a5;
-@RangeCalendar-link-text-color-hover: #74dcce;
+@range-calendar-shortcut-item-color: #68c1a6;
+@range-calendar-link-text-color: #66c4a5;
+@range-calendar-link-text-color-hover: #74dcce;
 
 .ui-rangecalendar {
-    background: @RangeCalendar-main-background;
-    border: @RangeCalendar-main-border;
-    .border-radius(@RangeCalendar-main-border-radius);
-    width: @RangeCalendar-main-width;
-    height: @RangeCalendar-main-height;
-    line-height: @RangeCalendar-main-height;
-    font-size: @RangeCalendar-main-font-size;
+    background: @range-calendar-main-background;
+    border: @range-calendar-main-border;
+    .border-radius(@range-calendar-main-border-radius);
+    width: @range-calendar-main-width;
+    height: @range-calendar-main-height;
+    line-height: @range-calendar-main-height;
+    font-size: @range-calendar-main-font-size;
 }
 
 .ui-rangecalendar-text {
-    color: @RangeCalendar-main-font-color;
+    color: @range-calendar-main-font-color;
 }
 
 .ui-rangecalendar:hover,
 .ui-rangecalendar:active {
-    border-color: @RangeCalendar-main-hover-border-color;
+    border-color: @range-calendar-main-hover-border-color;
 }
 
 .ui-rangecalendar-arrow {
     background: none;
-    .pseudo-icon(@RangeCalendar-arrow-icon, @RangeCalendar-arrow-icon-width, @RangeCalendar-arrow-icon-height, center);
-    height: @RangeCalendar-main-height;
-    width: @RangeCalendar-arrow-icon-width;
+    .pseudo-icon(@range-calendar-arrow-icon, @range-calendar-arrow-icon-width, @range-calendar-arrow-icon-height, center);
+    height: @range-calendar-main-height;
+    width: @range-calendar-arrow-icon-width;
     margin: 0;
 }
 
 .ui-rangecalendar-active {
     .ui-rangecalendar-arrow {
         background: none;
-        .pseudo-icon(@RangeCalendar-arrow-icon-active, @RangeCalendar-arrow-icon-width, @RangeCalendar-arrow-icon-height, center);
+        .pseudo-icon(@range-calendar-arrow-icon-active, @range-calendar-arrow-icon-width, @range-calendar-arrow-icon-height, center);
     }
 }
 
 .ui-rangecalendar-layer {
-    background: @RangeCalendar-layer-background;
-    border-top: @RangeCalendar-layer-border-top;
-    border-bottom: @RangeCalendar-layer-border-bottom;
-    border-left: @RangeCalendar-layer-border-left;
-    border-right: @RangeCalendar-layer-border-right;
-    padding: @RangeCalendar-layer-padding;
+    background: @range-calendar-layer-background;
+    border-top: @range-calendar-layer-border-top;
+    border-bottom: @range-calendar-layer-border-bottom;
+    border-left: @range-calendar-layer-border-left;
+    border-right: @range-calendar-layer-border-right;
+    padding: @range-calendar-layer-padding;
     width: auto;
     &.ui-layer-bl {
-        .top-pointer(@RangeCalendar-layer-border-top-color, 60px, 0);
+        .top-pointer(@range-calendar-layer-border-top-color, 60px, 0);
         position: absolute;
     }
 
     &.ui-layer-br {
-        .top-pointer(@RangeCalendar-layer-border-top-color, 0, 60px);
+        .top-pointer(@range-calendar-layer-border-top-color, 0, 60px);
         position: absolute;
     }
 
 
     .ui-rangecalendar-shortcut-item {
-        border-left: 1px solid @RangeCalendar-shortcut-item-color;
-        color: @RangeCalendar-shortcut-item-color;
+        border-left: 1px solid @range-calendar-shortcut-item-color;
+        color: @range-calendar-shortcut-item-color;
         text-decoration: none;
         margin-left: 8px;
         padding-left: 8px;
         &:hover {
-            color: @RangeCalendar-link-text-color-hover;
+            color: @range-calendar-link-text-color-hover;
         }
     }
 
@@ -111,10 +111,10 @@
         .ui-rangecalendar-begin, .ui-rangecalendar-end {
             width: auto;
             .ui-monthview-month-item-highlight {
-                background: @RangeCalendar-month-item-color-highlight;
+                background: @range-calendar-month-item-color-highlight;
             }
             .ui-monthview-month-item:hover {
-                background: @Monthview-month-item-background-hover;
+                background: @month-view-month-item-background-hover;
             }
  
         }
@@ -125,7 +125,7 @@
     }
     
     .skin-layerClose-button {
-        .normal-icon(@RangeCalendar-layer-close-icon, @RangeCalendar-layer-close-icon-width, @RangeCalendar-layer-close-icon-height);
+        .normal-icon(@range-calendar-layer-close-icon, @range-calendar-layer-close-icon-width, @range-calendar-layer-close-icon-height);
         right: 11px;
         top: 12px;
         border: none;
@@ -150,10 +150,10 @@
 
         .ui-rangecalendar-cancelBtn {
             background: none;
-            color: @RangeCalendar-link-text-color;
+            color: @range-calendar-link-text-color;
             border: none;
             &:hover {
-                color: @RangeCalendar-link-text-color-hover;
+                color: @range-calendar-link-text-color-hover;
             }
         }
     }

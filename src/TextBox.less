@@ -1,45 +1,45 @@
-@TextBox-border: 1px solid #ddd;
-@TextBox-width: 240px;
-@TextBox-input-height: 28px;
-@TextBox-color : #333;
-@TextBox-background: #fff;
+@text-box-border: 1px solid #ddd;
+@text-box-width: 240px;
+@text-box-input-height: 28px;
+@text-box-color : #333;
+@text-box-background: #fff;
 
 //hover
-@TextBox-border-hover: 1px solid #65cabd;
+@text-box-border-hover: 1px solid #65cabd;
 
 //Hint
-@TextBox-hint-background: #f7f7f7;
-@TextBox-hint-border: @TextBox-border;
+@text-box-hint-background: #f7f7f7;
+@text-box-hint-border: @text-box-border;
 .ui-textbox {
     input, textarea {
-        color: @TextBox-color;
-        background: @TextBox-background;
-        border: @TextBox-border;
-        width: @TextBox-width;
-        height: @TextBox-input-height;
-        line-height: @TextBox-input-height;
+        color: @text-box-color;
+        background: @text-box-background;
+        border: @text-box-border;
+        width: @text-box-width;
+        height: @text-box-input-height;
+        line-height: @text-box-input-height;
         &:hover {
-            border: @TextBox-border-hover;
+            border: @text-box-border-hover;
         }
     }
 }
 
 .ui-textbox-hint {
-    background: @TextBox-hint-background;
-    border: @TextBox-hint-border;
-    height: @TextBox-input-height;
-    line-height: @TextBox-input-height;
+    background: @text-box-hint-background;
+    border: @text-box-hint-border;
+    height: @text-box-input-height;
+    line-height: @text-box-input-height;
 }
 
 .ui-textbox-placeholder {
-    height: @TextBox-input-height;
-    line-height:  @TextBox-input-height;
+    height: @text-box-input-height;
+    line-height:  @text-box-input-height;
 }
 
 .ui-textbox-disabled,
 .ui-textbox-read-only {
     input, textarea {
-        border: @TextBox-border;
+        border: @text-box-border;
         background: #f6f6f6;
         color: #999;
     }

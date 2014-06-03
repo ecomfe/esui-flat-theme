@@ -1,73 +1,73 @@
-@TipLayer-background: #fff6bd;
-@TipLayer-font-color: #555;
+@tip-layer-background: #fff6bd;
+@tip-layer-font-color: #555;
 
-@TipLayer-border-color: #d5ca81;
-@TipLayer-border-width: 1px;
-@TipLayer-border-style: solid;
-@TipLayer-border: @TipLayer-border-width @TipLayer-border-style @TipLayer-border-color;
+@tip-layer-border-color: #d5ca81;
+@tip-layer-border-width: 1px;
+@tip-layer-border-style: solid;
+@tip-layer-border: @tip-layer-border-width @tip-layer-border-style @tip-layer-border-color;
 
-@TipLayer-padding: 5px;
+@tip-layer-padding: 5px;
 
-@TipLayer-arrow-width-lr: 13px;
-@TipLayer-arrow-height-lr: 12px;
-@TipLayer-arrow-width-tb: 12px;
-@TipLayer-arrow-height-tb: 13px;
+@tip-layer-arrow-width-lr: 13px;
+@tip-layer-arrow-height-lr: 12px;
+@tip-layer-arrow-width-tb: 12px;
+@tip-layer-arrow-height-tb: 13px;
 
-@TipLayer-arrow-top-lr: 2px;
-@TipLayer-arrow-bottom-lr: 2px;
+@tip-layer-arrow-top-lr: 2px;
+@tip-layer-arrow-bottom-lr: 2px;
 
-@TipLayer-arrow-left-tb: -1px;
-@TipLayer-arrow-right-tb: -1px;
+@tip-layer-arrow-left-tb: -1px;
+@tip-layer-arrow-right-tb: -1px;
 
-@TipLayer-arrow-icon-tl: url(./img/esui-tip-arrow-tl.png);
-@TipLayer-arrow-icon-tr: url(./img/esui-tip-arrow-tr.png);
-@TipLayer-arrow-icon-bl: url(./img/esui-tip-arrow-bl.png);
-@TipLayer-arrow-icon-br: url(./img/esui-tip-arrow-br.png);
-@TipLayer-arrow-icon-lt: url(./img/esui-tip-arrow-lt.png);
-@TipLayer-arrow-icon-lb: url(./img/esui-tip-arrow-lb.png);
-@TipLayer-arrow-icon-rt: url(./img/esui-tip-arrow-rt.png);
-@TipLayer-arrow-icon-rb: url(./img/esui-tip-arrow-rb.png);
+@tip-layer-arrow-icon-tl: url(./img/esui-tip-arrow-tl.png);
+@tip-layer-arrow-icon-tr: url(./img/esui-tip-arrow-tr.png);
+@tip-layer-arrow-icon-bl: url(./img/esui-tip-arrow-bl.png);
+@tip-layer-arrow-icon-br: url(./img/esui-tip-arrow-br.png);
+@tip-layer-arrow-icon-lt: url(./img/esui-tip-arrow-lt.png);
+@tip-layer-arrow-icon-lb: url(./img/esui-tip-arrow-lb.png);
+@tip-layer-arrow-icon-rt: url(./img/esui-tip-arrow-rt.png);
+@tip-layer-arrow-icon-rb: url(./img/esui-tip-arrow-rb.png);
 
 
-@TipLayer-title-padding: 0px;
-@TipLayer-title-margin: .5em 0;
-@TipLayer-title-font-size: 12px;
-@TipLayer-title-line-height: 18px;
+@tip-layer-title-padding: 0px;
+@tip-layer-title-margin: .5em 0;
+@tip-layer-title-font-size: 12px;
+@tip-layer-title-line-height: 18px;
 
-@TipLayer-body-padding: 0px;
-@TipLayer-body-margin: 0 0 5px;
-@TipLayer-body-font-size: 12px;
-@TipLayer-body-line-height: 18px;
+@tip-layer-body-padding: 0px;
+@tip-layer-body-margin: 0 0 5px;
+@tip-layer-body-font-size: 12px;
+@tip-layer-body-line-height: 18px;
 
 .ui-tiplayer {
-    background: @TipLayer-background;
-    border: @TipLayer-border;
-    padding: @TipLayer-padding;
-    color: @TipLayer-font-color;
+    background: @tip-layer-background;
+    border: @tip-layer-border;
+    padding: @tip-layer-padding;
+    color: @tip-layer-font-color;
 }
 
 .ui-tiplayer-rt,
 .ui-tiplayer-rb {
-    margin-left: -1*@TipLayer-arrow-width-lr;
+    margin-left: -1*@tip-layer-arrow-width-lr;
 }
 
 .ui-tiplayer-lt,
 .ui-tiplayer-lb {
-    margin-left: @TipLayer-arrow-width-lr;
+    margin-left: @tip-layer-arrow-width-lr;
 }
 
 .ui-tiplayer-title {
-    padding: @TipLayer-title-padding;
-    margin: @TipLayer-title-margin;
-    font-size: @TipLayer-title-font-size;
-    line-height: @TipLayer-title-line-height;
+    padding: @tip-layer-title-padding;
+    margin: @tip-layer-title-margin;
+    font-size: @tip-layer-title-font-size;
+    line-height: @tip-layer-title-line-height;
 }
 .ui-tiplayer-body {
-    padding: @TipLayer-body-padding;
-    margin: @TipLayer-body-margin;
-    @TipLayer-body-font-size: 12px;
+    padding: @tip-layer-body-padding;
+    margin: @tip-layer-body-margin;
+    @tip-layer-body-font-size: 12px;
     word-wrap: break-word;
-    line-height: @TipLayer-body-line-height;
+    line-height: @tip-layer-body-line-height;
 }
 
 .ui-tiplayer-arrow {
@@ -79,73 +79,73 @@
 .ui-tiplayer-arrow-tl {
     display: block;
     .normal-icon(
-        @TipLayer-arrow-icon-tl, @TipLayer-arrow-width-tb, @TipLayer-arrow-height-tb
+        @tip-layer-arrow-icon-tl, @tip-layer-arrow-width-tb, @tip-layer-arrow-height-tb
     );
-    top: -1*@TipLayer-arrow-height-tb;
-    left: @TipLayer-arrow-left-tb;
+    top: -1*@tip-layer-arrow-height-tb;
+    left: @tip-layer-arrow-left-tb;
 }
 
 .ui-tiplayer-arrow-tr {
     display: block;
     .normal-icon(
-        @TipLayer-arrow-icon-tr, @TipLayer-arrow-width-tb, @TipLayer-arrow-height-tb
+        @tip-layer-arrow-icon-tr, @tip-layer-arrow-width-tb, @tip-layer-arrow-height-tb
     );
-    top: -1*@TipLayer-arrow-height-tb;
-    right: @TipLayer-arrow-right-tb;
+    top: -1*@tip-layer-arrow-height-tb;
+    right: @tip-layer-arrow-right-tb;
 }
 
 .ui-tiplayer-arrow-bl {
     display: block;
     .normal-icon(
-        @TipLayer-arrow-icon-bl, @TipLayer-arrow-width-tb, @TipLayer-arrow-height-tb
+        @tip-layer-arrow-icon-bl, @tip-layer-arrow-width-tb, @tip-layer-arrow-height-tb
     );
-    bottom: -1*@TipLayer-arrow-height-tb;
-    left: @TipLayer-arrow-left-tb;
+    bottom: -1*@tip-layer-arrow-height-tb;
+    left: @tip-layer-arrow-left-tb;
 }
 
 .ui-tiplayer-arrow-br {
     display: block;
     .normal-icon(
-        @TipLayer-arrow-icon-br, @TipLayer-arrow-width-tb, @TipLayer-arrow-height-tb
+        @tip-layer-arrow-icon-br, @tip-layer-arrow-width-tb, @tip-layer-arrow-height-tb
     );
-    bottom: -1*@TipLayer-arrow-height-tb;
-    right: @TipLayer-arrow-right-tb;
+    bottom: -1*@tip-layer-arrow-height-tb;
+    right: @tip-layer-arrow-right-tb;
 }
 
 .ui-tiplayer-arrow-lt {
     display: block;
     .normal-icon(
-        @TipLayer-arrow-icon-lt, @TipLayer-arrow-width-lr, @TipLayer-arrow-height-lr
+        @tip-layer-arrow-icon-lt, @tip-layer-arrow-width-lr, @tip-layer-arrow-height-lr
     );
-    top: @TipLayer-arrow-top-lr;
-    left: -1*@TipLayer-arrow-width-lr;
+    top: @tip-layer-arrow-top-lr;
+    left: -1*@tip-layer-arrow-width-lr;
 }
 
 .ui-tiplayer-arrow-lb {
     display: block;
     .normal-icon(
-        @TipLayer-arrow-icon-lb, @TipLayer-arrow-width-lr, @TipLayer-arrow-height-lr
+        @tip-layer-arrow-icon-lb, @tip-layer-arrow-width-lr, @tip-layer-arrow-height-lr
     );
-    bottom: @TipLayer-arrow-bottom-lr;
-    left: -1*@TipLayer-arrow-width-lr;
+    bottom: @tip-layer-arrow-bottom-lr;
+    left: -1*@tip-layer-arrow-width-lr;
 }
 
 .ui-tiplayer-arrow-rt {
     display: block;
     .normal-icon(
-        @TipLayer-arrow-icon-rt, @TipLayer-arrow-width-lr, @TipLayer-arrow-height-lr
+        @tip-layer-arrow-icon-rt, @tip-layer-arrow-width-lr, @tip-layer-arrow-height-lr
     );
-    top: @TipLayer-arrow-top-lr;
-    right: -1*@TipLayer-arrow-width-lr;
+    top: @tip-layer-arrow-top-lr;
+    right: -1*@tip-layer-arrow-width-lr;
 }
 
 .ui-tiplayer-arrow-rb {
     display: block;
     .normal-icon(
-        @TipLayer-arrow-icon-rb, @TipLayer-arrow-width-lr, @TipLayer-arrow-height-lr
+        @tip-layer-arrow-icon-rb, @tip-layer-arrow-width-lr, @tip-layer-arrow-height-lr
     );
-    bottom: @TipLayer-arrow-bottom-lr;
-    right: -1*@TipLayer-arrow-width-lr;
+    bottom: @tip-layer-arrow-bottom-lr;
+    right: -1*@tip-layer-arrow-width-lr;
 }
 
 .ui-tiplayer-hidden {

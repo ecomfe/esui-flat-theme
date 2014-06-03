@@ -1,52 +1,71 @@
 // TODO: 改了变量名，这里之后要做下向前兼容处理
-@Searchbox-search-icon-img: url(./img/esui-search-normal.png);
-@Searchbox-search-icon-img-active: url(./img/esui-search-active.png);
-@Searchbox-search-icon-img-width: 15px;
-@Searchbox-search-icon-img-height: 15px;
-@Searchbox-search-icon-width: 25px;
-@Searchbox-search-icon-height: 25px;
+@search-box-height: 25px;
 
-@Searchbox-2x-search-icon-background-image: url(./img/search@2x.png);
-@Searchbox-2x-search-icon-background-size: 15px 50px;
+@search-box-search-icon-img: url(./img/esui-search-normal.png);
+@search-box-search-icon-img-active: url(./img/esui-search-active.png);
+@search-box-search-icon-img-width: 15px;
+@search-box-search-icon-img-height: 15px;
+@search-box-search-icon-width: 25px;
+@search-box-search-icon-height: @search-box-height;
 
-@Searchbox-border: 1px solid #ddd;
-@Searchbox-hover-border: 1px solid #65cabd;
-@Searchbox-focus-border: 1px solid #65cabd;
-@SearchBox-height: 23px;
+@search-box-2x-search-icon-background-image: url(./img/search@2x.png);
+@search-box-2x-search-icon-background-size: 15px 50px;
+
+@search-box-border-width: 1px;
+@search-box-border-color: #ddd;
+@search-box-border-color-hover: #65cabd;
+@search-box-border-color-focus: #65cabd;
+@search-box-border: @search-box-border-width solid @search-box-border-color;
+@search-box-hover-border: @search-box-border-width solid @search-box-border-color-hover;
+@search-box-focus-border: @search-box-border-width solid @search-box-border-color-focus;
+
+@search-box-padding-top: 2px;
+@search-box-padding-bottom: 2px;
+@search-box-padding-left: 4px;
+@search-box-padding-right: 2px;
+
+// 右padding实际是icon的宽度 + 开发者设置padding
+@search-box-padding: @search-box-padding-top @search-box-padding-right+@search-box-search-icon-width @search-box-padding-bottom @search-box-padding-left;
+
+@search-box-input-height: @search-box-height - @search-box-padding-top - @search-box-padding-bottom - 2 * @search-box-border-width;
 
 
 .normal-search-icon() {
     .pseudo-icon(
-        @Searchbox-search-icon-img,
-        @Searchbox-search-icon-img-width, @Searchbox-search-icon-img-height,
+        @search-box-search-icon-img,
+        @search-box-search-icon-img-width, @search-box-search-icon-img-height,
         center, 0, center, 0, absolute);
 }
 .active-search-icon() {
     .pseudo-icon(
-        @Searchbox-search-icon-img-active,
-        @Searchbox-search-icon-img-width, @Searchbox-search-icon-img-height,
+        @search-box-search-icon-img-active,
+        @search-box-search-icon-img-width, @search-box-search-icon-img-height,
         center, 0, center, 0, absolute);
 }
 
 .ui-searchbox {
     .ui-textbox {
         input {
-            padding-right: @Searchbox-search-icon-width;
-            border: @Searchbox-border;
+            float: left;
+            // 实际高度是：视觉高度 - 上下padding - 上下border
+            height: @search-box-input-height;
+            line-height: @search-box-input-height;
+            padding: @search-box-padding;
+            border: @search-box-border;
 
             &:hover {
-                border: @Searchbox-hover-border;
+                border: @search-box-hover-border;
             }
 
             &:focus {
-                border-color: @Searchbox-focus-border; 
+                border-color: @search-box-focus-border; 
             }
         }
     }
 
     .ui-button {
-        width: @Searchbox-search-icon-width;
-        height: @Searchbox-search-icon-height;
+        width: @search-box-search-icon-width;
+        height: @search-box-search-icon-height;
         top: 0;
         background: none;
         .normal-search-icon();
@@ -76,8 +95,8 @@
 }
 
 .searchbox-2x() {
-    background-image: @Searchbox-2x-search-icon-background-image;
-    background-size: @Searchbox-2x-search-icon-background-size;
+    background-image: @search-box-2x-search-icon-background-image;
+    background-size: @search-box-2x-search-icon-background-size;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 

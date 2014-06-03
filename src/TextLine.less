@@ -1,36 +1,36 @@
-@TextLine-border: 1px solid #ebebeb;
-@TextLine-hover-border: @TextLine-border;
-@TextLine-num-line-background: #f7f7f7;
-@TextLine-num-line-color: #333;
-@TextLine-num-line-width: 30px;
-@TextLine-num-line-line-height: 25px;
-@TextLine-num-line-font-size: 12px;
+@text-line-border: 1px solid #ebebeb;
+@text-line-hover-border: @text-line-border;
+@text-line-num-line-background: #f7f7f7;
+@text-line-num-line-color: #333;
+@text-line-num-line-width: 30px;
+@text-line-num-line-line-height: 25px;
+@text-line-num-line-font-size: 12px;
 
-@TextLine-textarea-background: #fff;
+@text-line-textarea-background: #fff;
 
 .ui-textline {
-    background: @TextLine-num-line-background;
-    border: @TextLine-border;
+    background: @text-line-num-line-background;
+    border: @text-line-border;
     &:hover {
-        border: @TextLine-hover-border;
+        border: @text-line-hover-border;
     }
 }
 
 .ui-textline-num-line {
-    background: @TextLine-num-line-background;
-    color: @TextLine-num-line-color;
-    width: @TextLine-num-line-width;
-    line-height: @TextLine-num-line-line-height;
-    font-size: @TextLine-num-line-font-size;
+    background: @text-line-num-line-background;
+    color: @text-line-num-line-color;
+    width: @text-line-num-line-width;
+    line-height: @text-line-num-line-line-height;
+    font-size: @text-line-num-line-font-size;
 }
 
 .ui-textline-text-container {
-    left: @TextLine-num-line-width;
+    left: @text-line-num-line-width;
     textarea {
         position: absolute;
-        background: @TextLine-textarea-background;
-        line-height: @TextLine-num-line-line-height;
-        font-size: @TextLine-num-line-font-size;
+        background: @text-line-textarea-background;
+        line-height: @text-line-num-line-line-height;
+        font-size: @text-line-num-line-font-size;
         resize: none;
     }
 }
