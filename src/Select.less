@@ -1,9 +1,9 @@
-@select-arrow-icon-width: 9px;
-@select-arrow-icon-height: 5px;
-@select-arrow-icon: url(./img/esui-combo-arrow-normal.png);
-@select-arrow-icon-hover: url(./img/esui-combo-arrow-hover.png);
-@select-arrow-icon-active: url(./img/esui-combo-arrow-active.png);
-@select-arrow-icon-disabled: url(./img/esui-combo-arrow-normal.png);
+@select-layer-state-indicator-width: 9px;
+@select-layer-state-indicator-height: 5px;
+@select-layer-state-indicator: url(./img/esui-combo-arrow-normal.png);
+@select-layer-state-indicator-hover: url(./img/esui-combo-arrow-hover.png);
+@select-layer-state-indicator-active: url(./img/esui-combo-arrow-active.png);
+@select-layer-state-indicator-disabled: url(./img/esui-combo-arrow-normal.png);
 
 @select-background-color: transparent;
 @select-background-color-hover: transparent;
@@ -14,8 +14,11 @@
 @select-height: 12px;
 @select-width: auto;
 @select-height: 12px;
+
 @select-padding-left: 18px;
-@select-padding-right: 2 * @select-padding-left + @select-arrow-icon-width;
+// select实际右侧内边距 
+//     = 2倍左侧内边距（保证图标距离文字和右侧外边缘距离相同）+ 图标宽度
+@select-padding-right: 2 * @select-padding-left + @select-layer-state-indicator-width;
 @select-padding: 0 @select-padding-right 0 @select-padding-left;
 
 //layer
@@ -38,20 +41,20 @@
     font-weight: bold;
     text-align: center;
     // TODO: 这里的left和10px是否需要开放配置？
-    .pseudo-icon(@select-arrow-icon, @select-arrow-icon-width, @select-arrow-icon-height, right, @select-padding-left);
+    .pseudo-icon(@select-layer-state-indicator, @select-layer-state-indicator-width, @select-layer-state-indicator-height, right, @select-padding-left);
 }
 
 .ui-select:focus,
 .ui-select:hover {
     background: @select-background-color-hover;
-    .pseudo-icon(@select-arrow-icon-hover, @select-arrow-icon-width, @select-arrow-icon-height, right, @select-padding-left);
+    .pseudo-icon(@select-layer-state-indicator-hover, @select-layer-state-indicator-width, @select-layer-state-indicator-height, right, @select-padding-left);
 }
 
 .ui-select-active,
 .ui-select-active:hover,
 .ui-select-active:focus {
     background: @select-background-color-active;
-    .pseudo-icon(@select-arrow-icon-active, @select-arrow-icon-width, @select-arrow-icon-height, right, @select-padding-left);
+    .pseudo-icon(@select-layer-state-indicator-active, @select-layer-state-indicator-width, @select-layer-state-indicator-height, right, @select-padding-left);
 }
 
 .ui-select-layer {
@@ -85,5 +88,5 @@
 .ui-select-read-only:hover {
     color: #999;
     background: @select-background-color-disabled;
-    .pseudo-icon(@select-arrow-icon-disabled, @select-arrow-icon-width, @select-arrow-icon-height, right, @select-padding-left);
+    .pseudo-icon(@select-layer-state-indicator-disabled, @select-layer-state-indicator-width, @select-layer-state-indicator-height, right, @select-padding-left);
 }
