@@ -1,60 +1,60 @@
-@Schedule-Border: 1px solid #cdcdcd;
-@Schedule-Background: #f7f7f7;
+@schedule-border: 1px solid #cdcdcd;
+@schedule-background: #f7f7f7;
 
-@Schedule-ItemBorder: 1px solid #dcdcdc;
+@schedule-item-border: 1px solid #dcdcdc;
 
-@Schedule-ShortcutItemColor: #333;
-@Schedule-ShortcutItemBorder: 1px solid #a8adb6;
-@Schedule-ShortcutItemBorderRadius: 2px;
+@schedule-shortcut-item-color: #333;
+@schedule-shortcut-item-border: 1px solid #a8adb6;
+@schedule-shortcut-item-border-radius: 2px;
 
-@Schedule-ShortcutItemHoverBorder: 1px solid #888f9b;
+@schedule-shortcut-item-border-hover: 1px solid #888f9b;
 
-@Schedule-HelpUnSelectedBackgroundColor: #fff;
-@Schedule-HelpSelectedBackgroundColor: #dcfacf;
+@schedule-help-background-color-unselected: #fff;
+@schedule-help-background-color-selected: #dcfacf;
 
-@Schedule-TimeHoverBorder: 1px solid #f7de41;
-@Schedule-TimeHoverBackgroundColor: #fff6bd;
+@schedule-TimeHoverborder: 1px solid #f7de41;
+@schedule-TimeHoverbackgroundColor: #fff6bd;
 
-@Schedule-FollowItemBorder: 1px dotted #cc0000;
-@Schedule-FollowItemBackground: #dcfacf;
+@schedule-follow-item-border: 1px dotted #cc0000;
+@schedule-follow-item-background: #dcfacf;
 
 .ui-schedule {
-    background: @Schedule-Background;
-    border: @Schedule-Border;
+    background: @schedule-background;
+    border: @schedule-border;
 }
 
 .ui-schedule-shortcut-item {
-    color: @Schedule-ShortcutItemColor;
-    border: @Schedule-ShortcutItemBorder;
-    border-radius: @Schedule-ShortcutItemBorderRadius;
+    color: @schedule-shortcut-item-color;
+    border: @schedule-shortcut-item-border;
+    border-radius: @schedule-shortcut-item-border-radius;
 }
 
 .ui-schedule-shortcut-item-hover,
 .ui-schedule-shortcut-item-press {
-    border: @Schedule-ShortcutItemHoverBorder;
+    border: @schedule-shortcut-item-border-hover;
 }
 
 .ui-schedule-shortcut-text-item {
-    color: @Schedule-ShortcutItemColor;
+    color: @schedule-shortcut-item-color;
 }
 
 .ui-schedule-time,
 .ui-schedule-help-selected,
 .ui-schedule-help-unselected {
-    border: @Schedule-ItemBorder;
-    background: @Schedule-HelpUnSelectedBackgroundColor;
+    border: @schedule-item-border;
+    background: @schedule-help-background-color-unselected;
 }
 
 .ui-schedule-time-selected,
 .ui-schedule-help-selected {
-    background: @Schedule-HelpSelectedBackgroundColor;
+    background: @schedule-help-background-color-selected;
 }
 
 .ui-schedule-time-hover {
-    border: @Schedule-TimeHoverBorder;
-    background: @Schedule-TimeHoverBackgroundColor;
+    border: @schedule-TimeHoverborder;
+    background: @schedule-TimeHoverbackgroundColor;
 }
 
 .ui-schedule-follow-item {
-    border: @Schedule-FollowItemBorder;
+    border: @schedule-follow-item-border;
 }

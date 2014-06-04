@@ -1,27 +1,27 @@
-@Region-font-color: #000;
-@Region-border-color: #DDDDDD;
-@Region-border-color-disabled: #D8D8D8;
-@Region-border: 1px solid @Region-border-color;
+@region-font-color: #000;
+@region-border-color: #DDDDDD;
+@region-border-color-disabled: #D8D8D8;
+@region-border: 1px solid @region-border-color;
 
-@Region-country-row-border-color: #DDDDDD;
-@Region-country-row-border-bottom: 1px solid @Region-country-row-border-color;
+@region-country-row-border-color: #DDDDDD;
+@region-country-row-border-bottom: 1px solid @region-country-row-border-color;
 
-@Region-country-row-background-color: #F6F6F6;
+@region-country-row-background-color: #F6F6F6;
 
-@Region-region-row-border-odd: solid 1px #E6EEF6;
-@Region-region-row-background-odd: #F9FCFE;
+@region-region-row-border-odd: solid 1px #E6EEF6;
+@region-region-row-background-odd: #F9FCFE;
 
-@Region-region-row-border-even: solid 1px #FFFFFF;
-@Region-region-row-background-even: #F1F1F1;
+@region-region-row-border-even: solid 1px #FFFFFF;
+@region-region-row-background-even: #F1F1F1;
 
-@Region-city-box-border: solid 1px #97A5B2;
-@Region-city-box-background: #FFF;
+@region-city-box-border: solid 1px #97A5B2;
+@region-city-box-background: #FFF;
 
-@Region-city-box-border-hover: solid 1px #97A5B2;
-@Region-city-box-background-hover: #FFF;
+@region-city-box-border-hover: solid 1px #97A5B2;
+@region-city-box-background-hover: #FFF;
 
-@Region-select-info-tip-background: #3F8FE1;
-@Region-select-info-tip-color: #FFF;
+@region-select-info-tip-background: #3F8FE1;
+@region-select-info-tip-color: #FFF;
 
 .ui-region {
     text-align: left;
@@ -30,8 +30,8 @@
     width: 610px;
     font-size: 12px;
     line-height: 13px;
-    color: @Region-font-color;
-    border: @Region-border;
+    color: @region-font-color;
+    border: @region-border;
     border-bottom: none;
     .user-select();
 
@@ -52,21 +52,21 @@
     .ui-region-country-box {
         overflow: hidden;
         zoom: 1;
-        border-bottom: @Region-country-row-border-bottom;
+        border-bottom: @region-country-row-border-bottom;
     }
 
     .ui-region-country-check {
         width: 600px;
         height: 14px;
         padding: 8px 0 8px 10px;
-        background-color: @Region-country-row-background-color;
+        background-color: @region-country-row-background-color;
         border-top: none;
     }
 
     .ui-region-region-box0 {
         width: 610px;
-        border-top: @Region-region-row-border-odd;
-        background: @Region-region-row-background-odd;
+        border-top: @region-region-row-border-odd;
+        background: @region-region-row-background-odd;
         clear: both;
         .clear-float();
     }
@@ -74,8 +74,8 @@
     .ui-region-region-box1 {
         width: 610px;
         clear: both;
-        background: @Region-region-row-background-even;;
-        border-top: @Region-region-row-border-even;
+        background: @region-region-row-background-even;;
+        border-top: @region-region-row-border-even;
         .clear-float();
     }
 
@@ -104,8 +104,8 @@
             position: absolute;
             padding: 3px 0;
             margin: -1px;
-            background-color: @Region-city-box-background;
-            border: @Region-city-box-border;
+            background-color: @region-city-box-background;
+            border: @region-city-box-border;
             z-index: 998;
             _height: 26px;
 
@@ -118,20 +118,20 @@
 
         .ui-region-city-box-over {
             border-right: none;
-            background-color: @Region-city-box-background-hover;
-            border: @Region-city-box-border-hover;
+            background-color: @region-city-box-background-hover;
+            border: @region-city-box-border-hover;
             margin: -1px 0;
             z-index: 999;
         }
 
         b {
             width: 33px;
-            color: @Region-select-info-tip-color;
+            color: @region-select-info-tip-color;
             display: block;
             text-align: center;
             font-weight: normal;
             font-family: Arial, Helvetica, sans-serif;
-            background: @Region-select-info-tip-background;
+            background: @region-select-info-tip-background;
             margin-top: 8px;
             -moz-border-radius: 3px;
             -webkit-border-radius: 3px;
@@ -168,5 +168,5 @@
 .ui-region-disabled,
 .ui-region-read-only {
     color: #999;
-    border-color: @Region-border-color-disabled;
+    border-color: @region-border-color-disabled;
 }

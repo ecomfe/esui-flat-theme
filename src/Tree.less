@@ -1,49 +1,49 @@
-@Tree-node-line-height: 35px;
+@tree-node-line-height: 35px;
 
-@Tree-node-indicator-icon-height-collapsed: 7px;
-@Tree-node-indicator-icon-width-collapsed: 5px;
-@Tree-node-indicator-icon-collapsed: url(./img/esui-open-icon.png);
+@tree-node-indicator-icon-height-collapsed: 7px;
+@tree-node-indicator-icon-width-collapsed: 5px;
+@tree-node-indicator-icon-collapsed: url(./img/esui-open-icon.png);
 
-@Tree-node-indicator-icon-height-expanded: 5px;
-@Tree-node-indicator-icon-width-expanded: 7px;
-@Tree-node-indicator-icon-expanded: url(./img/esui-close-icon.png);
+@tree-node-indicator-icon-height-expanded: 5px;
+@tree-node-indicator-icon-width-expanded: 7px;
+@tree-node-indicator-icon-expanded: url(./img/esui-close-icon.png);
 
-@Tree-node-indicator-height: 7px;
-@Tree-node-indicator-width: 7px;
-@Tree-node-indicator-margin: 14px 9px 14px 4px;
+@tree-node-indicator-height: 7px;
+@tree-node-indicator-width: 7px;
+@tree-node-indicator-margin: 14px 9px 14px 4px;
 
 // TODO：这里应该也开放出来同形式的变量
-@Tree-node-indicator-empty-background: none;
-@Tree-node-indicator-previous-background: none;
-@Tree-node-indicator-far-previous-background: none;
+@tree-node-indicator-empty-background: none;
+@tree-node-indicator-previous-background: none;
+@tree-node-indicator-far-previous-background: none;
 
-@Tree-node-item-font-color: #666;
+@tree-node-item-font-color: #666;
 
 
 // 选中的节点
-@Tree-node-wrapper-background-selected: #fffaee;
-@Tree-node-item-font-color-selected: #333;
-@Tree-node-item-icon-selected: none;
+@tree-node-wrapper-background-selected: #fffaee;
+@tree-node-item-font-color-selected: #333;
+@tree-node-item-icon-selected: none;
 // 悬浮的节点
-@Tree-node-wrapper-background-hover: #fffaee;
-@Tree-node-item-font-color-hover: #333;
-@Tree-node-item-icon-hover: none;
+@tree-node-wrapper-background-hover: #fffaee;
+@tree-node-item-font-color-hover: #333;
+@tree-node-item-icon-hover: none;
 
 // 图标
 .ui-tree-node-indicator {
-    margin: @Tree-node-indicator-margin;
-    height: @Tree-node-indicator-height;
-    width: @Tree-node-indicator-width;
+    margin: @tree-node-indicator-margin;
+    height: @tree-node-indicator-height;
+    width: @tree-node-indicator-width;
     background: none;
     .pseudo-icon(
-        @Tree-node-indicator-icon-collapsed, @Tree-node-indicator-icon-width-collapsed, @Tree-node-indicator-icon-height-collapsed, center
+        @tree-node-indicator-icon-collapsed, @tree-node-indicator-icon-width-collapsed, @tree-node-indicator-icon-height-collapsed, center
     );
 }
 
 // 展开
 .ui-tree-node-indicator-expanded {
     .pseudo-icon(
-        @Tree-node-indicator-icon-expanded, @Tree-node-indicator-icon-width-expanded, @Tree-node-indicator-icon-height-expanded, center
+        @tree-node-indicator-icon-expanded, @tree-node-indicator-icon-width-expanded, @tree-node-indicator-icon-height-expanded, center
     );
 }
 
@@ -51,49 +51,49 @@
 .ui-tree-node-indicator-empty {
     background: none;
     .pseudo-icon(
-        @Tree-node-indicator-empty-background, 0, 0
+        @tree-node-indicator-empty-background, 0, 0
     );
 }
 .ui-tree-node-indicator-previous {
     background: none;
     .pseudo-icon(
-        @Tree-node-indicator-previous-background, 0, 0
+        @tree-node-indicator-previous-background, 0, 0
     );
 }
 .ui-tree-node-indicator-far-previous {
     background: none;
     .pseudo-icon(
-        @Tree-node-indicator-far-previous-background, 0, 0
+        @tree-node-indicator-far-previous-background, 0, 0
     );
 }
 
 .ui-tree-node {
-    line-height: @Tree-node-line-height;
+    line-height: @tree-node-line-height;
 }
 
 .ui-tree-content-wrapper {
     border-left: none;
     padding: 0 10px;
     &:hover {
-        background: @Tree-node-wrapper-background-hover;
+        background: @tree-node-wrapper-background-hover;
 
         .ui-tree-item-content {
-            color: @Tree-node-item-font-color-hover;
-            background: @Tree-node-item-icon-hover;
+            color: @tree-node-item-font-color-hover;
+            background: @tree-node-item-icon-hover;
         }
     }
 }
                                                                                                                                                                                                                                             
 .ui-tree-content-wrapper-selected,
 .ui-tree-content-wrapper-selected:hover {
-    background: @Tree-node-wrapper-background-selected;
+    background: @tree-node-wrapper-background-selected;
     border-left: none;
     .ui-tree-item-content {
-        color: @Tree-node-item-font-color-selected;
-        background: @Tree-node-item-icon-selected;
+        color: @tree-node-item-font-color-selected;
+        background: @tree-node-item-icon-selected;
     }
 }
 
 .ui-tree-item-content {
-    color: @Tree-node-item-font-color;
+    color: @tree-node-item-font-color;
 }
