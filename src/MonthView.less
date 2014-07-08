@@ -71,73 +71,80 @@
     border: @month-view-border;
     width: 7 * @month-view-month-item-width;
 
-    /** 先前向后按钮 */
-    .ui-monthview-month-back,
-    .ui-monthview-month-forward {
-        padding: 0;
-        border: 0;
-        margin-top: 0px;
-        height: @month-view-head-button-width;
-        width: @month-view-head-button-height;
-        background-color: transparent;
-
-        &:active,
-        &:hover {
+    .ui-monthview-head {
+        /** 先前向后按钮 */
+        .ui-monthview-month-back,
+        .ui-monthview-month-forward {
+            padding: 0;
             border: 0;
-            background-color: transparent;
+            margin-top: 0px;
+            height: @month-view-head-button-width;
+            width: @month-view-head-button-height;
+            background: none;
+
+            &:active,
+            &:hover {
+                border: 0;
+                background: none;
+            }
+        }
+
+        .ui-monthview-month-back {
+            .pseudo-icon(@month-view-back-button-background, @month-view-head-button-icon-width, @month-view-head-button-icon-height, center);
+            &:active,
+            &:hover {
+                .pseudo-icon(@month-view-back-button-background-active, @month-view-head-button-icon-width, @month-view-head-button-icon-height, center);
+            }
+        }
+
+        .ui-monthview-month-forward {
+            margin-right: 5px;
+            .pseudo-icon(@month-view-forward-button-background, @month-view-head-button-icon-width, @month-view-head-button-icon-height, center);
+            &:active,
+            &:hover {
+                .pseudo-icon(@month-view-forward-button-background-active, @month-view-head-button-icon-width, @month-view-head-button-icon-height, center);
+            }
+        }
+
+        /** 年月下拉选框 */
+        .ui-select, .ui-select:hover, .ui-select:focus {
+            background: @month-view-select-background;
+            .pseudo-icon(@month-view-select-icon, @month-view-select-icon-width, @month-view-select-icon-height, right, 10px);
+            height: @month-view-select-height;
+            line-height: @month-view-select-height;
+            padding: 0 0 0 5px;
+            margin: 0 13px;
+            text-align: left;
+            font-weight: normal;
+        }
+
+        .ui-select-active, .ui-select-active:hover, .ui-select-active:focus {
+            background: @month-view-select-background-active;
+            .pseudo-icon(@month-view-select-icon-active, @month-view-select-icon-width, @month-view-select-icon-height, right, 10px);
+        }
+
+        .ui-monthview-month-select,
+        .ui-monthview-month-select:hover,
+        .ui-monthview-month-select:focus  {
+            width: @month-view-month-select-width;
+            margin: @month-view-month-select-margin;
+        }
+
+        .ui-monthview-year-select,
+        .ui-monthview-year-select:hover,
+        .ui-monthview-year-select:focus {
+            width: @month-view-year-select-width;
+            margin: @month-view-year-select-margin;
         }
     }
+}
 
-    .ui-monthview-month-back {
-        .pseudo-icon(@month-view-back-button-background, @month-view-head-button-icon-width, @month-view-head-button-icon-height, center);
-        &:active,
-        &:hover {
-            .pseudo-icon(@month-view-back-button-background-active, @month-view-head-button-icon-width, @month-view-head-button-icon-height, center);
-        }
-    }
-
-    .ui-monthview-month-forward {
-        margin-right: 5px;
-        .pseudo-icon(@month-view-forward-button-background, @month-view-head-button-icon-width, @month-view-head-button-icon-height, center);
-        &:active,
-        &:hover {
-            .pseudo-icon(@month-view-forward-button-background-active, @month-view-head-button-icon-width, @month-view-head-button-icon-height, center);
-        }
-    }
-
-    /** 年月下拉选框 */
-    .ui-select, .ui-select:hover, .ui-select:focus {
-        background: @month-view-select-background;
-        .pseudo-icon(@month-view-select-icon, @month-view-select-icon-width, @month-view-select-icon-height, right, 10px);
-        height: @month-view-select-height;
-        line-height: @month-view-select-height;
-        padding: 0 0 0 5px;
-        margin: 0 13px;
+// 日历中各类弹层的样式
+.ui-monthview-year-select-layer,
+.ui-monthview-month-select-layer {
+    .ui-select-item {
+        padding: 0 0 0 4px;
         text-align: left;
-        font-weight: normal;
-    }
-
-    .ui-select-active, .ui-select-active:hover, .ui-select-active:focus {
-        background: @month-view-select-background-active;
-        .pseudo-icon(@month-view-select-icon-active, @month-view-select-icon-width, @month-view-select-icon-height, right, 10px);
-    }
-    
-    .ui-select-layer {
-        background: @MonthView-select-layer-background;
-    }
-
-    .ui-monthview-month-select,
-    .ui-monthview-month-select:hover,
-    .ui-monthview-month-select:focus  {
-        width: @month-view-month-select-width;
-        margin: @month-view-month-select-margin;
-    }
-
-    .ui-monthview-year-select,
-    .ui-monthview-year-select:hover,
-    .ui-monthview-year-select:focus {
-        width: @month-view-year-select-width;
-        margin: @month-view-year-select-margin;
     }
 }
 
