@@ -3,13 +3,14 @@
 
 @search-box-search-icon-img: url(./img/esui-search-normal.png);
 @search-box-search-icon-img-active: url(./img/esui-search-active.png);
+@search-box-clear-icon-img: url(./img/esui-btn-clear.png);
+@search-box-clear-icon-img-hover: url(./img/esui-btn-clear-hover.png);
 @search-box-search-icon-img-width: 15px;
 @search-box-search-icon-img-height: 15px;
+@search-box-search-clear-img-width: 12px;
+@search-box-search-clear-img-height: 12px;
 @search-box-search-icon-width: 25px;
 @search-box-search-icon-height: @search-box-height;
-
-@search-box-2x-search-icon-background-image: url(./img/search@2x.png);
-@search-box-2x-search-icon-background-size: 15px 50px;
 
 @search-box-border-width: 1px;
 @search-box-border-color: #ddd;
@@ -29,17 +30,31 @@
 
 @search-box-input-height: @search-box-height - @search-box-padding-top - @search-box-padding-bottom - 2 * @search-box-border-width;
 
-
 .normal-search-icon() {
     .pseudo-icon(
         @search-box-search-icon-img,
         @search-box-search-icon-img-width, @search-box-search-icon-img-height,
         center, 0, center, 0, absolute);
 }
+
 .active-search-icon() {
     .pseudo-icon(
         @search-box-search-icon-img-active,
         @search-box-search-icon-img-width, @search-box-search-icon-img-height,
+        center, 0, center, 0, absolute);
+}
+
+.clear-search-icon() {
+    .pseudo-icon(
+        @search-box-clear-icon-img,
+        @search-box-search-clear-img-width, @search-box-search-clear-img-height,
+        center, 0, center, 0, absolute);
+}
+
+.hover-clear-search-icon() {
+    .pseudo-icon(
+        @search-box-clear-icon-img-hover,
+        @search-box-search-clear-img-width, @search-box-search-clear-img-height,
         center, 0, center, 0, absolute);
 }
 
@@ -58,7 +73,7 @@
             }
 
             &:focus {
-                border-color: @search-box-focus-border; 
+                border-color: @search-box-focus-border;
             }
         }
     }
@@ -94,23 +109,11 @@
     }
 }
 
-.searchbox-2x() {
-    background-image: @search-box-2x-search-icon-background-image;
-    background-size: @search-box-2x-search-icon-background-size;
-}
-
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) { 
-    .ui-searchbox .ui-button {
-        .searchbox-2x();
-
-        &:active {
-            .searchbox-2x();
-        }
-    }
-
-    .ui-searchbox-focus {
-        .ui-button {
-            .searchbox-2x();
+.ui-searchbox-clear {
+    .ui-button {
+        .clear-search-icon();
+        &:hover {
+            .hover-clear-search-icon();
         }
     }
 }
