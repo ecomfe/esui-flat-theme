@@ -1,0 +1,89 @@
+@commandmenu-layer-state-indicator-width: 9px;
+@commandmenu-layer-state-indicator-height: 5px;
+@commandmenu-layer-state-indicator: url(./img/esui-combo-arrow-normal.png);
+@commandmenu-layer-state-indicator-hover: url(./img/esui-combo-arrow-hover.png);
+@commandmenu-layer-state-indicator-active: url(./img/esui-combo-arrow-active.png);
+@commandmenu-layer-state-indicator-disabled: url(./img/esui-combo-arrow-normal.png);
+
+@commandmenu-background-color: transparent;
+@commandmenu-background-color-hover: transparent;
+@commandmenu-background-color-active: transparent;
+@commandmenu-background-color-disabled: transparent;
+@commandmenu-font-color: #666;
+@commandmenu-border: none;
+@commandmenu-height: 30px;
+@commandmenu-width: auto;
+
+@commandmenu-padding-left: 0px;
+// commandmenu实际右侧内边距 
+//     = 2倍左侧内边距（保证图标距离文字和右侧外边缘距离相同）+ 图标宽度
+@commandmenu-padding-right: 2 * @commandmenu-padding-left + @commandmenu-layer-state-indicator-width;
+@commandmenu-padding: 0 @commandmenu-padding-right 0 @commandmenu-padding-left;
+
+//layer
+@commandmenu-layer-split-border: 0;
+@commandmenu-layer-background: #f7f7f7;
+@commandmenu-node-color: #666;
+@commandmenu-node-height: 30px;
+@commandmenu-node-padding-left: 0px;
+@commandmenu-node-background-color-hover: #f1f1f1;
+@commandmenu-node-background-color-active: #fffaee;
+@commandmenu-node-background-color-disabled: #f1f1f1;
+
+.ui-commandmenu {
+    border: @commandmenu-border;
+    background: @commandmenu-background-color;
+    .pseudo-icon(@commandmenu-layer-state-indicator, @commandmenu-layer-state-indicator-width, @commandmenu-layer-state-indicator-height, right, @commandmenu-padding-left);
+    border-radius: 0;
+    height: @commandmenu-height;
+    line-height: @commandmenu-height;
+    padding: @commandmenu-padding;
+    width: @commandmenu-width;
+    color: @commandmenu-font-color;
+    font-weight: bold;
+}
+
+.ui-commandmenu:focus,
+.ui-commandmenu:hover,
+.ui-commandmenu:active {
+    background: @commandmenu-background-color-hover;
+    .pseudo-icon(@commandmenu-layer-state-indicator-hover, @commandmenu-layer-state-indicator-width, @commandmenu-layer-state-indicator-height, right, @commandmenu-padding-left);
+}
+
+.ui-commandmenu-active:focus,
+.ui-commandmenu-active:hover,
+.ui-commandmenu-active:active {
+    background: @commandmenu-background-color-active;
+    .pseudo-icon(@commandmenu-layer-state-indicator-active, @commandmenu-layer-state-indicator-width, @commandmenu-layer-state-indicator-height, right, @commandmenu-padding-left);
+}
+
+.ui-commandmenu-layer {
+    width: @commandmenu-width;
+    border: @commandmenu-border;
+    border-top: @commandmenu-layer-split-border;
+    background: @commandmenu-layer-background;   
+}
+
+.ui-commandmenu-node {
+    color: @commandmenu-node-color;
+    height: @commandmenu-node-height;
+    line-height: @commandmenu-node-height;
+    margin: 0;
+    padding: 0;
+    padding-left: @commandmenu-node-padding-left;
+}
+
+.ui-commandmenu-node:hover {
+    background: @commandmenu-node-background-color-hover;
+}
+
+.ui-commandmenu-disabled,
+.ui-commandmenu-disabled:hover {
+    background: @commandmenu-background-color-disabled;
+    .pseudo-icon(@commandmenu-layer-state-indicator-disabled, @commandmenu-layer-state-indicator-width, @commandmenu-layer-state-indicator-height, right, @commandmenu-padding-left);
+}
+
+.ui-commandmenu-node-disabled {
+    color: #999;
+    background: @commandmenu-node-background-color-disabled;
+}
