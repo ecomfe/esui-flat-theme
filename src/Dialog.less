@@ -22,45 +22,45 @@
 
 @dialog-foot-button-align: left;
 
-.ui-dialog {
+.@{ui-class-prefix}-dialog {
     background: @dialog-background;
     border: @dialog-border;
     width: @dialog-width;
     .border-radius(0);
 }
 
-.ui-dialog-head {
+.@{ui-class-prefix}-dialog-head {
     background: @dialog-head-background;
     color: @dialog-color;
     height: @dialog-head-height;
 }
 
-.ui-dialog-title {
+.@{ui-class-prefix}-dialog-title {
     padding: @dialog-title-padding;
     font-size: @dialog-title-font-size;
     line-height: @dialog-title-height;
 }
 
-.ui-dialog-close-icon {
+.@{ui-class-prefix}-dialog-close-icon {
     .normal-icon(@dialog-close-icon-image, @dialog-close-icon-width, @dialog-close-icon-height);
     right: @dialog-close-icon-right;
     top: @dialog-close-icon-top;
 }
 
-.ui-dialog-body {
+.@{ui-class-prefix}-dialog-body {
     padding: @dialog-body-padding;
 }
 
 
-.ui-dialog-foot-panel {
+.@{ui-class-prefix}-dialog-foot-panel {
     padding: @dialog-foot-panel-padding;
     border: none;
     margin: 0;
 }
 
-.ui-dialog-foot {
+.@{ui-class-prefix}-dialog-foot {
     float: @dialog-foot-button-align;
-    .ui-button {
+    .@{ui-class-prefix}-button {
         margin-right: 6px;
         height: @dialog-foot-button-height;
         line-height: @dialog-foot-button-height;
@@ -68,7 +68,7 @@
     }
 }
 
-.ui-dialog-mask-mixin {
+.@{ui-class-prefix}-dialog-mask-mixin {
     position: fixed;
     top: 0;
     left: 0;
@@ -86,21 +86,21 @@
 /** 警告框，确认框 */
 .skin-alert-dialog,
 .skin-confirm-dialog {
-    .ui-dialog-body {
+    .@{ui-class-prefix}-dialog-body {
         padding: 5px 40px;
     }
 
     // TODO: 无图标的提示框设计是besc中的，这里迁移到esui-flat-theme不知是否合适。
-    .ui-dialog-icon-warning, .ui-dialog-icon-confirm {
+    .@{ui-class-prefix}-dialog-icon-warning, .@{ui-class-prefix}-dialog-icon-confirm {
         display: none;
     }
 
-    .ui-dialog-cancel-btn {
+    .@{ui-class-prefix}-dialog-cancel-btn {
         width: 30px;
         .skin-link-button();
     }
 
-    .ui-dialog-text {
+    .@{ui-class-prefix}-dialog-text {
         margin-top: 0;
         line-height: 18px;
         margin-right: 0;

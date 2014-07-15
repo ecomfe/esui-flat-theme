@@ -29,7 +29,7 @@
 @select-item-background-hover: #f1f1f1;
 @select-item-background-selected: #fffaee;
 
-.ui-select {
+.@{ui-class-prefix}-select {
     background: @select-background-color;
     border: @select-border;
     border-radius: 0;
@@ -44,27 +44,27 @@
     .pseudo-icon(@select-layer-state-indicator, @select-layer-state-indicator-width, @select-layer-state-indicator-height, right, @select-padding-left);
 }
 
-.ui-select:focus,
-.ui-select:hover {
+.@{ui-class-prefix}-select:focus,
+.@{ui-class-prefix}-select:hover {
     background: @select-background-color-hover;
     .pseudo-icon(@select-layer-state-indicator-hover, @select-layer-state-indicator-width, @select-layer-state-indicator-height, right, @select-padding-left);
 }
 
-.ui-select-active,
-.ui-select-active:hover,
-.ui-select-active:focus {
+.@{ui-class-prefix}-select-active,
+.@{ui-class-prefix}-select-active:hover,
+.@{ui-class-prefix}-select-active:focus {
     background: @select-background-color-active;
     .pseudo-icon(@select-layer-state-indicator-active, @select-layer-state-indicator-width, @select-layer-state-indicator-height, right, @select-padding-left);
 }
 
-.ui-select-layer {
+.@{ui-class-prefix}-select-layer {
     width: @select-width;
     border: @select-border;
     border-top: @select-layer-split-border;
     background: @select-layer-background;
 }
 
-.ui-select-item {
+.@{ui-class-prefix}-select-item {
     color: @select-item-color;
     line-height: @select-item-height;
     margin: 0;
@@ -72,20 +72,20 @@
     text-align: center;
 }
 
-.ui-select-item-selected {
+.@{ui-class-prefix}-select-item-selected {
     background: @select-item-background-selected;
     border: none;
     padding: 0 3px;
 }
 
-.ui-select-item:hover {
+.@{ui-class-prefix}-select-item:hover {
     background: @select-item-background-hover;
 }
 
-.ui-select-disabled,
-.ui-select-read-only,
-.ui-select-disabled:hover,
-.ui-select-read-only:hover {
+.@{ui-class-prefix}-select-disabled,
+.@{ui-class-prefix}-select-read-only,
+.@{ui-class-prefix}-select-disabled:hover,
+.@{ui-class-prefix}-select-read-only:hover {
     color: #999;
     background: @select-background-color-disabled;
     .pseudo-icon(@select-layer-state-indicator-disabled, @select-layer-state-indicator-width, @select-layer-state-indicator-height, right, @select-padding-left);

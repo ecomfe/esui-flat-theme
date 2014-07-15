@@ -10,7 +10,7 @@
 //Hint
 @text-box-hint-background: #f7f7f7;
 @text-box-hint-border: @text-box-border;
-.ui-textbox {
+.@{ui-class-prefix}-textbox {
     input, textarea {
         color: @text-box-color;
         background: @text-box-background;
@@ -24,20 +24,20 @@
     }
 }
 
-.ui-textbox-hint {
+.@{ui-class-prefix}-textbox-hint {
     background: @text-box-hint-background;
     border: @text-box-hint-border;
     height: @text-box-input-height;
     line-height: @text-box-input-height;
 }
 
-.ui-textbox-placeholder {
+.@{ui-class-prefix}-textbox-placeholder {
     height: @text-box-input-height;
     line-height:  @text-box-input-height;
 }
 
-.ui-textbox-disabled,
-.ui-textbox-read-only {
+.@{ui-class-prefix}-textbox-disabled,
+.@{ui-class-prefix}-textbox-read-only {
     input, textarea {
         border: @text-box-border;
         background: #f6f6f6;

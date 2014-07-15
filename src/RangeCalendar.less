@@ -29,7 +29,7 @@
 @range-calendar-link-text-color: #66c4a5;
 @range-calendar-link-text-color-hover: #74dcce;
 
-.ui-rangecalendar {
+.@{ui-class-prefix}-rangecalendar {
     background: @range-calendar-main-background;
     border: @range-calendar-main-border;
     .border-radius(@range-calendar-main-border-radius);
@@ -39,16 +39,16 @@
     font-size: @range-calendar-main-font-size;
 }
 
-.ui-rangecalendar-text {
+.@{ui-class-prefix}-rangecalendar-text {
     color: @range-calendar-main-font-color;
 }
 
-.ui-rangecalendar:hover,
-.ui-rangecalendar:active {
+.@{ui-class-prefix}-rangecalendar:hover,
+.@{ui-class-prefix}-rangecalendar:active {
     border-color: @range-calendar-main-hover-border-color;
 }
 
-.ui-rangecalendar-arrow {
+.@{ui-class-prefix}-rangecalendar-arrow {
     background: none;
     .pseudo-icon(@range-calendar-arrow-icon, @range-calendar-arrow-icon-width, @range-calendar-arrow-icon-height, center);
     height: @range-calendar-main-height;
@@ -56,14 +56,14 @@
     margin: 0;
 }
 
-.ui-rangecalendar-active {
-    .ui-rangecalendar-arrow {
+.@{ui-class-prefix}-rangecalendar-active {
+    .@{ui-class-prefix}-rangecalendar-arrow {
         background: none;
         .pseudo-icon(@range-calendar-arrow-icon-active, @range-calendar-arrow-icon-width, @range-calendar-arrow-icon-height, center);
     }
 }
 
-.ui-rangecalendar-layer {
+.@{ui-class-prefix}-rangecalendar-layer {
     background: @range-calendar-layer-background;
     border-top: @range-calendar-layer-border-top;
     border-bottom: @range-calendar-layer-border-bottom;
@@ -71,18 +71,18 @@
     border-right: @range-calendar-layer-border-right;
     padding: @range-calendar-layer-padding;
     width: auto;
-    &.ui-layer-bl {
+    &.@{ui-class-prefix}-layer-bl {
         .top-pointer(@range-calendar-layer-border-top-color, 60px, 0);
         position: absolute;
     }
 
-    &.ui-layer-br {
+    &.@{ui-class-prefix}-layer-br {
         .top-pointer(@range-calendar-layer-border-top-color, 0, 60px);
         position: absolute;
     }
 
 
-    .ui-rangecalendar-shortcut-item {
+    .@{ui-class-prefix}-rangecalendar-shortcut-item {
         border-left: 1px solid @range-calendar-shortcut-item-color;
         color: @range-calendar-shortcut-item-color;
         text-decoration: none;
@@ -93,7 +93,7 @@
         }
     }
 
-    .ui-rangecalendar-shortcut-item-selected {
+    .@{ui-class-prefix}-rangecalendar-shortcut-item-selected {
         font-weight: bold;
         color: #666;
         &:hover {
@@ -101,25 +101,25 @@
         }
     }
 
-    .ui-rangecalendar-body {
+    .@{ui-class-prefix}-rangecalendar-body {
         .clearfix();
 
-        .ui-rangecalendar-label {
+        .@{ui-class-prefix}-rangecalendar-label {
             padding: 12px 0 7px;
         }
 
-        .ui-rangecalendar-begin, .ui-rangecalendar-end {
+        .@{ui-class-prefix}-rangecalendar-begin, .@{ui-class-prefix}-rangecalendar-end {
             width: auto;
-            .ui-monthview-month-item-highlight {
+            .@{ui-class-prefix}-monthview-month-item-highlight {
                 background: @range-calendar-month-item-color-highlight;
             }
-            .ui-monthview-month-item:hover {
+            .@{ui-class-prefix}-monthview-month-item:hover {
                 background: @month-view-month-item-background-hover;
             }
  
         }
 
-        .ui-rangecalendar-begin {
+        .@{ui-class-prefix}-rangecalendar-begin {
             margin-right: 12px;
         }
     }
@@ -132,9 +132,9 @@
         padding: 0;
     }
 
-    .ui-rangecalendar-foot{
+    .@{ui-class-prefix}-rangecalendar-foot{
         padding-top: 13px;
-        .ui-button {
+        .@{ui-class-prefix}-button {
             margin-right: 5px;
             height: 29px;
             line-height: 29px;
@@ -144,11 +144,11 @@
             width: 79px;
         }
 
-        .ui-rangecalendar-okBtn {
+        .@{ui-class-prefix}-rangecalendar-okBtn {
             font-weight: bold;
         }
 
-        .ui-rangecalendar-cancelBtn {
+        .@{ui-class-prefix}-rangecalendar-cancelBtn {
             background: none;
             color: @range-calendar-link-text-color;
             border: none;
