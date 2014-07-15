@@ -43,7 +43,7 @@
 @sidebar-head-border-radius-right-bottom: 0;
 @sidebar-head-border-radius-bottom-left:0;
 
-.ui-sidebar {
+.@{ui-class-prefix}-sidebar {
     position: fixed;
     _position: absolute;
     z-index: 100;
@@ -54,15 +54,15 @@
     border: @sidebar-border;
 }
 
-.ui-sidebar-neighbor {  
+.@{ui-class-prefix}-sidebar-neighbor {  
     margin-left: @sidebar-neighbor-margin-left;
 }
 
-.ui-sidebar-neighbor-hide {
+.@{ui-class-prefix}-sidebar-neighbor-hide {
     margin-left: @sidebar-neighbor-margin-left-hide;
 }
 
-.ui-sidebar-mat {
+.@{ui-class-prefix}-sidebar-mat {
     position: fixed;
     _display: none;
     z-index: 50;
@@ -72,7 +72,7 @@
     border-right: @sidebar-mat-border;
 }
 
-.ui-sidebar-minibar {
+.@{ui-class-prefix}-sidebar-minibar {
     position: fixed;
     _position: absolute;
     _padding-bottom: 10px;
@@ -90,12 +90,12 @@
     width: @sidebar-minibar-width;
 }
 
-.ui-sidebar-minibar-text {
+.@{ui-class-prefix}-sidebar-minibar-text {
     padding: @sidebar-minibar-padding;
     width: @sidebar-minibar-text-width;
 } 
 
-.ui-sidebar-minibar-arrow {
+.@{ui-class-prefix}-sidebar-minibar-arrow {
     font-size: 0;
     position: absolute;
     bottom: 50%;
@@ -104,15 +104,15 @@
     .normal-icon(@sidebar-minibar-arrow, @sidebar-minibar-arrow-width, @sidebar-minibar-arrow-height);
 }
 
-.ui-sidebar-minibar-hover .ui-sidebar-minibar-arrow {
+.@{ui-class-prefix}-sidebar-minibar-hover .@{ui-class-prefix}-sidebar-minibar-arrow {
     .normal-icon(@sidebar-minibar-arrow-hover, @sidebar-minibar-arrow-width, @sidebar-minibar-arrow-height);
 }
 
-.ui-sidebar-minibar-hover .ui-sidebar-minibar-text {
+.@{ui-class-prefix}-sidebar-minibar-hover .@{ui-class-prefix}-sidebar-minibar-text {
     color: @sidebar-minibar-text-color-hover;
 }
 
-.ui-sidebar-head {
+.@{ui-class-prefix}-sidebar-head {
     border-bottom: @sidebar-head-border-bottom;
     background: @sidebar-head-background;
     line-height: @sidebar-head-height;
@@ -126,7 +126,7 @@
     );
 }
 
-.ui-sidebar-body {
+.@{ui-class-prefix}-sidebar-body {
     position: absolute;
     _position: static;
     overflow-x: hidden;

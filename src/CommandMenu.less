@@ -30,7 +30,7 @@
 @commandmenu-node-background-color-active: #fffaee;
 @commandmenu-node-background-color-disabled: #f1f1f1;
 
-.ui-commandmenu {
+.@{ui-class-prefix}-commandmenu {
     border: @commandmenu-border;
     background: @commandmenu-background-color;
     .pseudo-icon(@commandmenu-layer-state-indicator, @commandmenu-layer-state-indicator-width, @commandmenu-layer-state-indicator-height, right, @commandmenu-padding-left);
@@ -43,28 +43,28 @@
     font-weight: bold;
 }
 
-.ui-commandmenu:focus,
-.ui-commandmenu:hover,
-.ui-commandmenu:active {
+.@{ui-class-prefix}-commandmenu:focus,
+.@{ui-class-prefix}-commandmenu:hover,
+.@{ui-class-prefix}-commandmenu:active {
     background: @commandmenu-background-color-hover;
     .pseudo-icon(@commandmenu-layer-state-indicator-hover, @commandmenu-layer-state-indicator-width, @commandmenu-layer-state-indicator-height, right, @commandmenu-padding-left);
 }
 
-.ui-commandmenu-active:focus,
-.ui-commandmenu-active:hover,
-.ui-commandmenu-active:active {
+.@{ui-class-prefix}-commandmenu-active:focus,
+.@{ui-class-prefix}-commandmenu-active:hover,
+.@{ui-class-prefix}-commandmenu-active:active {
     background: @commandmenu-background-color-active;
     .pseudo-icon(@commandmenu-layer-state-indicator-active, @commandmenu-layer-state-indicator-width, @commandmenu-layer-state-indicator-height, right, @commandmenu-padding-left);
 }
 
-.ui-commandmenu-layer {
+.@{ui-class-prefix}-commandmenu-layer {
     width: @commandmenu-width;
     border: @commandmenu-border;
     border-top: @commandmenu-layer-split-border;
     background: @commandmenu-layer-background;   
 }
 
-.ui-commandmenu-node {
+.@{ui-class-prefix}-commandmenu-node {
     color: @commandmenu-node-color;
     height: @commandmenu-node-height;
     line-height: @commandmenu-node-height;
@@ -73,17 +73,17 @@
     padding-left: @commandmenu-node-padding-left;
 }
 
-.ui-commandmenu-node:hover {
+.@{ui-class-prefix}-commandmenu-node:hover {
     background: @commandmenu-node-background-color-hover;
 }
 
-.ui-commandmenu-disabled,
-.ui-commandmenu-disabled:hover {
+.@{ui-class-prefix}-commandmenu-disabled,
+.@{ui-class-prefix}-commandmenu-disabled:hover {
     background: @commandmenu-background-color-disabled;
     .pseudo-icon(@commandmenu-layer-state-indicator-disabled, @commandmenu-layer-state-indicator-width, @commandmenu-layer-state-indicator-height, right, @commandmenu-padding-left);
 }
 
-.ui-commandmenu-node-disabled {
+.@{ui-class-prefix}-commandmenu-node-disabled {
     color: #999;
     background: @commandmenu-node-background-color-disabled;
 }

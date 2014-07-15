@@ -20,7 +20,7 @@
 @button-color-disabled: #656565;
 @button-border-color-disabled: @button-background-disabled;
 
-.ui-button {
+.@{ui-class-prefix}-button {
     background: @button-background;
     border-style: @button-border-style;
     border-color: @button-border-color;
@@ -33,24 +33,24 @@
     line-height: @button-height;
 }
 
-button.ui-button {
+button.@{ui-class-prefix}-button {
     *height: @button-height + 2px;
 }
 
-.ui-button:hover {
+.@{ui-class-prefix}-button:hover {
     border-color: @button-border-color-hover;
     background: @button-background-hover;
     color: @button-color-hover;
     border-width: @button-border-width;
 }
 
-.ui-button:active {
+.@{ui-class-prefix}-button:active {
     border-color: @button-border-color-active;
     background: @button-background-active;
     color: @button-color-active;
 }
 
-.ui-button-disabled {
+.@{ui-class-prefix}-button-disabled {
     border-color: @button-border-color-disabled;
     background: @button-background-disabled;
     color: @button-color-disabled;

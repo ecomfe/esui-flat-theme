@@ -58,8 +58,8 @@
         center, 0, center, 0, absolute);
 }
 
-.ui-searchbox {
-    .ui-textbox {
+.@{ui-class-prefix}-searchbox {
+    .@{ui-class-prefix}-textbox {
         input {
             float: left;
             // 实际高度是：视觉高度 - 上下padding - 上下border
@@ -78,7 +78,7 @@
         }
     }
 
-    .ui-button {
+    .@{ui-class-prefix}-button {
         width: @search-box-search-icon-width;
         height: @search-box-search-icon-height;
         top: 0;
@@ -96,21 +96,21 @@
         }
     }
 
-    .ui-button-disabled {
+    .@{ui-class-prefix}-button-disabled {
         &:active {
             .active-search-icon();
         }
     }
 }
 
-.ui-searchbox-focus {
-    .ui-button {
+.@{ui-class-prefix}-searchbox-focus {
+    .@{ui-class-prefix}-button {
         .active-search-icon();
     }
 }
 
-.ui-searchbox-clear {
-    .ui-button {
+.@{ui-class-prefix}-searchbox-clear {
+    .@{ui-class-prefix}-button {
         .clear-search-icon();
         &:hover {
             .hover-clear-search-icon();

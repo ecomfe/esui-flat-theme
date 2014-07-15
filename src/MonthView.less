@@ -60,21 +60,21 @@
 @month-view-month-select-margin: 3px 6px 0;
 @MonthView-select-layer-background: #efefef;
 
-.ui-monthview-head {
+.@{ui-class-prefix}-monthview-head {
     height: 28px;
     table { width: auto; }
     background: @month-view-head-background;
 }
 
-.ui-monthview {
+.@{ui-class-prefix}-monthview {
     background: @month-view-background;
     border: @month-view-border;
     width: 7 * @month-view-month-item-width;
 
-    .ui-monthview-head {
+    .@{ui-class-prefix}-monthview-head {
         /** 先前向后按钮 */
-        .ui-monthview-month-back,
-        .ui-monthview-month-forward {
+        .@{ui-class-prefix}-monthview-month-back,
+        .@{ui-class-prefix}-monthview-month-forward {
             padding: 0;
             border: 0;
             margin-top: 0px;
@@ -89,7 +89,7 @@
             }
         }
 
-        .ui-monthview-month-back {
+        .@{ui-class-prefix}-monthview-month-back {
             .pseudo-icon(@month-view-back-button-background, @month-view-head-button-icon-width, @month-view-head-button-icon-height, center);
             &:active,
             &:hover {
@@ -97,7 +97,7 @@
             }
         }
 
-        .ui-monthview-month-forward {
+        .@{ui-class-prefix}-monthview-month-forward {
             margin-right: 5px;
             .pseudo-icon(@month-view-forward-button-background, @month-view-head-button-icon-width, @month-view-head-button-icon-height, center);
             &:active,
@@ -107,7 +107,7 @@
         }
 
         /** 年月下拉选框 */
-        .ui-select, .ui-select:hover, .ui-select:focus {
+        .@{ui-class-prefix}-select, .@{ui-class-prefix}-select:hover, .@{ui-class-prefix}-select:focus {
             background: @month-view-select-background;
             .pseudo-icon(@month-view-select-icon, @month-view-select-icon-width, @month-view-select-icon-height, right, 10px);
             height: @month-view-select-height;
@@ -118,21 +118,21 @@
             font-weight: normal;
         }
 
-        .ui-select-active, .ui-select-active:hover, .ui-select-active:focus {
+        .@{ui-class-prefix}-select-active, .@{ui-class-prefix}-select-active:hover, .@{ui-class-prefix}-select-active:focus {
             background: @month-view-select-background-active;
             .pseudo-icon(@month-view-select-icon-active, @month-view-select-icon-width, @month-view-select-icon-height, right, 10px);
         }
 
-        .ui-monthview-month-select,
-        .ui-monthview-month-select:hover,
-        .ui-monthview-month-select:focus  {
+        .@{ui-class-prefix}-monthview-month-select,
+        .@{ui-class-prefix}-monthview-month-select:hover,
+        .@{ui-class-prefix}-monthview-month-select:focus  {
             width: @month-view-month-select-width;
             margin: @month-view-month-select-margin;
         }
 
-        .ui-monthview-year-select,
-        .ui-monthview-year-select:hover,
-        .ui-monthview-year-select:focus {
+        .@{ui-class-prefix}-monthview-year-select,
+        .@{ui-class-prefix}-monthview-year-select:hover,
+        .@{ui-class-prefix}-monthview-year-select:focus {
             width: @month-view-year-select-width;
             margin: @month-view-year-select-margin;
         }
@@ -140,19 +140,19 @@
 }
 
 // 日历中各类弹层的样式
-.ui-monthview-year-select-layer,
-.ui-monthview-month-select-layer {
-    .ui-select-item {
+.@{ui-class-prefix}-monthview-year-select-layer,
+.@{ui-class-prefix}-monthview-month-select-layer {
+    .@{ui-class-prefix}-select-item {
         padding: 0 0 0 4px;
         text-align: left;
     }
 }
 
-.ui-monthview-month {
+.@{ui-class-prefix}-monthview-month {
     border: @month-view-month-border;
 }
 
-.ui-monthview-month-title {
+.@{ui-class-prefix}-monthview-month-title {
     background: @month-view-month-title-background;
     color: @month-view-month-title-color;
     width: @month-view-month-item-width;
@@ -160,11 +160,11 @@
     line-height: @month-view-month-item-height;
 }
 
-.ui-monthview-month-title-selected {
+.@{ui-class-prefix}-monthview-month-title-selected {
     background: @month-view-month-title-background-selected;
 }
 
-.ui-monthview-month-item {
+.@{ui-class-prefix}-monthview-month-item {
     width: @month-view-month-item-width;
     height: @month-view-month-item-height;
     line-height: @month-view-month-item-height;
@@ -172,21 +172,21 @@
     border-bottom: @month-view-month-item-border;
 }
 
-.ui-monthview-month-item:hover {
+.@{ui-class-prefix}-monthview-month-item:hover {
     background: @month-view-month-item-background-hover;
 }
 
-.ui-monthview-month-item-today {
+.@{ui-class-prefix}-monthview-month-item-today {
     font-weight: bold;
 }
 
-.ui-monthview-month-item-selected {
+.@{ui-class-prefix}-monthview-month-item-selected {
     background: @month-view-month-item-background-selected;
     color: @month-view-month-item-color-selected;
 }
 
-.ui-monthview-month-item-virtual,
-.ui-monthview-month-item-out {
+.@{ui-class-prefix}-monthview-month-item-virtual,
+.@{ui-class-prefix}-monthview-month-item-out {
     color: @month-view-month-item-color-virtual;
     background: @month-view-month-item-background-virtual;
     &:hover {
@@ -194,7 +194,7 @@
     }
 }
 
-.ui-monthview-month-item-disabled {
+.@{ui-class-prefix}-monthview-month-item-disabled {
     background: @month-view-month-item-background-disabled;
     color: @month-view-month-item-color-disabled;
     &:hover {
@@ -203,35 +203,35 @@
 }
 
 // 多选模式
-.ui-monthview-multi-select {
-    .ui-monthview-month-select-all {
+.@{ui-class-prefix}-monthview-multi-select {
+    .@{ui-class-prefix}-monthview-month-select-all {
         background: @month-view-month-row-select-background;
         &:hover {
             background: @month-view-month-row-select-background;
         }
     }
 
-    .ui-monthview-month-select-all-selected {
+    .@{ui-class-prefix}-monthview-month-select-all-selected {
         background: @month-view-month-row-select-background-selected;
     }
 
-    .ui-monthview-month-row-select {
+    .@{ui-class-prefix}-monthview-month-row-select {
         background: @month-view-month-row-select-background;
         border-bottom: @month-view-month-item-border;
     }
-    .ui-monthview-month-row-select-selected {
+    .@{ui-class-prefix}-monthview-month-row-select-selected {
         background: @month-view-month-row-select-background-selected;
     }
 }
 
-.ui-monthview-disabled {
-    .ui-monthview-month-forward:hover,
-    .ui-monthview-month-forward:active {
+.@{ui-class-prefix}-monthview-disabled {
+    .@{ui-class-prefix}-monthview-month-forward:hover,
+    .@{ui-class-prefix}-monthview-month-forward:active {
         background: @month-view-forward-button-background-disabled;
     }
 
-    .ui-monthview-month-back:active,
-    .ui-monthview-month-back:hover {
+    .@{ui-class-prefix}-monthview-month-back:active,
+    .@{ui-class-prefix}-monthview-month-back:hover {
         background: @month-view-back-button-background-disabled;
     }
 }

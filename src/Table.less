@@ -74,7 +74,7 @@
 @table-subentry-icon-img-height-opened-hover: 5px;
 @table-subentry-icon-opened-hover: url(./img/esui-close-icon.png);
 
-.ui-table-head {
+.@{ui-class-prefix}-table-head {
     background: @table-head-background-color;
 
     table {
@@ -86,7 +86,7 @@
 }
 
 /* 表头单元格 */
-.ui-table-hcell {
+.@{ui-class-prefix}-table-hcell {
     font-weight: @table-head-font-weight;
     color: @table-head-font-color;
     border-left-color: @table-hcell-border-color;
@@ -96,40 +96,40 @@
 }
 
 /* 表头单元格DIV容器 */
-.ui-table-hcell-text {
+.@{ui-class-prefix}-table-hcell-text {
     height: Table-hcell-text-height;
     line-height: Table-hcell-text-height;
     padding: Table-hcell-text-padding;
 }
 
 /* 表头单元格提示 */
-.ui-table-htip{
+.@{ui-class-prefix}-table-htip{
     margin: @table-hcell-tip-margin;
 }
 
 /* 表头单元格排序标识 */
-.ui-table-hsort {
+.@{ui-class-prefix}-table-hsort {
     // background: @table-sort-icon-background;
     margin: @table-sort-icon-margin;
     height: @table-sort-icon-height;
     width: @table-sort-icon-width;
 }
 
-.ui-table-hcell-asc .ui-table-hsort {
+.@{ui-class-prefix}-table-hcell-asc .@{ui-class-prefix}-table-hsort {
     // background: @table-sort-icon-asc-background;
 }
 
-.ui-table-hcell-desc .ui-table-hsort {
+.@{ui-class-prefix}-table-hcell-desc .@{ui-class-prefix}-table-hsort {
     //background: @table-sort-icon-desc-background;
 }
 
 
 /* 可排序列的表头样式Hover */
-.ui-table-hcell-sort-hover {
+.@{ui-class-prefix}-table-hcell-sort-hover {
     background: @table-hcell-sort-hover-background;
 }
 
-.ui-table-body {
+.@{ui-class-prefix}-table-body {
     background: @table-body-background;
     border-bottom: 1px solid @table-body-border-color;
     table {
@@ -137,103 +137,103 @@
     }
 }
 
-.ui-table-body-nodata {
+.@{ui-class-prefix}-table-body-nodata {
     border: 1px solid @table-body-border-color;
     border-width: 0 1px;
 }
 
-.ui-table-row {
+.@{ui-class-prefix}-table-row {
     background: @table-row-background;
     border-bottom: 1px solid @table-row-border-color;
 }
 
 /* 行表格移上 */
-.ui-table-row-hover {
+.@{ui-class-prefix}-table-row-hover {
     background: @table-row-background-hover;
 }
 
 /* 扩展-可编辑单元
-.ui-table-row-hover .ui-table-cell-editable {
+.@{ui-class-prefix}-table-row-hover .@{ui-class-prefix}-table-cell-editable {
     border: @table-row-hover-editable-cell-border;
     margin: @table-row-hover-editable-cell-margin;
     padding: @table-row-hover-editable-cell-padding;
     background: @table-row-hover-editable-cell-background;
 }
-.ui-table-editor {
+.@{ui-class-prefix}-table-editor {
     background: @table-editor-background;
     border-color: @table-editor-border-color;
     padding: @table-editor-padding;
     width: @table-editor-width;
 }
-.ui-table-editor-opt {
+.@{ui-class-prefix}-table-editor-opt {
     margin-bottom: @table-editor-opt-margin-bottom;
 }
-.ui-table-editor-error {
+.@{ui-class-prefix}-table-editor-error {
     margin-bottom: @table-editor-error-margin-bottom;
 }
-.ui-table-editor .ui-button{
+.@{ui-class-prefix}-table-editor .@{ui-class-prefix}-button{
     margin-left: @table-editor-button-margin-left;
 }
 
 */
 
 /* 行表格选中 */
-.ui-table-row-selected table {
+.@{ui-class-prefix}-table-row-selected table {
     background: @table-row-background-selected;
 }
 
 /* 行表格展开 */
-.ui-table-row-unfolded {
+.@{ui-class-prefix}-table-row-unfolded {
     background: @table-row-background-unfolded;
 }
 
 /* 拖拽显示的竖线 */
-.ui-table-mark {
+.@{ui-class-prefix}-table-mark {
     height: @table-mark-height;
     background: @table-mark-background;
 }
 
 
 /* 表格内容单元格 */
-.ui-table-cell {
+.@{ui-class-prefix}-table-cell {
     border-color: @table-cell-border-color;
     &:first-child {
         border-color: @table-body-border-color;
     }
 }
 
-.ui-table-row-hover .ui-table-cell {
+.@{ui-class-prefix}-table-row-hover .@{ui-class-prefix}-table-cell {
     border-color: @table-cell-border-color-hover;
 }
 
 /* 表格内容单元格容器 */
-.ui-table-cell-text,
-.ui-table-body-nodata {
+.@{ui-class-prefix}-table-cell-text,
+.@{ui-class-prefix}-table-body-nodata {
   line-height: @table-cell-height;
   height: @table-cell-height;
   padding: @table-cell-padding;
 }
 
-.ui-table-cell-text-first,.ui-table-hcell-text-first {
+.@{ui-class-prefix}-table-cell-text-first,.@{ui-class-prefix}-table-hcell-text-first {
     padding-left: @table-cell-head-padding;
 }
-.ui-table-cell-text-last,.ui-table-hcell-text-last {
+.@{ui-class-prefix}-table-cell-text-last,.@{ui-class-prefix}-table-hcell-text-last {
     padding-right: @table-cell-tail-padding;
 }
 
-.ui-table-cell-sel,
-.ui-table-hcell-sel {
+.@{ui-class-prefix}-table-cell-sel,
+.@{ui-class-prefix}-table-hcell-sel {
   padding: @table-cell-sel-padding;
   *padding: @table-cell-sel-padding-IE;
   height: @table-cell-height;
   line-height: @table-cell-height;
 }
 
-.ui-table-scroll-x {
+.@{ui-class-prefix}-table-scroll-x {
     height: @table-scrollX-height;
 }
 
-//.ui-table-cell-editentry {
+//.@{ui-class-prefix}-table-cell-editentry {
 //    width: @table-cell-edit-entry-width;
 //    height: @table-cell-edit-entry-height;
 //    top: @table-cell-edit-entry-top;
@@ -242,14 +242,14 @@
 //}
 
 
-//.ui-table-cell-align-right .ui-table-cell-editentry {
+//.@{ui-class-prefix}-table-cell-align-right .@{ui-class-prefix}-table-cell-editentry {
 //    left: @table-cell-align-right-edit-entry-left;
 //}
 
 /* 子表格收起展开按钮 */
-.ui-table-subentry,
-.ui-table-subentry-opened,
-.ui-table-subentry-opened-hover {
+.@{ui-class-prefix}-table-subentry,
+.@{ui-class-prefix}-table-subentry-opened,
+.@{ui-class-prefix}-table-subentry-opened-hover {
     width: @table-subentry-icon-width;
     height: @table-subentry-icon-height;
     border: none;
@@ -257,30 +257,30 @@
     background: none;
 }
 
-.ui-table-subentry {
+.@{ui-class-prefix}-table-subentry {
     .pseudo-icon(@table-subentry-icon, @table-subentry-icon-img-width, @table-subentry-icon-img-height, center);
 }
 
-.ui-table-subentry-opened {
+.@{ui-class-prefix}-table-subentry-opened {
     .pseudo-icon(@table-subentry-icon-open, @table-subentry-icon-img-width-open, @table-subentry-icon-img-height-open, center);
 }
 
 
-.ui-table-subentry-hover {
+.@{ui-class-prefix}-table-subentry-hover {
     .pseudo-icon(@table-subentry-icon-hover, @table-subentry-icon-img-width-hover, @table-subentry-icon-img-height-hover, center);
 }
-.ui-table-subentry-opened-hover {
+.@{ui-class-prefix}-table-subentry-opened-hover {
     .pseudo-icon(@table-subentry-icon-opened-hover, @table-subentry-icon-img-width-opened-hover, @table-subentry-icon-img-height-opened-hover, center);
 }
 
-.ui-table-subrow {
+.@{ui-class-prefix}-table-subrow {
     background: @table-subrow-background;
     border-color: @table-subrow-border-color;
     padding: @table-subrow-padding;
 }
 
 
-.ui-table-foot {
+.@{ui-class-prefix}-table-foot {
     background: @table-foot-background;
     table {
         border-color: @table-foot-border-color;
@@ -289,7 +289,7 @@
 
 
 /* 表尾单元格 */
-.ui-table-fcell {
+.@{ui-class-prefix}-table-fcell {
     border-color: @table-footcell-border-color;
     &:first-child {
         border-color: @table-foot-border-color;
