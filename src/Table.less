@@ -33,11 +33,12 @@
 @table-subrow-background: #FFF9EE;
 @table-subrow-border-color: #ddd;
 @table-subrow-padding: 1px 0 0 36px;
-@table-body-border-selected-color: #f0f0f0;
-@table-cell-border-selected-color-hover: #f0f0f0;
 
 @table-cell-border-color: @table-row-background;
 @table-cell-border-color-hover: @table-row-background-hover;
+
+@table-cell-border-color-selected: transparent;
+@table-cell-border-color-selected-hover: transparent;
 
 @table-cell-height: 28px;
 @table-cell-padding: 4px 8px;
@@ -182,15 +183,13 @@
 /* 行表格选中 */
 .ui-table-row-selected table {
     background: @table-row-background-selected;
+
     .ui-table-cell {
-        border-color: @table-cell-border-selected-color;
-        &:first-child {
-            border-color: @table-body-border-selected-color;
-        }
+        border-color: @table-cell-border-color-selected;
     }
 
     .ui-table-row-hover .ui-table-cell {
-        border-color: @table-cell-border-selected-color-hover;
+        border-color: @table-cell-border-color-selected-hover;
     }
 }
 
